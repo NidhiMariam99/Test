@@ -1,0 +1,5066 @@
+/*----------------- Global -----------------*/
+@import url('https://use.fontawesome.com/releases/v5.0.9/css/all.css');
+@font-face {
+  font-family: 'Open Sans';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url(https://fonts.gstatic.com/s/opensans/v23/mem8YaGs126MiZpBA-UFVZ0e.ttf) format('truetype');
+}
+@font-face {
+  font-family: 'Raleway';
+  font-style: normal;
+  font-weight: 400;/*----------------- Global -----------------*/
+@import url('https://use.fontawesome.com/releases/v5.0.9/css/all.css');
+@font-face {
+  font-family: 'Open Sans';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url(https://fonts.gstatic.com/s/opensans/v23/mem8YaGs126MiZpBA-UFVZ0e.ttf) format('truetype');
+}
+@font-face {
+  font-family: 'Raleway';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url(https://fonts.gstatic.com/s/raleway/v22/1Ptxg8zYS_SKggPN4iEgvnHyvveLxVvaorCIPrQ.ttf) format('truetype');
+}
+@font-face {
+  font-family: 'Raleway';
+  font-style: normal;
+  font-weight: 500;
+  font-display: swap;
+  src: url(https://fonts.gstatic.com/s/raleway/v22/1Ptxg8zYS_SKggPN4iEgvnHyvveLxVvoorCIPrQ.ttf) format('truetype');
+}
+@font-face {
+  font-family: 'Raleway';
+  font-style: normal;
+  font-weight: 600;
+  font-display: swap;
+  src: url(https://fonts.gstatic.com/s/raleway/v22/1Ptxg8zYS_SKggPN4iEgvnHyvveLxVsEpbCIPrQ.ttf) format('truetype');
+}
+body {
+  background-color: #ccc !important;
+  padding-bottom: 75px;
+  counter-reset: section;
+}
+.fade:not(.show) {
+  display: none;
+}
+.container-fluid > div > div.row {
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: -ms-flex;
+  display: flex;
+}
+.container-fluid > div > div.row > div.col {
+  padding-left: 25px;
+  padding-right: 25px;
+}
+.container-fluid > div > div.row > div.col .padding-t20 {
+  padding-top: 25px;
+}
+a.dropdown-item {
+  font-size: 14px;
+  font-family: "Raleway";
+}
+.form-group {
+  padding-left: 0px;
+  padding-right: 0px;
+}
+.form-group label {
+  font-family: "Raleway";
+  font-weight: 500;
+  font-size: 15px;
+}
+.form-group select {
+  font-family: "Raleway";
+  font-weight: 500;
+  font-size: 15px;
+}
+button {
+  font-family: "Raleway";
+  font-weight: 500;
+}
+.form-control {
+  display: block;
+  width: 100%;
+  height: 34px;
+  padding: 6px 12px;
+  font-family: "Raleway", sans-serif;
+  font-weight: 500;
+  font-size: 15px;
+  line-height: 1.42857;
+  color: #555;
+  background-color: #fff;
+  background-image: none;
+  border: 1px solid #ccc;
+  -webkit-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075) !important;
+  box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075) !important;
+  border-top-right-radius: 4px !important;
+  border-top-left-radius: 4px !important;
+  border-bottom-right-radius: 4px !important;
+  border-bottom-left-radius: 4px !important;
+  -webkit-transition: border-color ease-in-out 0.15s,box-shadow ease-in-out 0.15s;
+  transition: border-color ease-in-out 0.15s,box-shadow ease-in-out 0.15s;
+}
+.form-control:focus {
+  border-color: #66afe9;
+  outline: 0;
+  -webkit-box-shadow: inset 0 1px 1px rgba(0,0,0,0.075), 0 0 4px rgba(102,175,233,0.6) !important;
+  box-shadow: inset 0 1px 1px rgba(0,0,0,0.075), 0 0 4px rgba(102,175,233,0.6) !important;
+}
+.row {
+  display: block;
+}
+.grid figure img {
+  height: auto;
+}
+.redText {
+  color: #ff0000;
+}
+.textCenter {
+  text-align: center;
+}
+.dontShow {
+  display: none;
+}
+small.text-muted.form-text {
+  color: #a02c1d !important;
+  font-family: "Raleway";
+}
+.react-datepicker {
+  font-size: 1rem !important;
+}
+/*--------------- Form Canvas --------------*/
+#elements-holder {
+  background: #fff;
+  display: inline-block;
+  padding-top: 0px !important;
+  padding-left: 25px !important;
+  padding-right: 10px !important;
+  border-top-right-radius: 0px !important;
+  border-top-left-radius: 0px !important;
+  border-bottom-right-radius: 0px !important;
+  border-bottom-left-radius: 0px !important;
+  -webkit-box-shadow: none !important;
+  box-shadow: none !important;
+  -webkit-flex-grow: unset !important;
+  -ms-flex-grow: unset !important;
+  flex-grow: unset !important;
+  -webkit-transition: 1s;
+  transition: 1s;
+  -webkit-transition-delay: 0.1s;
+  transition-delay: 0.1s;
+  width: calc(100% - 280px);
+}
+#elements-holder > .row {
+  margin-left: 0px;
+  margin-right: 0px;
+  padding-top: 0px !important;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: -ms-flex;
+  display: flex;
+}
+#elements-holder > .row .logo-body {
+  margin-top: 5px;
+}
+/*------------ Formfield Global ------------*/
+.formfield {
+  margin-bottom: 40px !important;
+  padding-left: 0px;
+  padding-right: 15px;
+  float: left;
+}
+.formfield.field-invalid {
+  color: #ff0000;
+}
+.formfield.field-invalid textarea,
+.formfield.field-invalid input,
+.formfield.field-invalid select {
+  border-color: #ff0000 !important;
+}
+.formfield.field-invalid .rbt-input-hint input {
+  border: none !important;
+}
+.formfield .row {
+  margin-left: 0px;
+  margin-right: 0px;
+}
+.formfield .row .col {
+  padding-left: 0px;
+  padding-right: 0px;
+}
+.formfield .title h3 {
+  font-family: "Raleway", sans-serif;
+  font-size: 18px;
+  font-weight: 600;
+  margin-bottom: 5px;
+}
+.formfield .description .col {
+  font-family: "Raleway", sans-serif;
+  font-size: 14px;
+  font-weight: 300;
+  color: #888;
+  margin-bottom: 5px;
+  letter-spacing: 0.2px;
+}
+.formfield .description .col b,
+.formfield .description .col strong {
+  font-weight: 600 !important;
+  color: #555;
+}
+.formfield .field > div {
+  padding-left: 0px;
+  padding-right: 0px;
+}
+.formfield button.btn {
+  font-size: 14px;
+}
+/*----------- Title Formfield -----------*/
+.field-formtitle.formfield {
+  border-bottom: 3px solid #31b4ff !important;
+  background-color: #f8f9fa;
+  padding-top: 30px;
+  margin-left: -25px;
+  margin-right: -10px;
+  min-height: 77px;
+  padding-left: 25px !important;
+  padding-right: 10px;
+  box-sizing: content-box;
+  flex: unset;
+}
+.field-formtitle.formfield.text-right {
+  -webkit-flex-direction: row-reverse;
+  -ms-flex-direction: row-reverse;
+  flex-direction: row-reverse;
+}
+.field-formtitle.formfield.text-right .flex-grow-l {
+  padding-right: 10px;
+}
+.field-formtitle.formfield.text-right .logo-body {
+  margin-top: 0px !important;
+  width: 200px;
+  text-align: left;
+}
+.field-formtitle.formfield div.flex-grow-l {
+  width: calc(100% - 200px);
+}
+.field-formtitle.formfield div.flex-grow-l div.title .col h1 strong {
+  font-size: 39px !important;
+  padding-bottom: 5px !important;
+  line-height: 42px !important;
+  padding-top: 0px !important;
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+}
+.field-formtitle.formfield div.flex-grow-l div.description h2 {
+  color: #a02c1d;
+  font-weight: 300;
+  line-height: 24px;
+  font-size: 24px;
+  word-break: normal;
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+}
+.field-formtitle.formfield div.logo-body {
+  right: 22px;
+}
+.field-formtitle.formfield div.logo-body img {
+  max-height: 90px !important;
+}
+/*----------- Checkbox Formfield -----------*/
+.field-checkboxes.formfield .field.row {
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: -ms-flex;
+  display: flex;
+}
+.field-checkboxes.formfield .field.row .bis-checkboxes {
+  margin-top: 6px !important;
+  margin-bottom: 6px !important;
+}
+.field-checkboxes.formfield .field.row .bis-checkboxes .form-check,
+.field-checkboxes.formfield .field.row .bis-checkboxes .custom-control {
+  padding-left: 0px !important;
+}
+.field-checkboxes.formfield .field.row .bis-checkboxes .form-check input,
+.field-checkboxes.formfield .field.row .bis-checkboxes .custom-control input {
+  visibility: hidden;
+  /* checked mark aspect */
+  /* checked mark aspect changes */
+  /* disabled checkbox */
+  /* accessibility */
+  /* Custom Radio */
+  /* checked mark aspect */
+  /* checked mark aspect changes */
+  /* disabled checkbox */
+  /* accessibility */
+}
+.field-checkboxes.formfield .field.row .bis-checkboxes .form-check input[type="checkbox"]:not(:checked) + label,
+.field-checkboxes.formfield .field.row .bis-checkboxes .custom-control input[type="checkbox"]:not(:checked) + label,
+.field-checkboxes.formfield .field.row .bis-checkboxes .form-check input[type="checkbox"]:checked + label,
+.field-checkboxes.formfield .field.row .bis-checkboxes .custom-control input[type="checkbox"]:checked + label {
+  position: relative;
+  padding-left: 2.45em;
+  cursor: pointer;
+}
+.field-checkboxes.formfield .field.row .bis-checkboxes .form-check input[type="checkbox"]:not(:checked) + label:before,
+.field-checkboxes.formfield .field.row .bis-checkboxes .custom-control input[type="checkbox"]:not(:checked) + label:before,
+.field-checkboxes.formfield .field.row .bis-checkboxes .form-check input[type="checkbox"]:checked + label:before,
+.field-checkboxes.formfield .field.row .bis-checkboxes .custom-control input[type="checkbox"]:checked + label:before {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: -2px;
+  width: 1.6em;
+  height: 1.6em;
+  border: 2px solid #ccc;
+  background: #fff;
+  border-top-right-radius: 4px !important;
+  border-top-left-radius: 4px !important;
+  border-bottom-right-radius: 4px !important;
+  border-bottom-left-radius: 4px !important;
+  -webkit-box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.1) !important;
+  box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.1) !important;
+}
+.field-checkboxes.formfield .field.row .bis-checkboxes .form-check input[type="checkbox"]:not(:checked) + label:after,
+.field-checkboxes.formfield .field.row .bis-checkboxes .custom-control input[type="checkbox"]:not(:checked) + label:after,
+.field-checkboxes.formfield .field.row .bis-checkboxes .form-check input[type="checkbox"]:checked + label:after,
+.field-checkboxes.formfield .field.row .bis-checkboxes .custom-control input[type="checkbox"]:checked + label:after {
+  content: '\2713';
+  position: absolute;
+  top: 0.17em;
+  left: 0.18em;
+  font-size: 1.3em;
+  line-height: 0.8;
+  color: #09ad7e;
+  -webkit-transition: all 0.2s;
+  transition: all 0.2s;
+  font-weight: bold;
+}
+.field-checkboxes.formfield .field.row .bis-checkboxes .form-check input[type="checkbox"]:checked + label:after,
+.field-checkboxes.formfield .field.row .bis-checkboxes .custom-control input[type="checkbox"]:checked + label:after {
+  opacity: 1;
+  filter: alpha(opacity=100);
+  -webkit-transform: scale(1, 1);
+  -ms-transform: scale(1, 1);
+  transform: scale(1, 1);
+}
+.field-checkboxes.formfield .field.row .bis-checkboxes .form-check input[type="checkbox"]:disabled:not(:checked) + label:before,
+.field-checkboxes.formfield .field.row .bis-checkboxes .custom-control input[type="checkbox"]:disabled:not(:checked) + label:before,
+.field-checkboxes.formfield .field.row .bis-checkboxes .form-check input[type="checkbox"]:disabled:checked + label:before,
+.field-checkboxes.formfield .field.row .bis-checkboxes .custom-control input[type="checkbox"]:disabled:checked + label:before {
+  -webkit-box-shadow: none !important;
+  box-shadow: none !important;
+  border-color: #bbb;
+  background-color: #ddd;
+}
+.field-checkboxes.formfield .field.row .bis-checkboxes .form-check input[type="checkbox"]:disabled:checked + label:after,
+.field-checkboxes.formfield .field.row .bis-checkboxes .custom-control input[type="checkbox"]:disabled:checked + label:after {
+  color: #999;
+}
+.field-checkboxes.formfield .field.row .bis-checkboxes .form-check input[type="checkbox"]:disabled + label,
+.field-checkboxes.formfield .field.row .bis-checkboxes .custom-control input[type="checkbox"]:disabled + label {
+  color: #aaa;
+}
+.field-checkboxes.formfield .field.row .bis-checkboxes .form-check input[type="checkbox"]:not(:checked) + label:after,
+.field-checkboxes.formfield .field.row .bis-checkboxes .custom-control input[type="checkbox"]:not(:checked) + label:after {
+  opacity: 0;
+  filter: alpha(opacity=0);
+  -webkit-transform: scale(0, 0);
+  -ms-transform: scale(0, 0);
+  transform: scale(0, 0);
+}
+.field-checkboxes.formfield .field.row .bis-checkboxes .form-check input[type="checkbox"]:checked:focus + label:before,
+.field-checkboxes.formfield .field.row .bis-checkboxes .custom-control input[type="checkbox"]:checked:focus + label:before,
+.field-checkboxes.formfield .field.row .bis-checkboxes .form-check input[type="checkbox"]:not(:checked):focus + label:before,
+.field-checkboxes.formfield .field.row .bis-checkboxes .custom-control input[type="checkbox"]:not(:checked):focus + label:before {
+  border: 2px dotted blue;
+}
+.field-checkboxes.formfield .field.row .bis-checkboxes .form-check input[type="radio"]:not(:checked),
+.field-checkboxes.formfield .field.row .bis-checkboxes .custom-control input[type="radio"]:not(:checked),
+.field-checkboxes.formfield .field.row .bis-checkboxes .form-check input[type="radio"]:checked,
+.field-checkboxes.formfield .field.row .bis-checkboxes .custom-control input[type="radio"]:checked,
+.field-checkboxes.formfield .field.row .bis-checkboxes .form-check input[type="checkbox"]:not(:checked),
+.field-checkboxes.formfield .field.row .bis-checkboxes .custom-control input[type="checkbox"]:not(:checked),
+.field-checkboxes.formfield .field.row .bis-checkboxes .form-check input[type="checkbox"]:checked,
+.field-checkboxes.formfield .field.row .bis-checkboxes .custom-control input[type="checkbox"]:checked {
+  position: absolute;
+  left: -9999px;
+}
+.field-checkboxes.formfield .field.row .bis-checkboxes .form-check input[type="radio"]:not(:checked) + label,
+.field-checkboxes.formfield .field.row .bis-checkboxes .custom-control input[type="radio"]:not(:checked) + label,
+.field-checkboxes.formfield .field.row .bis-checkboxes .form-check input[type="radio"]:checked + label,
+.field-checkboxes.formfield .field.row .bis-checkboxes .custom-control input[type="radio"]:checked + label {
+  position: relative;
+  padding-left: 2.45em;
+  cursor: pointer;
+}
+.field-checkboxes.formfield .field.row .bis-checkboxes .form-check input[type="radio"]:not(:checked) + label:before,
+.field-checkboxes.formfield .field.row .bis-checkboxes .custom-control input[type="radio"]:not(:checked) + label:before,
+.field-checkboxes.formfield .field.row .bis-checkboxes .form-check input[type="radio"]:checked + label:before,
+.field-checkboxes.formfield .field.row .bis-checkboxes .custom-control input[type="radio"]:checked + label:before {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: -2px;
+  width: 24px;
+  height: 24px;
+  border: 2px solid #ccc;
+  border-top-right-radius: 20px !important;
+  border-top-left-radius: 20px !important;
+  border-bottom-right-radius: 20px !important;
+  border-bottom-left-radius: 20px !important;
+  background: #fff;
+  -webkit-box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.1) !important;
+  box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.1) !important;
+}
+.field-checkboxes.formfield .field.row .bis-checkboxes .form-check input[type="radio"]:not(:checked) + label:after,
+.field-checkboxes.formfield .field.row .bis-checkboxes .custom-control input[type="radio"]:not(:checked) + label:after,
+.field-checkboxes.formfield .field.row .bis-checkboxes .form-check input[type="radio"]:checked + label:after,
+.field-checkboxes.formfield .field.row .bis-checkboxes .custom-control input[type="radio"]:checked + label:after {
+  content: ' ';
+  position: absolute;
+  top: 2px;
+  left: 4px;
+  font-size: 3.5em;
+  line-height: 0.8;
+  background-color: #09ad7e;
+  -webkit-transition: all 0.2s;
+  transition: all 0.2s;
+  font-weight: bold;
+  width: 16px;
+  height: 16px;
+  border-top-right-radius: 16px !important;
+  border-top-left-radius: 16px !important;
+  border-bottom-right-radius: 16px !important;
+  border-bottom-left-radius: 16px !important;
+}
+.field-checkboxes.formfield .field.row .bis-checkboxes .form-check input[type="radio"]:not(:checked) + label:after,
+.field-checkboxes.formfield .field.row .bis-checkboxes .custom-control input[type="radio"]:not(:checked) + label:after {
+  opacity: 0;
+  filter: alpha(opacity=0);
+  -webkit-transform: scale(0, 0);
+  -ms-transform: scale(0, 0);
+  transform: scale(0, 0);
+}
+.field-checkboxes.formfield .field.row .bis-checkboxes .form-check input[type="radio"]:checked + label:after,
+.field-checkboxes.formfield .field.row .bis-checkboxes .custom-control input[type="radio"]:checked + label:after {
+  opacity: 1;
+  filter: alpha(opacity=100);
+  -webkit-transform: scale(1, 1);
+  -ms-transform: scale(1, 1);
+  transform: scale(1, 1);
+}
+.field-checkboxes.formfield .field.row .bis-checkboxes .form-check input[type="radio"]:disabled:not(:checked) + label:before,
+.field-checkboxes.formfield .field.row .bis-checkboxes .custom-control input[type="radio"]:disabled:not(:checked) + label:before,
+.field-checkboxes.formfield .field.row .bis-checkboxes .form-check input[type="radio"]:disabled:checked + label:before,
+.field-checkboxes.formfield .field.row .bis-checkboxes .custom-control input[type="radio"]:disabled:checked + label:before {
+  -webkit-box-shadow: none !important;
+  box-shadow: none !important;
+  border-color: #bbb;
+  background-color: #ddd;
+}
+.field-checkboxes.formfield .field.row .bis-checkboxes .form-check input[type="radio"]:disabled:checked + label:after,
+.field-checkboxes.formfield .field.row .bis-checkboxes .custom-control input[type="radio"]:disabled:checked + label:after {
+  color: #999;
+}
+.field-checkboxes.formfield .field.row .bis-checkboxes .form-check input[type="radio"]:disabled + label,
+.field-checkboxes.formfield .field.row .bis-checkboxes .custom-control input[type="radio"]:disabled + label {
+  color: #aaa;
+}
+.field-checkboxes.formfield .field.row .bis-checkboxes .form-check input[type="radio"]:checked:focus + label:before,
+.field-checkboxes.formfield .field.row .bis-checkboxes .custom-control input[type="radio"]:checked:focus + label:before,
+.field-checkboxes.formfield .field.row .bis-checkboxes .form-check input[type="radio"]:not(:checked):focus + label:before,
+.field-checkboxes.formfield .field.row .bis-checkboxes .custom-control input[type="radio"]:not(:checked):focus + label:before {
+  border: 2px dotted blue;
+}
+.field-checkboxes.formfield .field.row .bis-checkboxes .form-check label,
+.field-checkboxes.formfield .field.row .bis-checkboxes .custom-control label {
+  font-family: "Raleway", sans-serif;
+  font-weight: 500;
+  line-height: 20px;
+  /* hover style just for information */
+}
+.field-checkboxes.formfield .field.row .bis-checkboxes .form-check label:hover:before,
+.field-checkboxes.formfield .field.row .bis-checkboxes .custom-control label:hover:before {
+  border: 2px solid #4778d9 !important;
+}
+/*----------- Dropdown Formfield -----------*/
+.field-dropdown.formfield .field div .form-group select {
+  font-family: "Raleway", sans-serif;
+  font-weight: 500;
+  font-size: 15px;
+}
+/*------------- Text Formfield -------------*/
+.field-textfield.formfield .field div textarea {
+  padding: 6px !important;
+  font-family: "Open Sans", sans-serif;
+}
+.field-textfield.formfield .field > div.col-sm-12.col-12 > div.padding-t6 {
+  margin-top: 10px;
+  background-color: #b3e0ff;
+  display: flex;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  border-radius: 5px;
+  padding: 5px;
+  flex-direction: column;
+}
+.field-textfield.formfield .field > div.col-sm-12.col-12 > div.padding-t6 .text-warning {
+  color: #000 !important;
+  padding: 0px 5px 0px 5px;
+}
+.field-textfield.formfield .field > div.col-sm-12.col-12 > div.padding-t6 span.userConfirmationBox {
+  flex-basis: 50%;
+}
+.field-textfield.formfield .field > div.col-sm-12.col-12 > div.padding-t6 span.userConfirmationBox > div.form-check.mb-3,
+.field-textfield.formfield .field > div.col-sm-12.col-12 > div.padding-t6 span.userConfirmationBox div.form-check {
+  margin-top: 5px;
+  margin-left: 10px;
+  margin-bottom: 10px;
+}
+.field-textfield.formfield .field > div.col-sm-12.col-12 > div.padding-t6 span.userConfirmationBox > div.form-check.mb-3 label.form-check-label,
+.field-textfield.formfield .field > div.col-sm-12.col-12 > div.padding-t6 span.userConfirmationBox div.form-check label.form-check-label {
+  margin-bottom: 0;
+  font-family: "Raleway", sans-serif;
+  font-size: 14px;
+  font-weight: 300;
+  color: #000;
+}
+.field-textfield.formfield .field > div.col-sm-12.col-12 > div.padding-t6 div.row {
+  flex-basis: 100%;
+  display: flex !important;
+  flex-direction: row;
+}
+.field-textfield.formfield .field > div.col-sm-12.col-12 > div.padding-t6 div.row div.p-0.col-md-2.col-12 {
+  flex-basis: 260px;
+  max-width: unset;
+  margin-top: 7px;
+  font-family: "Raleway", sans-serif;
+  font-size: 14px;
+  font-weight: 300;
+  padding-left: 10px !important;
+  margin-right: 20px;
+  color: #000;
+  border-radius: 5px;
+  letter-spacing: 0.2px;
+}
+.field-textfield.formfield .field > div.col-sm-12.col-12 > div.padding-t6 div.row div.col-md-4.col-12 {
+  margin: 0px !important;
+  padding: 0px !important;
+  width: 100%;
+  flex-grow: 2;
+  max-width: unset;
+}
+/*------------ Likert Formfield ------------*/
+.field-likertscale.formfield .field div .table-responsive {
+  overflow-x: unset;
+  border-bottom: 3px solid #ddd;
+  border-radius: 5px;
+}
+.field-likertscale.formfield .field div .table-responsive table.table {
+  margin-bottom: 0px;
+}
+.field-likertscale.formfield .field div .table-responsive table.table thead {
+  color: #fff;
+  font-family: "Raleway", sans-serif;
+  font-weight: 500;
+}
+.field-likertscale.formfield .field div .table-responsive table.table thead tr th {
+  border: none;
+  font-weight: 300;
+}
+.field-likertscale.formfield .field div .table-responsive table.table thead tr th:nth-of-type(2) {
+  border-radius: 5px 0px 0px 0px;
+  border-left: none !important;
+}
+.field-likertscale.formfield .field div .table-responsive table.table thead tr th.text-center {
+  background: #00a2ff;
+  padding-left: 10px;
+  padding-right: 10px;
+  font-size: 13px;
+  border-left: 1px solid #b3e0ff;
+}
+.field-likertscale.formfield .field div .table-responsive table.table thead tr th.text-center:last-of-type {
+  border-radius: 0px 5px 0px 0px;
+}
+.field-likertscale.formfield .field div .table-responsive table.table tbody tr {
+  background: #f4fdff;
+  border-top: 1px solid #b3e0ff;
+}
+.field-likertscale.formfield .field div .table-responsive table.table tbody tr:hover {
+  background: #d7f6fd;
+}
+.field-likertscale.formfield .field div .table-responsive table.table tbody tr td {
+  font-family: "Raleway", sans-serif;
+  font-weight: 500;
+  padding-left: 15px;
+  border: none !important;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  font-size: 14px;
+  line-height: 24px;
+}
+.field-likertscale.formfield .field div .table-responsive table.table tbody tr td.text-center {
+  padding-left: 0.3rem !important;
+}
+.field-likertscale.formfield .field div .table-responsive table.table tbody tr td .form-check {
+  padding-left: 0px !important;
+}
+.field-likertscale.formfield .field div .table-responsive table.table tbody tr td .form-check input {
+  visibility: hidden;
+  /* Custom Radio */
+  /* checked mark aspect */
+  /* checked mark aspect changes */
+  /* disabled checkbox */
+  /* accessibility */
+}
+.field-likertscale.formfield .field div .table-responsive table.table tbody tr td .form-check input[type="radio"]:not(:checked),
+.field-likertscale.formfield .field div .table-responsive table.table tbody tr td .form-check input[type="radio"]:checked {
+  position: absolute;
+  left: -9999px;
+}
+.field-likertscale.formfield .field div .table-responsive table.table tbody tr td .form-check input[type="radio"]:not(:checked) + label,
+.field-likertscale.formfield .field div .table-responsive table.table tbody tr td .form-check input[type="radio"]:checked + label {
+  padding-left: 2.45em;
+  cursor: pointer;
+}
+.field-likertscale.formfield .field div .table-responsive table.table tbody tr td .form-check input[type="radio"]:not(:checked) + label:before,
+.field-likertscale.formfield .field div .table-responsive table.table tbody tr td .form-check input[type="radio"]:checked + label:before {
+  content: '';
+  position: absolute;
+  left: calc(50% - 13px);
+  top: 0;
+  width: 24px;
+  height: 24px;
+  border: 2px solid #ccc;
+  border-top-right-radius: 20px !important;
+  border-top-left-radius: 20px !important;
+  border-bottom-right-radius: 20px !important;
+  border-bottom-left-radius: 20px !important;
+  background: #fff;
+  -webkit-box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.1) !important;
+  box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.1) !important;
+}
+.field-likertscale.formfield .field div .table-responsive table.table tbody tr td .form-check input[type="radio"]:not(:checked) + label:after,
+.field-likertscale.formfield .field div .table-responsive table.table tbody tr td .form-check input[type="radio"]:checked + label:after {
+  content: ' ';
+  position: absolute;
+  top: 4px;
+  left: calc(50% - 9px);
+  font-size: 3.5em;
+  line-height: 0.8;
+  background-color: #09ad7e;
+  -webkit-transition: all 0.2s;
+  transition: all 0.2s;
+  font-weight: bold;
+  width: 16px;
+  height: 16px;
+  border-top-right-radius: 16px !important;
+  border-top-left-radius: 16px !important;
+  border-bottom-right-radius: 16px !important;
+  border-bottom-left-radius: 16px !important;
+}
+.field-likertscale.formfield .field div .table-responsive table.table tbody tr td .form-check input[type="radio"]:not(:checked) + label:after {
+  opacity: 0;
+  filter: alpha(opacity=0);
+  -webkit-transform: scale(0, 0);
+  -ms-transform: scale(0, 0);
+  transform: scale(0, 0);
+}
+.field-likertscale.formfield .field div .table-responsive table.table tbody tr td .form-check input[type="radio"]:checked + label:after {
+  opacity: 1;
+  filter: alpha(opacity=100);
+  -webkit-transform: scale(1, 1);
+  -ms-transform: scale(1, 1);
+  transform: scale(1, 1);
+}
+.field-likertscale.formfield .field div .table-responsive table.table tbody tr td .form-check input[type="radio"]:disabled:not(:checked) + label:before,
+.field-likertscale.formfield .field div .table-responsive table.table tbody tr td .form-check input[type="radio"]:disabled:checked + label:before {
+  -webkit-box-shadow: none !important;
+  box-shadow: none !important;
+  border-color: #bbb;
+  background-color: #ddd;
+}
+.field-likertscale.formfield .field div .table-responsive table.table tbody tr td .form-check input[type="radio"]:disabled:checked + label:after {
+  color: #999;
+}
+.field-likertscale.formfield .field div .table-responsive table.table tbody tr td .form-check input[type="radio"]:disabled + label {
+  color: #aaa;
+}
+.field-likertscale.formfield .field div .table-responsive table.table tbody tr td .form-check input[type="radio"]:checked:focus + label:before,
+.field-likertscale.formfield .field div .table-responsive table.table tbody tr td .form-check input[type="radio"]:not(:checked):focus + label:before {
+  border: 2px dotted blue;
+}
+.field-likertscale.formfield .field div .table-responsive table.table tbody tr td .form-check label {
+  font-family: "Raleway", sans-serif;
+  font-weight: 500;
+  line-height: 20px;
+  /* hover style just for information */
+}
+.field-likertscale.formfield .field div .table-responsive table.table tbody tr td .form-check label:hover:before {
+  border: 2px solid #4778d9 !important;
+}
+/*------------- Chart Formfield ------------*/
+.field-chart.formfield {
+  padding-right: 0px;
+}
+.field-chart.formfield .field.row {
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: -ms-flex;
+  display: flex;
+}
+.field-chart.formfield .field.row div {
+  padding-right: 15px;
+}
+.field-chart.formfield .field.row div strong {
+  font-family: "Raleway", sans-serif;
+  font-weight: 500;
+  font-size: 15px;
+}
+/*------------- Date Formfield -------------*/
+.field-mark.formfield input.form-control {
+  border-top-right-radius: 0px !important;
+  border-bottom-right-radius: 0px !important;
+}
+.field-mark.formfield i.fad {
+  font-size: 16px;
+  color: #888;
+}
+/*------------- Time Formfield -------------*/
+.field-mark.formfield input.form-control {
+  border-top-right-radius: 0px !important;
+  border-bottom-right-radius: 0px !important;
+}
+.field-mark.formfield i.fad {
+  font-size: 16px;
+  color: #888;
+}
+/*---------- Upload File Formfield ---------*/
+.field-uploadfile.formfield .field div .filepicker {
+  background-color: #f4fdff;
+  border-radius: 0 0 5px 5px;
+  display: table;
+  width: 100%;
+  min-height: 60px;
+  border-right: none !important;
+  border-left: none !important;
+  border-top: 1px solid #b3e0ff;
+  border-bottom: 3px solid #ccc;
+}
+.field-uploadfile.formfield .field div .filepicker > .dz-preview {
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: -ms-flex;
+  display: flex;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  background: transparent;
+  box-sizing: content-box;
+  width: auto;
+}
+.field-uploadfile.formfield .field div .filepicker > .dz-preview > div {
+  z-index: 300;
+}
+.field-uploadfile.formfield .field div .filepicker > .dz-preview .dz-details .dz-size {
+  margin-top: 17px;
+}
+.field-uploadfile.formfield .field div .filepicker > .dz-preview .dz-remove {
+  z-index: 1000;
+  position: relative;
+  margin-bottom: 20px;
+}
+.field-uploadfile.formfield .field div .filepicker > .dz-preview > .dz-image {
+  width: auto;
+  height: auto;
+  margin-bottom: 5px;
+}
+.field-uploadfile.formfield .field div .filepicker > .dz-preview > .dz-image img {
+  display: block;
+  margin: 0px auto;
+}
+.field-uploadfile.formfield .field div .filepicker > div i.fa {
+  color: #00a2ff !important;
+}
+.field-uploadfile.formfield .field div .filepicker > div p {
+  color: #000000;
+  font-weight: 100;
+  font-size: 12px;
+  font-family: "Raleway";
+}
+.field-uploadfile.formfield .py-2 {
+  padding-bottom: 0.5rem !important;
+  padding-top: 1rem !important;
+}
+.field-uploadfile.formfield .py-2 div {
+  padding-left: 0px;
+}
+.field-uploadfile.formfield .caption div {
+  padding-left: 0px;
+}
+.field-uploadfile.formfield .caption div small {
+  font-weight: 400;
+  font-family: "Raleway";
+  color: #a02c1d;
+  margin-left: 3px;
+}
+/*---------- Signature Formfield -----------*/
+.formfield.field-signature .description + .caption {
+  border-top: 1px solid #b3e0ff;
+  background: #f4fdff;
+}
+.formfield.field-signature .description + .caption small {
+  color: #000000 !important;
+  font-weight: 100;
+  font-size: 12px;
+  font-family: "Raleway";
+  padding: 10px 15px !important;
+  display: inline-block;
+}
+.formfield.field-signature .signatureHolder.row {
+  height: auto;
+  background: #f4fdff;
+  border-radius: 0 0 5px 5px;
+  border-bottom: 3px solid #ccc;
+  display: table !important;
+  width: 100% !important;
+}
+.formfield.field-signature .signatureHolder.row .formfield.signatureWrapper {
+  display: table !important;
+  margin-bottom: 0px !important;
+}
+.formfield.field-signature .signatureHolder.row .formfield.signatureWrapper .filepicker.dropzone {
+  width: 100% !important;
+}
+.formfield.field-signature .signatureHolder.row .formfield.signatureWrapper .filepicker.dropzone img.signImage {
+  height: 220px !important;
+  width: auto !important;
+  max-height: 220px !important;
+}
+.formfield.field-signature .signatureHolder.row .signnatureInput {
+  width: calc(100% - 13px) !important;
+}
+.formfield.field-signature .signatureHolder.row .col .filepicker.dropzone {
+  border: none;
+  background: none;
+  padding: 0px 15px 15px 15px !important;
+  height: 154px;
+}
+.formfield.field-signature .signatureHolder.row .col .filepicker.dropzone img {
+  max-height: 250px;
+  max-width: 100%;
+}
+.formfield.field-signature .signatureHolder.row .col .filepicker.dropzone img + div.dz-default {
+  display: none;
+}
+.formfield.field-signature .signatureHolder.row .col .filepicker.dropzone div:first-of-type {
+  border: 2px dashed #aaa;
+}
+.formfield.field-signature .py-2.row {
+  padding-bottom: 0.5rem !important;
+  padding-top: 1rem !important;
+  display: flex;
+}
+.formfield.field-signature .py-2.row div {
+  float: left;
+  padding-left: 3px;
+}
+.formfield.field-signature .py-2.row div button {
+  margin-left: 0px;
+  margin-right: 3px;
+}
+.formfield.field-signature .py-2.row div button.btn-success {
+  margin-right: 0px;
+}
+.formfield.field-signature .py-2.row div.text-right {
+  padding-right: 0px;
+}
+.formfield.field-signature .caption.row .col small {
+  font-weight: 400;
+  font-family: "Raleway";
+  color: #a02c1d;
+  padding-left: 3px;
+}
+/*------------- Mark Formfield -------------*/
+/*------------ Hours Formfield -------------*/
+/*------------- Task Formfield -------------*/
+.field-task.formfield .title.row {
+  background-color: #00a2ff;
+  border-radius: 3px 3px 0px 0px;
+}
+.field-task.formfield .title.row h3 {
+  margin-bottom: 0px;
+  padding-left: 15px;
+  padding-top: 10px;
+}
+.field-task.formfield .description.row {
+  background-color: #00a2ff;
+  padding-left: 15px !important;
+  padding-bottom: 10px !important;
+}
+.field-task.formfield .description.row .col {
+  margin-bottom: 0px;
+}
+.field-task.formfield .description.row .col span {
+  color: #fff;
+}
+.field-task.formfield .field.row {
+  padding: 10px 0px 5px 15px !important;
+  border-top: 1px solid #b3e0ff;
+  border-bottom: 3px solid #ccc;
+  border-radius: 0px 0px 5px 5px;
+  margin: 0px;
+  background-color: #f4fdff;
+}
+.field-task.formfield .field.row div.col-sm-3 {
+  display: inline-flex;
+  max-width: 50%;
+}
+.field-task.formfield .field.row div.col-sm-3 .form-group {
+  width: 100%;
+  padding-right: 15px;
+}
+.field-task.formfield .field.row div.col-sm-3 .form-group label {
+  font-family: "Raleway", sans-serif;
+  font-weight: 500;
+}
+.field-task.formfield .field.row div.col-12 .form-group label {
+  font-family: "Raleway", sans-serif;
+  font-weight: 500;
+}
+.field-task.formfield .field.row > div:last-of-type {
+  padding-right: 15px;
+}
+.field-task.formfield .addnew-task {
+  height: 35px;
+  padding: 0px;
+  margin-top: -5px !important;
+}
+.field-task.formfield .addnew-task button.addnewTask {
+  margin: auto 15px;
+  margin-top: 5px;
+  position: relative;
+}
+/*-------- Equipment Info Formfield --------*/
+/*------------ Diagram Formfield -----------*/
+.field-diagram.formfield .field.row {
+  padding: 15px;
+  border-top: 1px solid #b3e0ff;
+  border-bottom: 3px solid #ccc;
+  border-radius: 0px 0px 5px 5px;
+  margin: 10px 0px 0px 0px;
+  background-color: #f4fdff;
+}
+.field-diagram.formfield .field.row div.col > div {
+  border: 2px dashed #aaa;
+  box-sizing: content-box;
+}
+.field-diagram.formfield .py-2.row {
+  width: auto;
+  display: table;
+  float: right;
+  padding-top: 10px !important;
+}
+.field-diagram.formfield .caption.row {
+  display: table;
+  width: auto;
+  margin-top: 12px;
+}
+.field-diagram.formfield .caption.row small {
+  font-weight: 400;
+  font-family: "Raleway";
+  color: #a02c1d;
+  margin-left: 3px;
+}
+/*---------- Attendance Formfield ----------*/
+.field-attendance.formfield .field.row {
+  padding: 10px 15px 5px 15px;
+  border-top: 1px solid #b3e0ff;
+  border-bottom: 3px solid #ccc;
+  border-radius: 0px 0px 5px 5px;
+  margin: 10px 0px 0px 0px;
+  background-color: #f4fdff;
+}
+.field-attendance.formfield .field.row .col .row {
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: -ms-flex;
+  display: flex;
+}
+.field-attendance.formfield .field.row .col .row > div {
+  float: left;
+  padding-left: 0px;
+  padding-right: 0px;
+}
+.field-attendance.formfield .field.row .col .row > div.text-center button {
+  margin-top: 27px;
+}
+.field-attendance.formfield .field.row .col .row > div.text-center small {
+  color: #000000 !important;
+  font-weight: 100;
+  font-size: 11px;
+  font-family: "Raleway";
+  padding: 10px 0px 10px 15px !important;
+  display: inline-block;
+  margin-top: 0px;
+  text-align: center !important;
+}
+.field-attendance.formfield .field.row .col .row > div div.table-responsive table thead tr th {
+  background: #00a2ff;
+  color: #fff;
+  font-weight: 500;
+  font-family: "Raleway";
+  letter-spacing: 0.3px;
+  border: none;
+  padding-left: 10px;
+  padding-right: 10px;
+}
+.field-attendance.formfield .field.row .col .row > div div.table-responsive table tbody tr {
+  border-bottom: 1px solid #b3e0ff;
+  background: #fff;
+}
+.field-attendance.formfield .field.row .col .row > div div.table-responsive table tbody tr:hover {
+  background: #d7f6fd !important;
+}
+.field-attendance.formfield .field.row .col .row > div div.table-responsive table tbody tr td {
+  border-top: none !important;
+  padding-left: 10px;
+  padding-right: 10px;
+  font-family: "Raleway";
+}
+.field-attendance.formfield .field.row .col .row > div div.table-responsive table tbody tr td button {
+  margin-left: 10px;
+  margin-right: 0px !important;
+}
+/*---------- Assets Formfield ----------*/
+.field-assets.formfield .field.row {
+  padding: 10px 15px 5px 15px;
+  border-top: 1px solid #b3e0ff;
+  border-bottom: 3px solid #ccc;
+  border-radius: 0px 0px 5px 5px;
+  margin: 10px 0px 0px 0px;
+  background-color: #f4fdff;
+}
+.field-assets.formfield .field.row .col .row {
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: -ms-flex;
+  display: flex;
+}
+.field-assets.formfield .field.row .col .row > div {
+  float: left;
+  padding-left: 0px;
+  padding-right: 0px;
+}
+.field-assets.formfield .field.row .col .row > div.text-center button {
+  margin-top: 27px;
+}
+.field-assets.formfield .field.row .col .row > div.text-center small {
+  color: #000000 !important;
+  font-weight: 100;
+  font-size: 11px;
+  font-family: "Raleway";
+  padding: 10px 0px 10px 15px !important;
+  display: inline-block;
+  margin-top: 0px;
+  text-align: center !important;
+}
+.field-assets.formfield .field.row .col .row > div div.table-responsive table thead tr th {
+  background: #00a2ff;
+  color: #fff;
+  font-weight: 500;
+  font-family: "Raleway";
+  letter-spacing: 0.3px;
+  border: none;
+  padding-left: 10px;
+  padding-right: 10px;
+}
+.field-assets.formfield .field.row .col .row > div div.table-responsive table tbody tr {
+  border-bottom: 1px solid #b3e0ff;
+  background: #fff;
+}
+.field-assets.formfield .field.row .col .row > div div.table-responsive table tbody tr:hover {
+  background: #d7f6fd !important;
+}
+.field-assets.formfield .field.row .col .row > div div.table-responsive table tbody tr td {
+  border-top: none !important;
+  padding-left: 10px;
+  padding-right: 10px;
+  font-family: "Raleway";
+}
+.field-assets.formfield .field.row .col .row > div div.table-responsive table tbody tr td button {
+  margin-left: 10px;
+  margin-right: 0px !important;
+}
+
+/*--------- Personal Info Formfield --------*/
+.field-personalinformation.formfield .field.row {
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: -ms-flex;
+  display: flex;
+}
+.field-personalinformation.formfield .field.row > div {
+  border: 2px dashed #ddd;
+  padding: 10px 0px !important;
+  border-radius: 5px;
+  margin: 5px;
+  max-width: calc(50% - 14px);
+}
+.field-personalinformation.formfield .field.row > div:empty {
+  display: none;
+}
+.field-personalinformation.formfield .field.row > div .row div {
+  font-family: "Raleway";
+  font-weight: 500;
+  font-size: 15px;
+}
+.field-personalinformation.formfield .field.row > div .row div i.mr-3 {
+  width: 20px;
+  text-align: center;
+  margin-right: 15px !important;
+  font-size: 16px;
+}
+.field-personalinformation.formfield .field.row > div .row div i.mr-3.fa-map,
+.field-personalinformation.formfield .field.row > div .row div i.mr-3.fa-globe-americas {
+  color: #fff !important;
+}
+.field-personalinformation.formfield .field.row > div .row div i.mr-3.fa-map:before,
+.field-personalinformation.formfield .field.row > div .row div i.mr-3.fa-globe-americas:before,
+.field-personalinformation.formfield .field.row > div .row div i.mr-3.fa-map:after,
+.field-personalinformation.formfield .field.row > div .row div i.mr-3.fa-globe-americas:after {
+  color: #fff !important;
+}
+.field-personalinformation.formfield .field.row > div .row div i.fad:before {
+  color: #2ab1ff;
+}
+.field-personalinformation.formfield .field.row > div .row div i.fad:after {
+  color: #93ebff;
+  opacity: 1 !important;
+}
+/*---------- Plain Text Formfield ----------*/
+/*--------- Dynamic Text Formfield ---------*/
+/*------------- Video Formfield ------------*/
+.field-video.formfield .field > div {
+  padding-top: 0px !important;
+}
+/*------------- Image Formfield ------------*/
+.field-image.formfield .field div {
+  padding-top: 0px !important;
+}
+/*---------- Page Break Formfield ----------*/
+.field-pagebreak.formfield {
+  height: 30px;
+  background-color: #ccc;
+  padding: 0px !important;
+  margin-left: -25px;
+  margin-right: -15px;
+  box-sizing: content-box;
+  max-width: unset;
+  flex: unset;
+  width: 110%;
+}
+.field-pagebreak.formfield hr {
+  display: none;
+}
+/*---------- Row Formfield ----------*/
+.field-row {
+  margin-bottom: 0px !important;
+}
+.field-row .row {
+  margin-top: 0px !important;
+  padding: 0px !important;
+}
+/*------------ Section Formfield -----------*/
+.field-section.formfield {
+  display: grid;
+}
+.field-section.formfield .field-section.formfield {
+  box-shadow: 0px 0px 0px 1px #ddd;
+  border-radius: 5px;
+}
+.field-section.formfield hr {
+  display: none;
+}
+.field-section.formfield > div.row.title {
+  margin-left: 0px;
+  margin-right: 0px;
+  background-color: #7ed0ff;
+  padding: 15px;
+  border-bottom: 3px solid #31b4ff;
+  border-top-right-radius: 5px !important;
+  border-top-left-radius: 5px !important;
+}
+.field-section.formfield > div.row.title div.col h3 {
+  font-size: 20px;
+  font-weight: 600;
+  margin-bottom: 0px;
+}
+.field-section.formfield > div.row.description {
+  background: #f3f3f3;
+  background-color: #f3f3f3;
+  padding: 10px 7.5px 0px !important;
+  margin-top: 0px !important;
+  margin-left: 0px;
+  margin-right: 0px;
+}
+.field-section.formfield > div.row.description div.col {
+  font-size: 20px !important;
+  font-family: 'Raleway', sans-serif;
+  font-weight: 300;
+  margin-bottom: 0px !important;
+  border-bottom: 1px solid #ccc;
+  padding-bottom: 10px;
+  padding-left: 7.5px;
+  padding-right: 7.5px;
+}
+.field-section.formfield > div.field.row {
+  padding-top: 45px;
+  padding-left: 15px !important;
+  padding-right: 15px !important;
+  padding-bottom: 5px;
+  margin-top: 0px !important;
+  margin-left: 0px;
+  margin-right: 0px;
+  background-color: #f3f3f3;
+  border-bottom-right-radius: 5px !important;
+  border-bottom-left-radius: 5px !important;
+  border-bottom: 3px solid #ddd;
+}
+.field-section.formfield > div.field.row > div.formfield {
+  padding-right: 15px !important;
+}
+/*-------------- Row Formfield -------------*/
+/*--------------- Menu Holder --------------*/
+div#menuHolder {
+  position: fixed;
+  top: 0;
+  right: 0;
+  height: 100%;
+  overflow: visible;
+  margin-left: 25px;
+  width: 280px;
+  z-index: 1000;
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+}
+div#menuHolder > div {
+  height: 100%;
+  position: fixed;
+  width: 100%;
+}
+div#menuHolder > div .accordion {
+  height: 100%;
+  background: #5C5C5C;
+  border-top-right-radius: 0px !important;
+  border-top-left-radius: 0px !important;
+  border-bottom-right-radius: 0px !important;
+  border-bottom-left-radius: 0px !important;
+}
+div#menuHolder > div .accordion .list-group {
+  max-width: 280px;
+  width: 100%;
+}
+div#menuHolder > div .accordion .list-group .menu-logo {
+  border-top-right-radius: 0px !important;
+  border-top-left-radius: 0px !important;
+  border-bottom-right-radius: 0px !important;
+  border-bottom-left-radius: 0px !important;
+  text-align: center;
+}
+div#menuHolder > div .accordion .list-group .menu-logo.list-group-item {
+  padding-top: 10px;
+  padding-bottom: 10px;
+  background: #fff;
+}
+div#menuHolder > div .accordion .list-group .menu-logo img {
+  max-width: 250px;
+  max-height: 90px;
+}
+div#menuHolder > div .accordion .list-group .title {
+  padding: 0px;
+  text-align: left;
+}
+div#menuHolder > div .accordion .list-group .title h3 {
+  background-color: #000;
+  color: #fff;
+  padding: 5px 10px;
+  font-weight: bold;
+  font-stretch: extra-expanded;
+  margin-bottom: 0px !important;
+  font-size: 15px;
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+}
+div#menuHolder > div .accordion .list-group .list-group-item {
+  border: none !important;
+  border-bottom: 1px solid #fff !important;
+  padding: 0px;
+  background: #0081b8;
+  margin-bottom: 0px;
+}
+div#menuHolder > div .accordion .list-group .list-group-item a {
+  display: block;
+  padding: 4px 8px;
+  font-size: 15px;
+  font-weight: 400;
+  color: #fff;
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+}
+/*--------------- Form Footer --------------*/
+.bis-form-footer {
+  width: 100%;
+  bottom: 0px;
+  height: 50px;
+  left: 15px;
+  z-index: 1000;
+  color: #fff;
+  background-color: #000;
+  position: fixed;
+  -webkit-box-shadow: none !important;
+  box-shadow: none !important;
+}
+.bis-form-footer .bis-form-footer-left {
+  float: left;
+  width: 50%;
+  padding: 7px 10px;
+}
+.bis-form-footer .bis-form-footer-left .userinfo {
+  width: 45%;
+  float: left;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  overflow: hidden;
+}
+.bis-form-footer .bis-form-footer-left .locationinfo {
+  width: 55%;
+  float: left;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  overflow: hidden;
+}
+.bis-form-footer .bis-form-footer-left .startinfo {
+  font-size: 11px;
+  float: left;
+  width: 100%;
+}
+.bis-form-footer .bis-form-footer-right {
+  float: left;
+  width: 50%;
+  padding: 7px 10px;
+  text-align: right;
+}
+.bis-form-footer .bis-form-footer-right button {
+  padding: 6px 10px;
+  margin-left: 5px;
+}
+.bis-form-footer .bis-form-footer-right button.btn-info i.fad.fa-cloud-upload-alt:before {
+  content: "\f0c7";
+}
+.bis-form-footer .bis-form-footer-right button.btn-info i.fad.fa-cloud-upload-alt:after {
+  content: "\10f0c7";
+}
+.bis-form-footer .bis-form-footer-right button.btn-success i.fad.fa-save:before {
+  content: "\f382";
+}
+.bis-form-footer .bis-form-footer-right button.btn-success i.fad.fa-save:after {
+  content: "\10f382";
+}
+.bis-form-footer > div.col {
+  padding: 7px 10px;
+  float: left;
+  width: 30%;
+}
+.bis-form-footer > div.col h3 {
+  font-size: 14px;
+  line-height: 21px;
+  margin-bottom: 0px;
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+}
+.bis-form-footer > div.col small {
+  line-height: 15px;
+  font-size: 11px !important;
+  height: 15px;
+  display: block;
+}
+.bis-form-footer > div.col .btn {
+  padding: 7px 12px;
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-size: 14px;
+}
+.bis-form-footer > div.col.text-right {
+  width: 40% !important;
+}
+.bis-form-footer.row {
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: -ms-flex;
+  display: flex;
+}
+/*-------- Modals -----------*/
+.toast {
+  border-radius: 6px;
+  max-width: 600px;
+}
+.toast .toast-header {
+  background-color: transparent;
+  padding: 15px 20px;
+  border-bottom: 1px solid #ddd;
+}
+.toast .toast-header h3 {
+  margin-bottom: 0px;
+  color: #333;
+  font-family: "Raleway";
+  font-weight: 500;
+  font-size: 18px;
+}
+.toast .toast-header button {
+  font-size: 24px;
+  margin: 0px !important;
+  color: #333;
+  line-height: 21px;
+}
+.toast .toast-body {
+  padding: 15px 20px 0px;
+  font-size: 14px;
+  font-family: "Raleway";
+  font-weight: 300;
+  letter-spacing: 0.1px;
+}
+.toast .toast-body.text-right {
+  padding: 15px;
+}
+.toast .toast-body.text-right button {
+  height: 19px;
+  padding: 6px 12px;
+  box-sizing: content-box;
+  border: 1px solid #ccc;
+  font-size: 14px;
+  font-weight: 500 !important;
+  background-color: #fff;
+  color: black;
+}
+.toast .toast-body.text-right button i {
+  display: none;
+}
+.toast .toast-body.text-right button:hover {
+  background-color: #EAE6E6 !important;
+  border-color: #adadad !important;
+}
+@media (max-width: 1024px), only screen and (max-device-width: 1024px) and (orientation: landscape), (max-device-width: 1023px) and (orientation: landscape) {
+  .formfield button.btn {
+    font-size: 14px !important;
+  }
+  .bis-form-footer .bis-form-footer-left .userinfo {
+    width: 100%;
+  }
+  .bis-form-footer .bis-form-footer-left .startinfo {
+    width: 100%;
+  }
+  .bis-form-footer .bis-form-footer-left .locationinfo {
+    width: 100%;
+  }
+  .bis-form-footer .btn {
+    padding: 7px 12px;
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+    font-size: 14px;
+  }
+}
+@media only screen and (max-width: 991px) {
+  .container-fluid > div > div.row > div.col {
+    padding-left: 0px;
+    padding-right: 0px;
+  }
+  .container-fluid > div > div.row > div.col .padding-t20 {
+    padding-top: 0px;
+  }
+  div#elements-holder {
+    width: 100% !important;
+    max-width: unset;
+    padding-left: 10px !important;
+    margin-top: 0px !important;
+  }
+  #menuHolder {
+    display: none !important;
+  }
+  .bis-form-footer .bis-form-footer-left {
+    width: 40%;
+  }
+  .bis-form-footer .bis-form-footer-right {
+    width: 60%;
+  }
+}
+@media only screen and (min-width: 992px) {
+  .d-md-block {
+    display: block!important;
+  }
+  #elements-holder {
+    padding-left: 10px;
+  }
+}
+@media only screen and (max-width: 768px) {
+  .logo-body {
+    max-width: 200px !important;
+  }
+  /* Attendance */
+  .field-attendance.formfield .field.row .col .row > div {
+    width: 100% !important;
+    max-width: 100% !important;
+  }
+  .field-attendance.formfield .field.row .col .row > div:first-of-type div.table-responsive table {
+    margin-bottom: 0px;
+  }
+  .field-attendance.formfield .field.row .col .row > div:nth-of-type(2) div.table-responsive thead {
+    display: none;
+  }
+  .field-attendance.formfield .field.row .col .row > div div.table-responsive {
+    margin-bottom: 0px;
+  }
+  /* Footer */
+  .bis-form-footer .bis-form-footer-left {
+    width: 30%;
+  }
+  .bis-form-footer .bis-form-footer-right {
+    width: 70%;
+  }
+  .bis-form-footer .btn.btn-success i,
+  .bis-form-footer .btn.btn-info i {
+    display: none;
+  }
+}
+@media only screen and (max-width: 551px) {
+  .field-formtitle.formfield div.flex-grow-l {
+    width: calc(100% - 50px);
+  }
+  .bis-form-footer {
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: -ms-flex;
+    display: flex;
+    -webkit-flex-direction: column-reverse;
+    -ms-flex-direction: column-reverse;
+    flex-direction: column-reverse;
+    height: 80px;
+  }
+  .bis-form-footer .bis-form-footer-left {
+    width: 100%;
+  }
+  .bis-form-footer .bis-form-footer-left .userinfo {
+    width: 50%;
+  }
+  .bis-form-footer .bis-form-footer-left .startinfo {
+    display: none;
+  }
+  .bis-form-footer .bis-form-footer-left .locationinfo {
+    width: 50%;
+  }
+  .bis-form-footer .bis-form-footer-right {
+    width: 100%;
+    padding-bottom: 0px;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: -ms-flex;
+    display: flex;
+    -webkit-justify-content: space-between;
+    -ms-justify-content: space-between;
+    justify-content: space-between;
+  }
+  .bis-form-footer .btn.btn-success i,
+  .bis-form-footer .btn.btn-info i {
+    display: inline-block;
+  }
+}
+/*------------ CUSTOM STYLES ------------*/
+/*---- global ----*/
+.redFont {
+  color: red !important;
+}
+.bottomMargin60 {
+  margin-bottom: 60px !important;
+}
+.noBottomMargin.formfield,
+.NoBottomMargin.formfield,
+.noMarginBottom.formfield,
+.NoMarginBottom.formfield {
+  margin-bottom: 0px !important;
+}
+.noBottomMargin.formfield ul,
+.NoBottomMargin.formfield ul,
+.noMarginBottom.formfield ul,
+.NoMarginBottom.formfield ul,
+.noBottomMargin.formfield .col,
+.NoBottomMargin.formfield .col,
+.noMarginBottom.formfield .col,
+.NoMarginBottom.formfield .col {
+  margin-bottom: 0px !important;
+}
+.noTitle h3 > span,
+.NoTitle h3 > span {
+  display: none;
+}
+.requiredTitle h3::after {
+  content: "*";
+  color: #ff0000;
+}
+.requiredTitleDescription .description span:after {
+  content: "*";
+  color: #ff0000;
+}
+.headerText {
+  padding-left: 0px;
+  padding-right: 15px;
+  margin-bottom: 0px !important;
+  overflow: hidden;
+}
+.headerText .row {
+  margin-left: 0px;
+  margin-right: 0px;
+}
+.headerText .row.title h3 {
+  font-size: 24px;
+  padding-left: 15px;
+  padding-right: 15px;
+  width: 100%;
+  padding-bottom: 5px !important;
+  margin-bottom: 0px;
+}
+.headerText .row.description .col {
+  font-size: 16px;
+  padding-left: 15px;
+  padding-right: 15px;
+  padding-top: 20px;
+  padding-bottom: 20px;
+  background: #efefef;
+  border-bottom: 1px solid #aaa;
+  border-top: 1px solid #aaa;
+  margin-bottom: 0px;
+}
+.lowerAlphaList {
+  list-style: lower-alpha !important;
+}
+.lowerRomanList {
+  list-style: lower-roman !important;
+}
+.tallTextBox textarea {
+  height: 100px;
+}
+.marginTop {
+  margin-top: 20px;
+}
+.marginTop50 {
+  margin-top: 50px;
+}
+.noTitle.reqField .description.row .col::after {
+  content: "*";
+  color: #ff0000;
+  margin-left: 3px !important;
+  font-size: 20px;
+  line-height: 21px !important;
+  font-weight: 600;
+}
+.notBold.formfield .title h3 {
+  font-weight: 300 !important;
+}
+.bigTitle.formfield .title h3 {
+  font-size: 1.2em;
+  margin-bottom: 20px;
+}
+.descriptionBeside .description.row {
+  display: inline-block;
+  float: right;
+  margin-top: -24px !important;
+}
+.descriptionBeside .title.row {
+  margin-bottom: 3px;
+}
+.descriptionBeside .field.row {
+  display: block !important;
+}
+.courseTableHeader {
+  background: #d2e8fd;
+  text-align: center;
+  padding: 5px !important;
+  margin-bottom: 0px !important;
+  border-right: 5px solid #fff;
+}
+.tableField i.text-danger {
+  display: none !important;
+}
+/* Hide Chars remaining */
+.noCharsRemaining small.text-muted.form-text {
+  display: none !important;
+}
+/*---- sectionTitle ----*/
+.sectionTitle {
+  margin-top: 25px;
+  margin-bottom: 15px !important;
+}
+.sectionTitle h3 {
+  background-color: #f8f8f8;
+  border-radius: 15px;
+  font-size: 1.4em;
+  line-height: 30px;
+}
+.sectionTitle h3::before {
+  counter-increment: section;
+  content: counter(section);
+  width: 30px;
+  display: inline-block;
+  text-align: center;
+  height: 30px;
+  background: #A02C22;
+  border-radius: 30px;
+  line-height: 30px;
+  color: #fff;
+  font-size: 18px;
+  margin-right: 10px;
+}
+/*---- sectionRow ----*/
+.sectionRow {
+  padding-left: 40px !important;
+  padding-right: 20px !important;
+}
+/*---- warningText ----*/
+.warningText {
+  margin-top: 25px;
+}
+.warningText .title h3 {
+  background-color: #ffefef;
+  border-radius: 15px;
+  font-size: 1.4em;
+  color: #000000;
+  line-height: 30px;
+  width: 100%;
+}
+.warningText .title h3::before {
+  content: "!";
+  width: 30px;
+  display: inline-block;
+  text-align: center;
+  height: 30px;
+  background: #A02C22;
+  border-radius: 30px;
+  line-height: 30px;
+  color: #fff;
+  font-size: 18px;
+  margin-right: 5px;
+}
+.warningText .row.description {
+  margin-top: 15px;
+  margin-left: 40px;
+  color: #000;
+  font-weight: 500;
+}
+/* acknowledgement question header label */
+.formfield.field-checkboxes.acknowledgementQuestion {
+  padding-left: 0px;
+  padding-right: 0px;
+}
+.formfield.field-checkboxes.acknowledgementQuestion .title h3 {
+  font-size: 24px;
+  border-bottom: 1px solid #aaa;
+  width: 100%;
+  margin-bottom: 20px;
+  padding-bottom: 5px;
+  padding-left: 15px;
+  padding-right: 15px;
+  margin-bottom: 0px;
+}
+.formfield.field-checkboxes.acknowledgementQuestion .row.description .col {
+  font-size: 16px;
+  padding-left: 15px !important;
+  padding-right: 15px;
+  padding-top: 20px;
+  padding-bottom: 20px;
+  background: #efefef;
+  border-bottom: 1px solid #aaa;
+  margin-bottom: 0px !important;
+}
+.formfield.field-checkboxes.acknowledgementQuestion .row.field {
+  padding-left: 0px;
+  padding-right: 0px;
+}
+.formfield.field-checkboxes.acknowledgementQuestion .row.field .bis-checkboxes {
+  font-size: 18px;
+  margin-top: 0px !important;
+  margin-bottom: 0px !important;
+  padding-top: 15px;
+  padding-bottom: 15px;
+  background: #f9f9f9;
+  border-bottom: 1px solid #ddd;
+  padding-left: 15px !important;
+  padding-right: 15px !important;
+}
+.formfield.field-checkboxes.acknowledgementQuestion .row.field .bis-checkboxes label {
+  padding-left: 2.5em !important;
+}
+/* -----------------------= 5.1 single line =------------------------------*/
+.singleLineCheckbox {
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: -ms-flex;
+  display: flex;
+  -webkit-align-items: center;
+  -ms-align-items: center;
+  align-items: center;
+}
+.singleLineCheckbox.noTitle {
+  margin-top: 22px !important;
+}
+.singleLineCheckbox .title h3 {
+  line-height: 33px;
+}
+.singleLineCheckbox .row.field {
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: -ms-flex;
+  display: flex;
+  -webkit-justify-content: flex-end;
+  -ms-justify-content: flex-end;
+  justify-content: flex-end;
+  -webkit-flex-grow: 2;
+  -ms-flex-grow: 2;
+  flex-grow: 2;
+  -webkit-flex-wrap: nowrap;
+  -ms-flex-wrap: nowrap;
+  flex-wrap: nowrap;
+  margin-top: 0px !important;
+  padding-right: 10px !important;
+}
+.singleLineCheckbox .row.field .bis-checkboxes {
+  margin-left: 20px !important;
+  padding-left: 10px !important;
+  width: auto !important;
+  flex: unset;
+}
+.singleLineCheckbox .row.field .bis-checkboxes label {
+  width: 100% !important;
+  white-space: nowrap;
+}
+/*----- surveySection -----*/
+.field-section.formfield.surveySection .field.row {
+  padding-left: 0px !important;
+  padding-right: 0px !important;
+}
+.field-section.formfield.surveySection .surveyRow {
+  border-bottom: 1px solid #ddd;
+  padding: 10px 15px !important;
+}
+.field-section.formfield.surveySection .surveyRow.firstRow {
+  border-top: 1px solid #ddd;
+}
+.field-section.formfield.surveySection .surveyRow.firstRow .surveyQuestion .description {
+  text-align: right;
+  display: table;
+  float: right;
+}
+.field-section.formfield.surveySection .surveyRow.firstRow .surveyQuestion.showLabels .bis-checkboxes:first-of-type::after {
+  content: '\f00c';
+  font-family: 'Font Awesome\ 5 Free';
+  position: absolute;
+  margin-left: -2px !important;
+  top: -63px;
+  font-size: 20px !important;
+  color: #09ad7e;
+}
+.field-section.formfield.surveySection .surveyRow.firstRow .surveyQuestion.showLabels .bis-checkboxes:nth-of-type(2)::after {
+  content: '\f00d';
+  font-family: 'Font Awesome\ 5 Free';
+  position: absolute;
+  top: -63px;
+  left: 3px;
+  font-size: 20px !important;
+  color: #ff0000;
+}
+.field-section.formfield.surveySection .surveyRow.firstRow .surveyQuestion.showLabels .bis-checkboxes:last-of-type::after {
+  content: 'N/A';
+  position: absolute;
+  top: -60px;
+  font-size: 15px !important;
+  color: #333;
+  font-family: Tahoma;
+  letter-spacing: -1px !important;
+  font-weight: 500;
+}
+.field-section.formfield.surveySection .surveyRow:nth-of-type(odd) {
+  background: #fff;
+}
+.field-section.formfield.surveySection .surveyRow:nth-of-type(even) {
+  background: #f8f8f8;
+}
+.surveyQuestion.formfield.field-checkboxes .bis-checkboxes:nth-of-type(2) [type="radio"]:not(:checked) + label::after,
+.surveyQuestion.formfield.field-checkboxes .bis-checkboxes:nth-of-type(2) [type="radio"]:checked + label::after {
+  background-color: #09ad7e !important;
+}
+.surveyQuestion.formfield.field-checkboxes .bis-checkboxes:nth-of-type(2) [type="radio"]:not(:checked) + label::after,
+.surveyQuestion.formfield.field-checkboxes .bis-checkboxes:nth-of-type(2) [type="radio"]:checked + label::after {
+  background-color: #ff0000 !important;
+}
+.surveyQuestion.formfield.field-checkboxes .bis-checkboxes:last-of-type [type="radio"]:not(:checked) + label::after,
+.surveyQuestion.formfield.field-checkboxes .bis-checkboxes:last-of-type [type="radio"]:checked + label::after {
+  background-color: #888888 !important;
+}
+.surveyQuestion.formfield.field-checkboxes .bis-checkboxes:first-of-type [type="radio"]:not(:checked) + label::before,
+.surveyQuestion.formfield.field-checkboxes .bis-checkboxes:first-of-type [type="radio"]:checked + label::before {
+  background: #e6fee6 !important;
+}
+.surveyQuestion.formfield.field-checkboxes .bis-checkboxes:nth-of-type(2) [type="radio"]:not(:checked) + label::before,
+.surveyQuestion.formfield.field-checkboxes .bis-checkboxes:first-of-type [type="radio"]:checked + label::before {
+  background: #ffeaea !important;
+}
+.surveyQuestion.formfield.field-checkboxes .bis-checkboxes:first-of-type .form-check label:hover::before {
+  border: 2px solid #09ad7e !important;
+  border-color: #09ad7e !important;
+}
+.surveyQuestion.formfield.field-checkboxes .bis-checkboxes:nth-of-type(2) .form-check label:hover::before {
+  border: 2px solid #ff0000 !important;
+  border-color: #ff0000 !important;
+}
+.auditorTitle,
+.subTitle {
+  margin-top: 30px;
+}
+.auditorTitle .title span,
+.subTitle .title span {
+  color: #00558a !important;
+  font-size: 18px;
+  text-transform: uppercase;
+}
+/* Custom styles AP (please keep these at the bottom) */
+.bis-form-footer .bis-form-footer-right {
+  justify-content: center;
+}
+.bis-form-footer .btn.btn-success i,
+.bis-form-footer .btn.btn-info i {
+  display: inherit;
+}
+#elements-holder.flex-grow-1 {
+  -webkit-flex-grow: unset !important;
+  -ms-flex-grow: unset !important;
+  flex-grow: unset !important;
+}
+.hide {
+  display: none !important;
+}
+.fal,
+.far {
+  font-family: "Font Awesome 5 Pro" !important;
+}
+.popover-body span {
+  font-size: 14px;
+  font-family: Helvetica, Arial, sans-serif;
+}
+/*--------------- trafficLight for Barry --------------*/
+.trafficLight.formfield {
+  margin-bottom: 0px !important;
+  padding-top: 10px !important;
+  padding-bottom: 10px !important;
+}
+.trafficLight .field.row .bis-checkboxes:first-of-type .form-check input[type="radio"]:not(:checked) + label::after,
+.trafficLight .field.row .bis-checkboxes:first-of-type .form-check input[type="radio"]:checked + label::after {
+  background-color: #09ad7e !important;
+}
+.trafficLight .field.row .bis-checkboxes:nth-of-type(2) .form-check input[type="radio"]:not(:checked) + label::after,
+.trafficLight .field.row .bis-checkboxes:nth-of-type(2) .form-check input[type="radio"]:checked + label::after {
+  background-color: #F9CF05 !important;
+}
+.trafficLight .field.row .bis-checkboxes:nth-of-type(3) .form-check input[type="radio"]:not(:checked) + label::after,
+.trafficLight .field.row .bis-checkboxes:nth-of-type(3) .form-check input[type="radio"]:checked + label::after {
+  background-color: #ff0000 !important;
+}
+.trafficLight .field.row .bis-checkboxes:last-of-type .form-check input[type="radio"]:not(:checked) + label::after,
+.trafficLight .field.row .bis-checkboxes:last-of-type .form-check input[type="radio"]:checked + label::after {
+  background-color: #888888 !important;
+}
+.trafficLight .field.row .bis-checkboxes:first-of-type [type="radio"]:not(:checked) + label::before,
+.trafficLight .field.row .bis-checkboxes:first-of-type [type="radio"]:checked + label::before {
+  background: #e6fee6 !important;
+}
+.trafficLight .field.row .bis-checkboxes:nth-of-type(2) [type="radio"]:not(:checked) + label::before,
+.trafficLight .field.row .bis-checkboxes:nth-of-type(2) [type="radio"]:checked + label::before {
+  background: #fffdb9 !important;
+}
+.trafficLight .field.row .bis-checkboxes:nth-of-type(3) [type="radio"]:not(:checked) + label::before,
+.trafficLight .field.row .bis-checkboxes:nth-of-type(3) [type="radio"]:checked + label::before {
+  background: #ffeaea !important;
+}
+.trafficLight .field.row .bis-checkboxes:last-of-type [type="radio"]:not(:checked) + label::before,
+.trafficLight .field.row .bis-checkboxes:last-of-type [type="radio"]:checked + label::before {
+  background: #fefefe !important;
+}
+.trafficLight.field-checkboxes.formfield .field.row .bis-checkboxes:first-of-type .form-check label:hover::before {
+  border: 2px solid #09ad7e !important;
+}
+.trafficLight.field-checkboxes.formfield .field.row .bis-checkboxes:nth-of-type(2) .form-check label:hover::before {
+  border: 2px solid #F9CF05 !important;
+}
+.trafficLight.field-checkboxes.formfield .field.row .bis-checkboxes:nth-of-type(3) .form-check label:hover::before {
+  border: 2px solid #ff0000 !important;
+}
+/* Reverse */
+.trafficLight.reverse .field.row .bis-checkboxes:first-of-type .form-check input[type="radio"]:not(:checked) + label::after,
+.trafficLight.reverse .field.row .bis-checkboxes:first-of-type .form-check input[type="radio"]:checked + label::after {
+  background-color: #ff0000 !important;
+}
+.trafficLight.reverse .field.row .bis-checkboxes:nth-of-type(2) .form-check input[type="radio"]:not(:checked) + label::after,
+.trafficLight.reverse .field.row .bis-checkboxes:nth-of-type(2) .form-check input[type="radio"]:checked + label::after {
+  background-color: #F9CF05 !important;
+}
+.trafficLight.reverse .field.row .bis-checkboxes:nth-of-type(3) .form-check input[type="radio"]:not(:checked) + label::after,
+.trafficLight.reverse .field.row .bis-checkboxes:nth-of-type(3) .form-check input[type="radio"]:checked + label::after {
+  background-color: #09ad7e !important;
+}
+.trafficLight.reverse .field.row .bis-checkboxes:last-of-type .form-check input[type="radio"]:not(:checked) + label::after,
+.trafficLight.reverse .field.row .bis-checkboxes:last-of-type .form-check input[type="radio"]:checked + label::after {
+  background-color: #888888 !important;
+}
+.trafficLight.reverse .field.row .bis-checkboxes:first-of-type [type="radio"]:not(:checked) + label::before,
+.trafficLight.reverse .field.row .bis-checkboxes:first-of-type [type="radio"]:checked + label::before {
+  background: #ffeaea !important;
+}
+.trafficLight.reverse .field.row .bis-checkboxes:nth-of-type(2) [type="radio"]:not(:checked) + label::before,
+.trafficLight.reverse .field.row .bis-checkboxes:nth-of-type(2) [type="radio"]:checked + label::before {
+  background: #fffdb9 !important;
+}
+.trafficLight.reverse .field.row .bis-checkboxes:nth-of-type(3) [type="radio"]:not(:checked) + label::before,
+.trafficLight.reverse .field.row .bis-checkboxes:nth-of-type(3) [type="radio"]:checked + label::before {
+  background: #e6fee6 !important;
+}
+.trafficLight.reverse .field.row .bis-checkboxes:last-of-type [type="radio"]:not(:checked) + label::before,
+.trafficLight.reverse .field.row .bis-checkboxes:last-of-type [type="radio"]:checked + label::before {
+  background: #fefefe !important;
+}
+.trafficLight.field-checkboxes.reverse.formfield .field.row .bis-checkboxes:first-of-type .form-check label:hover::before {
+  border: 2px solid #ff0000 !important;
+}
+.trafficLight.field-checkboxes.reverse.formfield .field.row .bis-checkboxes:nth-of-type(2) .form-check label:hover::before {
+  border: 2px solid #F9CF05 !important;
+}
+.trafficLight.field-checkboxes.reverse.formfield .field.row .bis-checkboxes:nth-of-type(3) .form-check label:hover::before {
+  border: 2px solid #09ad7e !important;
+}
+.trafficLight.field-likertscale.formfield .field.row div .table-responsive table.table tbody tr td:nth-of-type(2) .form-check input[type="radio"]:not(:checked) + label::after,
+.trafficLight.field-likertscale.formfield .field.row div .table-responsive table.table tbody tr td:nth-of-type(2) .form-check input[type="radio"]:checked + label::after {
+  background-color: #09ad7e !important;
+}
+.trafficLight.field-likertscale.formfield .field.row div .table-responsive table.table tbody tr td:nth-of-type(2) .form-check label:hover::before {
+  border: 2px solid #09ad7e !important;
+}
+.trafficLight.field-likertscale.formfield .field.row div .table-responsive table.table tbody tr td:nth-of-type(2) .form-check [type="radio"]:not(:checked) + label::before,
+.trafficLight.field-likertscale.formfield .field.row div .table-responsive table.table tbody tr td:nth-of-type(2) .form-check [type="radio"]:checked + label::before {
+  background: #e6fee6 !important;
+}
+.trafficLight.field-likertscale.formfield .field.row div .table-responsive table.table tbody tr td:nth-of-type(3) .form-check input[type="radio"]:not(:checked) + label::after,
+.trafficLight.field-likertscale.formfield .field.row div .table-responsive table.table tbody tr td:nth-of-type(3) .form-check input[type="radio"]:checked + label::after {
+  background-color: #ff0000 !important;
+}
+.trafficLight.field-likertscale.formfield .field.row div .table-responsive table.table tbody tr td:nth-of-type(3) .form-check label:hover::before {
+  border: 2px solid #ff0000 !important;
+}
+.trafficLight.field-likertscale.formfield .field.row div .table-responsive table.table tbody tr td:nth-of-type(3) .form-check [type="radio"]:not(:checked) + label::before,
+.trafficLight.field-likertscale.formfield .field.row div .table-responsive table.table tbody tr td:nth-of-type(3) .form-check [type="radio"]:checked + label::before {
+  background: #ffeaea !important;
+}
+.trafficLight.field-likertscale.formfield .field.row div .table-responsive table.table tbody tr td:nth-of-type(4) .form-check input[type="radio"]:not(:checked) + label::after,
+.trafficLight.field-likertscale.formfield .field.row div .table-responsive table.table tbody tr td:nth-of-type(4) .form-check input[type="radio"]:checked + label::after {
+  background-color: #888888 !important;
+}
+.trafficLight.field-likertscale.formfield .field.row div .table-responsive table.table tbody tr td:nth-of-type(4) .form-check label:hover::before {
+  border: 2px solid #888888 !important;
+}
+.trafficLight.field-likertscale.formfield .field.row div .table-responsive table.table tbody tr td:nth-of-type(4) .form-check [type="radio"]:not(:checked) + label::before,
+.trafficLight.field-likertscale.formfield .field.row div .table-responsive table.table tbody tr td:nth-of-type(4) .form-check [type="radio"]:checked + label::before {
+  background: #fefefe !important;
+}
+/* REVERSE */
+.trafficLight.field-likertscale.reverse.formfield .field.row div .table-responsive table.table tbody tr td:nth-of-type(2) .form-check input[type="radio"]:not(:checked) + label::after,
+.trafficLight.field-likertscale.reverse.formfield .field.row div .table-responsive table.table tbody tr td:nth-of-type(2) .form-check input[type="radio"]:checked + label::after {
+  background-color: #ff0000 !important;
+}
+.trafficLight.field-likertscale.reverse.formfield .field.row div .table-responsive table.table tbody tr td:nth-of-type(2) .form-check label:hover::before {
+  border: 2px solid #ff0000 !important;
+}
+.trafficLight.field-likertscale.reverse.formfield .field.row div .table-responsive table.table tbody tr td:nth-of-type(2) .form-check [type="radio"]:not(:checked) + label::before,
+.trafficLight.field-likertscale.reverse.formfield .field.row div .table-responsive table.table tbody tr td:nth-of-type(2) .form-check [type="radio"]:checked + label::before {
+  background: #ffeaea !important;
+}
+.trafficLight.field-likertscale.reverse.formfield .field.row div .table-responsive table.table tbody tr td:nth-of-type(3) .form-check input[type="radio"]:not(:checked) + label::after,
+.trafficLight.field-likertscale.reverse.formfield .field.row div .table-responsive table.table tbody tr td:nth-of-type(3) .form-check input[type="radio"]:checked + label::after {
+  background-color: #F9CF05 !important;
+}
+.trafficLight.field-likertscale.reverse.formfield .field.row div .table-responsive table.table tbody tr td:nth-of-type(3) .form-check label:hover::before {
+  border: 2px solid #F9CF05 !important;
+}
+.trafficLight.field-likertscale.reverse.formfield .field.row div .table-responsive table.table tbody tr td:nth-of-type(3) .form-check [type="radio"]:not(:checked) + label::before,
+.trafficLight.field-likertscale.reverse.formfield .field.row div .table-responsive table.table tbody tr td:nth-of-type(3) .form-check [type="radio"]:checked + label::before {
+  background: #fffdb9 !important;
+}
+.trafficLight.field-likertscale.reverse.formfield .field.row div .table-responsive table.table tbody tr td:nth-of-type(4) .form-check input[type="radio"]:not(:checked) + label::after,
+.trafficLight.field-likertscale.reverse.formfield .field.row div .table-responsive table.table tbody tr td:nth-of-type(4) .form-check input[type="radio"]:checked + label::after {
+  background-color: #09ad7e !important;
+}
+.trafficLight.field-likertscale.reverse.formfield .field.row div .table-responsive table.table tbody tr td:nth-of-type(4) .form-check label:hover::before {
+  border: 2px solid #09ad7e !important;
+}
+.trafficLight.field-likertscale.reverse.formfield .field.row div .table-responsive table.table tbody tr td:nth-of-type(4) .form-check [type="radio"]:not(:checked) + label::before,
+.trafficLight.field-likertscale.reverse.formfield .field.row div .table-responsive table.table tbody tr td:nth-of-type(4) .form-check [type="radio"]:checked + label::before {
+  background: #e6fee6 !important;
+}
+.trafficLight.field-likertscale.reverse.formfield .field.row div .table-responsive table.table tbody tr td:nth-of-type(5) .form-check input[type="radio"]:not(:checked) + label::after,
+.trafficLight.field-likertscale.reverse.formfield .field.row div .table-responsive table.table tbody tr td:nth-of-type(5) .form-check input[type="radio"]:checked + label::after {
+  background-color: #888888 !important;
+}
+.trafficLight.field-likertscale.reverse.formfield .field.row div .table-responsive table.table tbody tr td:nth-of-type(5) .form-check label:hover::before {
+  border: 2px solid #888888 !important;
+}
+.trafficLight.field-likertscale.reverse.formfield .field.row div .table-responsive table.table tbody tr td:nth-of-type(5) .form-check [type="radio"]:not(:checked) + label::before,
+.trafficLight.field-likertscale.reverse.formfield .field.row div .table-responsive table.table tbody tr td:nth-of-type(5) .form-check [type="radio"]:checked + label::before {
+  background: #fefefe !important;
+}
+.border1 {
+  background: rgba(0, 0, 0, 0) linear-gradient(to right, #f2994a, #f2c94c);
+  border-radius: 25px;
+}
+.border2 {
+  background: linear-gradient(to right, #ffafbd, #ffc3a0);
+  border-radius: 25px;
+}
+/* CAPITALIZE INPUT - for LORNEVILLE */
+.uppercase.formfield input {
+  text-transform: uppercase;
+}
+/* INSTRUCTOR DASHBOARD */
+.instructorDashboard.formfield {
+  margin-bottom: 0px !important;
+  padding-top: 10px !important;
+  padding-bottom: 10px !important;
+}
+.instructorDashboard .field.row .bis-checkboxes:first-of-type [type="radio"]:not(:checked) + label::before,
+.instructorDashboard .field.row .bis-checkboxes:first-of-type [type="radio"]:checked + label::before {
+  background: #ff000085 !important;
+}
+.instructorDashboard .field.row .bis-checkboxes:nth-of-type(2) [type="radio"]:not(:checked) + label::before,
+.instructorDashboard .field.row .bis-checkboxes:nth-of-type(2) [type="radio"]:checked + label::before {
+  background: #fffdb9 !important;
+}
+.instructorDashboard .field.row .bis-checkboxes:nth-of-type(3) [type="radio"]:not(:checked) + label::before,
+.instructorDashboard .field.row .bis-checkboxes:nth-of-type(3) [type="radio"]:checked + label::before {
+  background: #27ff006e !important;
+}
+.instructorDashboard .field.row .bis-checkboxes:nth-of-type(4) [type="radio"]:not(:checked) + label::before,
+.instructorDashboard .field.row .bis-checkboxes:nth-of-type(4) [type="radio"]:checked + label::before {
+  background: #008c24bf !important;
+}
+.instructorDashboard .field.row .bis-checkboxes:nth-of-type(5) [type="radio"]:not(:checked) + label::before,
+.instructorDashboard .field.row .bis-checkboxes:nth-of-type(5) [type="radio"]:checked + label::before {
+  background: #ffffff !important;
+}
+.instructorDashboard .field-checkboxes.formfield .field.row .bis-checkboxes .form-check input[type="radio"]:not(:checked) + label:after,
+.field-checkboxes.formfield .field.row .bis-checkboxes .custom-control input[type="radio"]:not(:checked) + label:after,
+.field-checkboxes.formfield .field.row .bis-checkboxes .form-check input[type="radio"]:checked + label:after,
+.field-checkboxes.formfield .field.row .bis-checkboxes .custom-control input[type="radio"]:checked + label:after {
+  background-color: #000000;
+}
+@media only screen and (max-width: 768px) {
+  .descriptionBeside .description.row {
+    display: inline-block;
+    float: right;
+    margin-top: -24px !important;
+  }
+}
+.react-datepicker-popper {
+  z-index: 1001 !important;
+}
+@media only screen and (max-width: 575px) {
+  .sign-btn > div:nth-child(1) {
+    margin-bottom: 10px;
+    width: 100%;
+  }
+  .sign-btn > div:nth-child(2) {
+    display: flex;
+    justify-content: space-between;
+  }
+}
+@media only screen and (max-width: 551px) {
+  #elements-holder {
+    padding-bottom: 60px !important;
+  }
+}
+@media (min-width: 992px) and (max-width: 1433px) {
+  .footerButtonText {
+    display: none !important;
+  }
+}
+@media (max-width: 769px) {
+  #menuHolder {
+    width: 200px !important;
+  }
+}
+html,
+body {
+  overscroll-behavior-y: contain;
+}
+/*----- Linked Section -----*/
+.linkedSection > .field.row > .field-section > .description.row > .col {
+  border-bottom: none !important;
+}
+.linkedSection > .field.row > .field-section > .title.row {
+  display: none !important;
+}
+.linkedSection > .field.row > .field-section > .field.row {
+  border-bottom: none !important;
+}
+.linkedSection > .field.row > .field-section hr {
+  display: none !important;
+}
+.field-section.linkedSection .field-section.formfield {
+  box-shadow: none !important;
+}
+.field-section.linkedSection > .field.row {
+  margin-top: 0px !important;
+}
+/*---- chart w/ table header only ----*/
+.tableOnlyHeader .field.row > div > strong {
+  display: none;
+}
+.tableOnlyHeader.two .field.row > div:first-of-type > strong,
+.tableOnlyHeader.two .field.row > div:nth-of-type(2) > strong {
+  display: table !important;
+}
+.tableOnlyHeader.three .field.row > div:first-of-type > strong,
+.tableOnlyHeader.three .field.row > div:nth-of-type(2) > strong,
+.tableOnlyHeader.three .field.row > div:nth-of-type(3) > strong {
+  display: table !important;
+}
+.tableOnlyHeader.four .field.row > div.pb-3:first-of-type > strong,
+.tableOnlyHeader.four .field.row > div.pb-3:nth-of-type(2) > strong,
+.tableOnlyHeader.four .field.row > div.pb-3:nth-of-type(3) > strong,
+.tableOnlyHeader.four .field.row > div.pb-3:nth-of-type(4) > strong {
+  display: table !important;
+}
+/*---- print styles only ----*/
+@media print {
+  body {
+    background-color: #fff !important;
+    margin: 15px;
+    min-height: unset !important;
+    padding-bottom: 0px !important;
+  }
+  body #reactRoot .container-fluid > div > .row {
+    display: block !important;
+  }
+  body #reactRoot .container-fluid > div > .row #elements-holder {
+    display: block !important;
+    box-shadow: none !important;
+    padding-bottom: 0px !important;
+  }
+  body #reactRoot .container-fluid > div > .row #elements-holder .formfield {
+    float: left;
+  }
+  body #reactRoot .container-fluid > div > .row #elements-holder .formfield.noPrint {
+    display: none !important;
+  }
+  body #reactRoot .container-fluid > div > .row #elements-holder .formfield input {
+    background: #fff !important;
+  }
+  body #reactRoot .container-fluid > div > .row #elements-holder .formfield > .title.row {
+    flex-grow: 100% !important;
+    flex-basis: 100% !important;
+    flex-wrap: nowrap !important;
+  }
+  body #reactRoot .container-fluid > div > .row #elements-holder .formfield > .field.row .form-group {
+    padding-left: 0px;
+    padding-right: 0px;
+  }
+  body #reactRoot .container-fluid > div > .row #elements-holder .formfield > .field.row .form-group .rbt input.rbt-input-main.form-control.rbt-input {
+    color: #000 !important;
+  }
+  body #reactRoot .container-fluid > div > .row #elements-holder .formfield > .field.row .form-group .rbt input.rbt-input-hint {
+    display: none !important;
+  }
+  body #reactRoot .container-fluid > div > .row #elements-holder .formfield.col-sm-1,
+  body #reactRoot .container-fluid > div > .row #elements-holder .formfield.col-sm-2,
+  body #reactRoot .container-fluid > div > .row #elements-holder .formfield.col-sm-3,
+  body #reactRoot .container-fluid > div > .row #elements-holder .formfield.col-sm-4,
+  body #reactRoot .container-fluid > div > .row #elements-holder .formfield.col-sm-5,
+  body #reactRoot .container-fluid > div > .row #elements-holder .formfield.col-sm-6,
+  body #reactRoot .container-fluid > div > .row #elements-holder .formfield.col-sm-7,
+  body #reactRoot .container-fluid > div > .row #elements-holder .formfield.col-sm-8,
+  body #reactRoot .container-fluid > div > .row #elements-holder .formfield.col-sm-9,
+  body #reactRoot .container-fluid > div > .row #elements-holder .formfield.col-sm-10,
+  body #reactRoot .container-fluid > div > .row #elements-holder .formfield.col-sm-11,
+  body #reactRoot .container-fluid > div > .row #elements-holder .formfield.col-sm-12 {
+    flex: none !important;
+    display: inline-block !important;
+  }
+  body #reactRoot .container-fluid > div > .row #elements-holder .formfield.col-sm-1.noPrint,
+  body #reactRoot .container-fluid > div > .row #elements-holder .formfield.col-sm-2.noPrint,
+  body #reactRoot .container-fluid > div > .row #elements-holder .formfield.col-sm-3.noPrint,
+  body #reactRoot .container-fluid > div > .row #elements-holder .formfield.col-sm-4.noPrint,
+  body #reactRoot .container-fluid > div > .row #elements-holder .formfield.col-sm-5.noPrint,
+  body #reactRoot .container-fluid > div > .row #elements-holder .formfield.col-sm-6.noPrint,
+  body #reactRoot .container-fluid > div > .row #elements-holder .formfield.col-sm-7.noPrint,
+  body #reactRoot .container-fluid > div > .row #elements-holder .formfield.col-sm-8.noPrint,
+  body #reactRoot .container-fluid > div > .row #elements-holder .formfield.col-sm-9.noPrint,
+  body #reactRoot .container-fluid > div > .row #elements-holder .formfield.col-sm-10.noPrint,
+  body #reactRoot .container-fluid > div > .row #elements-holder .formfield.col-sm-11.noPrint,
+  body #reactRoot .container-fluid > div > .row #elements-holder .formfield.col-sm-12.noPrint {
+    display: none !important;
+  }
+  body #reactRoot .container-fluid > div > .row #elements-holder .formfield.col-sm-1.d-none.formfield,
+  body #reactRoot .container-fluid > div > .row #elements-holder .formfield.col-sm-2.d-none.formfield,
+  body #reactRoot .container-fluid > div > .row #elements-holder .formfield.col-sm-3.d-none.formfield,
+  body #reactRoot .container-fluid > div > .row #elements-holder .formfield.col-sm-4.d-none.formfield,
+  body #reactRoot .container-fluid > div > .row #elements-holder .formfield.col-sm-5.d-none.formfield,
+  body #reactRoot .container-fluid > div > .row #elements-holder .formfield.col-sm-6.d-none.formfield,
+  body #reactRoot .container-fluid > div > .row #elements-holder .formfield.col-sm-7.d-none.formfield,
+  body #reactRoot .container-fluid > div > .row #elements-holder .formfield.col-sm-8.d-none.formfield,
+  body #reactRoot .container-fluid > div > .row #elements-holder .formfield.col-sm-9.d-none.formfield,
+  body #reactRoot .container-fluid > div > .row #elements-holder .formfield.col-sm-10.d-none.formfield,
+  body #reactRoot .container-fluid > div > .row #elements-holder .formfield.col-sm-11.d-none.formfield,
+  body #reactRoot .container-fluid > div > .row #elements-holder .formfield.col-sm-12.d-none.formfield {
+    display: none !important;
+  }
+  body #reactRoot .container-fluid > div > .row #elements-holder .formfield.field-section > div.row.description {
+    background-color: #fff !important;
+    background: #fff !important;
+    border-left: 1px solid #ddd;
+    border-right: 1px solid #ddd;
+  }
+  body #reactRoot .container-fluid > div > .row #elements-holder .formfield.field-section > div.field.row {
+    background-color: #fff !important;
+    border-left: 1px solid #ddd;
+    border-right: 1px solid #ddd;
+  }
+  body #reactRoot .container-fluid > div > .row #elements-holder .formfield.field-attendance,
+  body #reactRoot .container-fluid > div > .row #elements-holder .formfield.field-chart,
+  body #reactRoot .container-fluid > div > .row #elements-holder .formfield.field-checkboxes,
+  body #reactRoot .container-fluid > div > .row #elements-holder .formfield.field-date,
+  body #reactRoot .container-fluid > div > .row #elements-holder .formfield.field-diagram,
+  body #reactRoot .container-fluid > div > .row #elements-holder .formfield.field-dropdown,
+  body #reactRoot .container-fluid > div > .row #elements-holder .formfield.field-dynamictext,
+  body #reactRoot .container-fluid > div > .row #elements-holder .formfield.field-equipment,
+  body #reactRoot .container-fluid > div > .row #elements-holder .formfield.field-equipmentinformation,
+  body #reactRoot .container-fluid > div > .row #elements-holder .formfield.field-formtitle,
+  body #reactRoot .container-fluid > div > .row #elements-holder .formfield.field-gpstracker,
+  body #reactRoot .container-fluid > div > .row #elements-holder .formfield.field-hours,
+  body #reactRoot .container-fluid > div > .row #elements-holder .formfield.field-image,
+  body #reactRoot .container-fluid > div > .row #elements-holder .formfield.field-likertscale,
+  body #reactRoot .container-fluid > div > .row #elements-holder .formfield.field-pdfdocument,
+  body #reactRoot .container-fluid > div > .row #elements-holder .formfield.field-personalinformation,
+  body #reactRoot .container-fluid > div > .row #elements-holder .formfield.field-plaintext,
+  body #reactRoot .container-fluid > div > .row #elements-holder .formfield.field-mark,
+  body #reactRoot .container-fluid > div > .row #elements-holder .formfield.field-signature,
+  body #reactRoot .container-fluid > div > .row #elements-holder .formfield.field-task,
+  body #reactRoot .container-fluid > div > .row #elements-holder .formfield.field-textfield,
+  body #reactRoot .container-fluid > div > .row #elements-holder .formfield.field-time,
+  body #reactRoot .container-fluid > div > .row #elements-holder .formfield.field-uploadfile,
+  body #reactRoot .container-fluid > div > .row #elements-holder .formfield.field-video {
+    page-break-inside: avoid !important;
+    break-inside: avoid !important;
+  }
+  body #reactRoot .container-fluid > div > .row #elements-holder .formfield.field-attendance.noPrint,
+  body #reactRoot .container-fluid > div > .row #elements-holder .formfield.field-chart.noPrint,
+  body #reactRoot .container-fluid > div > .row #elements-holder .formfield.field-checkboxes.noPrint,
+  body #reactRoot .container-fluid > div > .row #elements-holder .formfield.field-date.noPrint,
+  body #reactRoot .container-fluid > div > .row #elements-holder .formfield.field-diagram.noPrint,
+  body #reactRoot .container-fluid > div > .row #elements-holder .formfield.field-dropdown.noPrint,
+  body #reactRoot .container-fluid > div > .row #elements-holder .formfield.field-dynamictext.noPrint,
+  body #reactRoot .container-fluid > div > .row #elements-holder .formfield.field-equipment.noPrint,
+  body #reactRoot .container-fluid > div > .row #elements-holder .formfield.field-equipmentinformation.noPrint,
+  body #reactRoot .container-fluid > div > .row #elements-holder .formfield.field-formtitle.noPrint,
+  body #reactRoot .container-fluid > div > .row #elements-holder .formfield.field-gpstracker.noPrint,
+  body #reactRoot .container-fluid > div > .row #elements-holder .formfield.field-hours.noPrint,
+  body #reactRoot .container-fluid > div > .row #elements-holder .formfield.field-image.noPrint,
+  body #reactRoot .container-fluid > div > .row #elements-holder .formfield.field-likertscale.noPrint,
+  body #reactRoot .container-fluid > div > .row #elements-holder .formfield.field-pdfdocument.noPrint,
+  body #reactRoot .container-fluid > div > .row #elements-holder .formfield.field-personalinformation.noPrint,
+  body #reactRoot .container-fluid > div > .row #elements-holder .formfield.field-plaintext.noPrint,
+  body #reactRoot .container-fluid > div > .row #elements-holder .formfield.field-mark.noPrint,
+  body #reactRoot .container-fluid > div > .row #elements-holder .formfield.field-signature.noPrint,
+  body #reactRoot .container-fluid > div > .row #elements-holder .formfield.field-task.noPrint,
+  body #reactRoot .container-fluid > div > .row #elements-holder .formfield.field-textfield.noPrint,
+  body #reactRoot .container-fluid > div > .row #elements-holder .formfield.field-time.noPrint,
+  body #reactRoot .container-fluid > div > .row #elements-holder .formfield.field-uploadfile.noPrint,
+  body #reactRoot .container-fluid > div > .row #elements-holder .formfield.field-video.noPrint {
+    display: none !important;
+  }
+  body #reactRoot .container-fluid > div > .row #elements-holder .formfield.field-image .row,
+  body #reactRoot .container-fluid > div > .row #elements-holder .formfield.field-signature .row,
+  body #reactRoot .container-fluid > div > .row #elements-holder .formfield.field-gpstracker .row {
+    display: block !important;
+  }
+  body #reactRoot .container-fluid > div > .row #elements-holder .formfield.field-image.noPrint,
+  body #reactRoot .container-fluid > div > .row #elements-holder .formfield.field-signature.noPrint,
+  body #reactRoot .container-fluid > div > .row #elements-holder .formfield.field-gpstracker.noPrint {
+    display: none !important;
+  }
+  body #reactRoot .container-fluid > div > .row #elements-holder .formfield.field-likertscale .field div .table-responsive table.table thead tr th {
+    background-color: transparent !important;
+  }
+  body #reactRoot .container-fluid > div > .row #elements-holder .formfield.field-likertscale .field div .table-responsive table.table thead tr th.text-center {
+    background-color: #00a2ff !important;
+  }
+  body #reactRoot .container-fluid > div > .row #elements-holder .formfield.field-likertscale .field div .table-responsive table.table tbody tr td {
+    background-color: #f4fdff !important;
+  }
+  body #reactRoot .container-fluid > div > .row #elements-holder .formfield.field-likertscale.noPrint {
+    display: none !important;
+  }
+  body #reactRoot .container-fluid > div > .row #elements-holder .formfield.field-textfield {
+    display: inline-table;
+    height: auto;
+  }
+  body #reactRoot .container-fluid > div > .row #elements-holder .formfield.field-textfield.noPrint {
+    display: none !important;
+  }
+  body #reactRoot .container-fluid > div > .row #elements-holder .formfield.field-textfield .field.row {
+    display: inline-table !important;
+    width: 100%;
+  }
+  body #reactRoot .container-fluid > div > .row #elements-holder .formfield.field-textfield .field.row > div.col-sm-12.col-12 {
+    display: inline-table !important;
+  }
+  body #reactRoot .container-fluid > div > .row #elements-holder .formfield.field-textfield .field.row > div.col-sm-12.col-12 textarea.form-control {
+    display: inline-table !important;
+    border: none !important;
+    overflow-y: auto !important;
+    box-shadow: none !important;
+  }
+  body #reactRoot .container-fluid > div > .row #elements-holder .formfield.field-textfield .field.row > div.col-sm-12.col-12 small.text-muted.form-text {
+    display: none;
+  }
+  body #reactRoot .container-fluid > div > .row #elements-holder .formfield.field-textfield .field.row .rbt input.rbt-input-main.form-control.rbt-input {
+    color: #000 !important;
+  }
+  body #reactRoot .container-fluid > div > .row #elements-holder .formfield.field-textfield .field.row .rbt input.rbt-input-hint {
+    display: none !important;
+  }
+  body #reactRoot .container-fluid > div > .row #elements-holder .formfield.field-textfield .field.row small.text-muted.form-text {
+    display: none !important;
+  }
+  body #reactRoot .container-fluid > div > .row #elements-holder .formfield.field-pagebreak {
+    float: none;
+    page-break-after: always !important;
+    break-after: always !important;
+    background-color: transparent !important;
+  }
+  body #reactRoot .container-fluid > div > .row #elements-holder .formfield.field-pagebreak.col-sm-1,
+  body #reactRoot .container-fluid > div > .row #elements-holder .formfield.field-pagebreak.col-sm-2,
+  body #reactRoot .container-fluid > div > .row #elements-holder .formfield.field-pagebreak.col-sm-3,
+  body #reactRoot .container-fluid > div > .row #elements-holder .formfield.field-pagebreak.col-sm-4,
+  body #reactRoot .container-fluid > div > .row #elements-holder .formfield.field-pagebreak.col-sm-5,
+  body #reactRoot .container-fluid > div > .row #elements-holder .formfield.field-pagebreak.col-sm-6,
+  body #reactRoot .container-fluid > div > .row #elements-holder .formfield.field-pagebreak.col-sm-7,
+  body #reactRoot .container-fluid > div > .row #elements-holder .formfield.field-pagebreak.col-sm-8,
+  body #reactRoot .container-fluid > div > .row #elements-holder .formfield.field-pagebreak.col-sm-9,
+  body #reactRoot .container-fluid > div > .row #elements-holder .formfield.field-pagebreak.col-sm-10,
+  body #reactRoot .container-fluid > div > .row #elements-holder .formfield.field-pagebreak.col-sm-11,
+  body #reactRoot .container-fluid > div > .row #elements-holder .formfield.field-pagebreak.col-sm-12 {
+    display: block !important;
+  }
+  body #reactRoot .container-fluid > div > .row #elements-holder .formfield.field-pagebreak .row {
+    display: block !important;
+  }
+  body #reactRoot .container-fluid > div > .row #elements-holder .formfield.field-pagebreak hr {
+    display: none !important;
+  }
+  body #reactRoot .container-fluid > div > .row #elements-holder .formfield.field-signature img {
+    height: 220px !important;
+    width: auto !important;
+  }
+  body #reactRoot .container-fluid > div > .row #elements-holder .formfield.field-signature .field.signatureHolder.row {
+    min-height: unset !important;
+    height: auto !important;
+    display: table !important;
+    background: transparent;
+    border-left: 1px solid #ccc;
+    border-right: 1px solid #ccc;
+    border-top: 1px solid #ccc;
+    width: 100% !important;
+  }
+  body #reactRoot .container-fluid > div > .row #elements-holder .formfield.field-signature .field.signatureHolder.row .formfield.signatureWrapper {
+    margin-bottom: 0px !important;
+    display: table !important;
+  }
+  body #reactRoot .container-fluid > div > .row #elements-holder .formfield.field-signature .field.signatureHolder.row .formfield.signatureWrapper .filepicker.dropzone {
+    display: table !important;
+    width: 100%;
+  }
+  body #reactRoot .container-fluid > div > .row #elements-holder .formfield.field-signature .field.signatureHolder.row .formfield.signatureWrapper .filepicker.dropzone img {
+    max-height: 220px !important;
+    height: 220px !important;
+    margin: 0px auto;
+    position: relative;
+  }
+  body #reactRoot .container-fluid > div > .row #elements-holder .formfield.field-formtitle {
+    background-color: transparent !important;
+  }
+  body #reactRoot .container-fluid > div > .row #elements-holder .formfield.field-formtitle.col-sm-1,
+  body #reactRoot .container-fluid > div > .row #elements-holder .formfield.field-formtitle.col-sm-2,
+  body #reactRoot .container-fluid > div > .row #elements-holder .formfield.field-formtitle.col-sm-3,
+  body #reactRoot .container-fluid > div > .row #elements-holder .formfield.field-formtitle.col-sm-4,
+  body #reactRoot .container-fluid > div > .row #elements-holder .formfield.field-formtitle.col-sm-5,
+  body #reactRoot .container-fluid > div > .row #elements-holder .formfield.field-formtitle.col-sm-6,
+  body #reactRoot .container-fluid > div > .row #elements-holder .formfield.field-formtitle.col-sm-7,
+  body #reactRoot .container-fluid > div > .row #elements-holder .formfield.field-formtitle.col-sm-8,
+  body #reactRoot .container-fluid > div > .row #elements-holder .formfield.field-formtitle.col-sm-9,
+  body #reactRoot .container-fluid > div > .row #elements-holder .formfield.field-formtitle.col-sm-10,
+  body #reactRoot .container-fluid > div > .row #elements-holder .formfield.field-formtitle.col-sm-11,
+  body #reactRoot .container-fluid > div > .row #elements-holder .formfield.field-formtitle.col-sm-12 {
+    display: flex !important;
+  }
+  body #reactRoot .container-fluid > div > .row #elements-holder .formfield.field-task {
+    background-color: #fff !important;
+  }
+  body #reactRoot .container-fluid > div > .row #elements-holder .formfield.field-task .description.row .col {
+    border-left: 1px solid #ddd !important;
+    border-right: 1px solid #ddd !important;
+    padding: 15px 10px !important;
+  }
+  body #reactRoot .container-fluid > div > .row #elements-holder .formfield.field-task .field.row {
+    padding: 10px 0px 6px 15px !important;
+    border-radius: 0px !important;
+    border-bottom: none !important;
+    border-left: 1px solid #ddd !important;
+    border-right: 1px solid #ddd !important;
+    border-top: none !important;
+    background-color: #fff !important;
+  }
+  body #reactRoot .container-fluid > div > .row #elements-holder .formfield.field-task .field.row:last-of-type {
+    border-bottom: 1px solid #ddd !important;
+  }
+  body #reactRoot .container-fluid > div > .row #elements-holder .formfield.field-task button {
+    display: none !important;
+  }
+  body #reactRoot .container-fluid > div > .row #elements-holder .formfield.field-checkboxes .field.row .bis-checkboxes .form-check input[type="checkbox"]:not(:checked) + label:before {
+    background: #fff !important;
+  }
+  body #reactRoot .container-fluid > div > .row #elements-holder .formfield.field-likertscale .field div .table-responsive table.table tbody tr td .form-check input[type="radio"]:not(:checked) + label:before {
+    background: #fff !important;
+  }
+}
+
+  font-display: swap;
+  src: url(https://fonts.gstatic.com/s/raleway/v22/1Ptxg8zYS_SKggPN4iEgvnHyvveLxVvaorCIPrQ.ttf) format('truetype');
+}
+@font-face {
+  font-family: 'Raleway';
+  font-style: normal;
+  font-weight: 500;
+  font-display: swap;
+  src: url(https://fonts.gstatic.com/s/raleway/v22/1Ptxg8zYS_SKggPN4iEgvnHyvveLxVvoorCIPrQ.ttf) format('truetype');
+}
+@font-face {
+  font-family: 'Raleway';
+  font-style: normal;
+  font-weight: 600;
+  font-display: swap;
+  src: url(https://fonts.gstatic.com/s/raleway/v22/1Ptxg8zYS_SKggPN4iEgvnHyvveLxVsEpbCIPrQ.ttf) format('truetype');
+}
+body {
+  background-color: #ccc !important;
+  padding-bottom: 75px;
+  counter-reset: section;
+}
+.fade:not(.show) {
+  display: none;
+}
+.container-fluid > div > div.row {
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: -ms-flex;
+  display: flex;
+}
+.container-fluid > div > div.row > div.col {
+  padding-left: 25px;
+  padding-right: 25px;
+}
+.container-fluid > div > div.row > div.col .padding-t20 {
+  padding-top: 25px;
+}
+a.dropdown-item {
+  font-size: 14px;
+  font-family: "Raleway";
+}
+.form-group {
+  padding-left: 0px;
+  padding-right: 0px;
+}
+.form-group label {
+  font-family: "Raleway";
+  font-weight: 500;
+  font-size: 15px;
+}
+.form-group select {
+  font-family: "Raleway";
+  font-weight: 500;
+  font-size: 15px;
+}
+button {
+  font-family: "Raleway";
+  font-weight: 500;
+}
+.form-control {
+  display: block;
+  width: 100%;
+  height: 34px;
+  padding: 6px 12px;
+  font-family: "Raleway", sans-serif;
+  font-weight: 500;
+  font-size: 15px;
+  line-height: 1.42857;
+  color: #555;
+  background-color: #fff;
+  background-image: none;
+  border: 1px solid #ccc;
+  -webkit-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075) !important;
+  box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075) !important;
+  border-top-right-radius: 4px !important;
+  border-top-left-radius: 4px !important;
+  border-bottom-right-radius: 4px !important;
+  border-bottom-left-radius: 4px !important;
+  -webkit-transition: border-color ease-in-out 0.15s,box-shadow ease-in-out 0.15s;
+  transition: border-color ease-in-out 0.15s,box-shadow ease-in-out 0.15s;
+}
+.form-control:focus {
+  border-color: #66afe9;
+  outline: 0;
+  -webkit-box-shadow: inset 0 1px 1px rgba(0,0,0,0.075), 0 0 4px rgba(102,175,233,0.6) !important;
+  box-shadow: inset 0 1px 1px rgba(0,0,0,0.075), 0 0 4px rgba(102,175,233,0.6) !important;
+}
+.row {
+  display: block;
+}
+.grid figure img {
+  height: auto;
+}
+.redText {
+  color: #ff0000;
+}
+.textCenter {
+  text-align: center;
+}
+.dontShow {
+  display: none;
+}
+small.text-muted.form-text {
+  color: #a02c1d !important;
+  font-family: "Raleway";
+}
+.react-datepicker {
+  font-size: 1rem !important;
+}
+/*--------------- Form Canvas --------------*/
+#elements-holder {
+  background: #fff;
+  display: inline-block;
+  padding-top: 0px !important;
+  padding-left: 25px !important;
+  padding-right: 10px !important;
+  border-top-right-radius: 0px !important;
+  border-top-left-radius: 0px !important;
+  border-bottom-right-radius: 0px !important;
+  border-bottom-left-radius: 0px !important;
+  -webkit-box-shadow: none !important;
+  box-shadow: none !important;
+  -webkit-flex-grow: unset !important;
+  -ms-flex-grow: unset !important;
+  flex-grow: unset !important;
+  -webkit-transition: 1s;
+  transition: 1s;
+  -webkit-transition-delay: 0.1s;
+  transition-delay: 0.1s;
+  width: calc(100% - 280px);
+}
+#elements-holder > .row {
+  margin-left: 0px;
+  margin-right: 0px;
+  padding-top: 0px !important;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: -ms-flex;
+  display: flex;
+}
+#elements-holder > .row .logo-body {
+  margin-top: 5px;
+}
+/*------------ Formfield Global ------------*/
+.formfield {
+  margin-bottom: 40px !important;
+  padding-left: 0px;
+  padding-right: 15px;
+  float: left;
+}
+.formfield.field-invalid {
+  color: #ff0000;
+}
+.formfield.field-invalid textarea,
+.formfield.field-invalid input,
+.formfield.field-invalid select {
+  border-color: #ff0000 !important;
+}
+.formfield.field-invalid .rbt-input-hint input {
+  border: none !important;
+}
+.formfield .row {
+  margin-left: 0px;
+  margin-right: 0px;
+}
+.formfield .row .col {
+  padding-left: 0px;
+  padding-right: 0px;
+}
+.formfield .title h3 {
+  font-family: "Raleway", sans-serif;
+  font-size: 18px;
+  font-weight: 600;
+  margin-bottom: 5px;
+}
+.formfield .description .col {
+  font-family: "Raleway", sans-serif;
+  font-size: 14px;
+  font-weight: 300;
+  color: #888;
+  margin-bottom: 5px;
+  letter-spacing: 0.2px;
+}
+.formfield .description .col b,
+.formfield .description .col strong {
+  font-weight: 600 !important;
+  color: #555;
+}
+.formfield .field > div {
+  padding-left: 0px;
+  padding-right: 0px;
+}
+.formfield button.btn {
+  font-size: 14px;
+}
+/*----------- Title Formfield -----------*/
+.field-formtitle.formfield {
+  border-bottom: 3px solid #31b4ff !important;
+  background-color: #f8f9fa;
+  padding-top: 30px;
+  margin-left: -25px;
+  margin-right: -10px;
+  min-height: 77px;
+  padding-left: 25px !important;
+  padding-right: 10px;
+  box-sizing: content-box;
+  flex: unset;
+}
+.field-formtitle.formfield.text-right {
+  -webkit-flex-direction: row-reverse;
+  -ms-flex-direction: row-reverse;
+  flex-direction: row-reverse;
+}
+.field-formtitle.formfield.text-right .flex-grow-l {
+  padding-right: 10px;
+}
+.field-formtitle.formfield.text-right .logo-body {
+  margin-top: 0px !important;
+  width: 200px;
+  text-align: left;
+}
+.field-formtitle.formfield div.flex-grow-l {
+  width: calc(100% - 200px);
+}
+.field-formtitle.formfield div.flex-grow-l div.title .col h1 strong {
+  font-size: 39px !important;
+  padding-bottom: 5px !important;
+  line-height: 42px !important;
+  padding-top: 0px !important;
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+}
+.field-formtitle.formfield div.flex-grow-l div.description h2 {
+  color: #a02c1d;
+  font-weight: 300;
+  line-height: 24px;
+  font-size: 24px;
+  word-break: normal;
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+}
+.field-formtitle.formfield div.logo-body {
+  right: 22px;
+}
+.field-formtitle.formfield div.logo-body img {
+  max-height: 90px !important;
+}
+/*----------- Checkbox Formfield -----------*/
+.field-checkboxes.formfield .field.row {
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: -ms-flex;
+  display: flex;
+}
+.field-checkboxes.formfield .field.row .bis-checkboxes {
+  margin-top: 6px !important;
+  margin-bottom: 6px !important;
+}
+.field-checkboxes.formfield .field.row .bis-checkboxes .form-check,
+.field-checkboxes.formfield .field.row .bis-checkboxes .custom-control {
+  padding-left: 0px !important;
+}
+.field-checkboxes.formfield .field.row .bis-checkboxes .form-check input,
+.field-checkboxes.formfield .field.row .bis-checkboxes .custom-control input {
+  visibility: hidden;
+  /* checked mark aspect */
+  /* checked mark aspect changes */
+  /* disabled checkbox */
+  /* accessibility */
+  /* Custom Radio */
+  /* checked mark aspect */
+  /* checked mark aspect changes */
+  /* disabled checkbox */
+  /* accessibility */
+}
+.field-checkboxes.formfield .field.row .bis-checkboxes .form-check input[type="checkbox"]:not(:checked) + label,
+.field-checkboxes.formfield .field.row .bis-checkboxes .custom-control input[type="checkbox"]:not(:checked) + label,
+.field-checkboxes.formfield .field.row .bis-checkboxes .form-check input[type="checkbox"]:checked + label,
+.field-checkboxes.formfield .field.row .bis-checkboxes .custom-control input[type="checkbox"]:checked + label {
+  position: relative;
+  padding-left: 2.45em;
+  cursor: pointer;
+}
+.field-checkboxes.formfield .field.row .bis-checkboxes .form-check input[type="checkbox"]:not(:checked) + label:before,
+.field-checkboxes.formfield .field.row .bis-checkboxes .custom-control input[type="checkbox"]:not(:checked) + label:before,
+.field-checkboxes.formfield .field.row .bis-checkboxes .form-check input[type="checkbox"]:checked + label:before,
+.field-checkboxes.formfield .field.row .bis-checkboxes .custom-control input[type="checkbox"]:checked + label:before {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: -2px;
+  width: 1.6em;
+  height: 1.6em;
+  border: 2px solid #ccc;
+  background: #fff;
+  border-top-right-radius: 4px !important;
+  border-top-left-radius: 4px !important;
+  border-bottom-right-radius: 4px !important;
+  border-bottom-left-radius: 4px !important;
+  -webkit-box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.1) !important;
+  box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.1) !important;
+}
+.field-checkboxes.formfield .field.row .bis-checkboxes .form-check input[type="checkbox"]:not(:checked) + label:after,
+.field-checkboxes.formfield .field.row .bis-checkboxes .custom-control input[type="checkbox"]:not(:checked) + label:after,
+.field-checkboxes.formfield .field.row .bis-checkboxes .form-check input[type="checkbox"]:checked + label:after,
+.field-checkboxes.formfield .field.row .bis-checkboxes .custom-control input[type="checkbox"]:checked + label:after {
+  content: '\2713';
+  position: absolute;
+  top: 0.17em;
+  left: 0.18em;
+  font-size: 1.3em;
+  line-height: 0.8;
+  color: #09ad7e;
+  -webkit-transition: all 0.2s;
+  transition: all 0.2s;
+  font-weight: bold;
+}
+.field-checkboxes.formfield .field.row .bis-checkboxes .form-check input[type="checkbox"]:checked + label:after,
+.field-checkboxes.formfield .field.row .bis-checkboxes .custom-control input[type="checkbox"]:checked + label:after {
+  opacity: 1;
+  filter: alpha(opacity=100);
+  -webkit-transform: scale(1, 1);
+  -ms-transform: scale(1, 1);
+  transform: scale(1, 1);
+}
+.field-checkboxes.formfield .field.row .bis-checkboxes .form-check input[type="checkbox"]:disabled:not(:checked) + label:before,
+.field-checkboxes.formfield .field.row .bis-checkboxes .custom-control input[type="checkbox"]:disabled:not(:checked) + label:before,
+.field-checkboxes.formfield .field.row .bis-checkboxes .form-check input[type="checkbox"]:disabled:checked + label:before,
+.field-checkboxes.formfield .field.row .bis-checkboxes .custom-control input[type="checkbox"]:disabled:checked + label:before {
+  -webkit-box-shadow: none !important;
+  box-shadow: none !important;
+  border-color: #bbb;
+  background-color: #ddd;
+}
+.field-checkboxes.formfield .field.row .bis-checkboxes .form-check input[type="checkbox"]:disabled:checked + label:after,
+.field-checkboxes.formfield .field.row .bis-checkboxes .custom-control input[type="checkbox"]:disabled:checked + label:after {
+  color: #999;
+}
+.field-checkboxes.formfield .field.row .bis-checkboxes .form-check input[type="checkbox"]:disabled + label,
+.field-checkboxes.formfield .field.row .bis-checkboxes .custom-control input[type="checkbox"]:disabled + label {
+  color: #aaa;
+}
+.field-checkboxes.formfield .field.row .bis-checkboxes .form-check input[type="checkbox"]:not(:checked) + label:after,
+.field-checkboxes.formfield .field.row .bis-checkboxes .custom-control input[type="checkbox"]:not(:checked) + label:after {
+  opacity: 0;
+  filter: alpha(opacity=0);
+  -webkit-transform: scale(0, 0);
+  -ms-transform: scale(0, 0);
+  transform: scale(0, 0);
+}
+.field-checkboxes.formfield .field.row .bis-checkboxes .form-check input[type="checkbox"]:checked:focus + label:before,
+.field-checkboxes.formfield .field.row .bis-checkboxes .custom-control input[type="checkbox"]:checked:focus + label:before,
+.field-checkboxes.formfield .field.row .bis-checkboxes .form-check input[type="checkbox"]:not(:checked):focus + label:before,
+.field-checkboxes.formfield .field.row .bis-checkboxes .custom-control input[type="checkbox"]:not(:checked):focus + label:before {
+  border: 2px dotted blue;
+}
+.field-checkboxes.formfield .field.row .bis-checkboxes .form-check input[type="radio"]:not(:checked),
+.field-checkboxes.formfield .field.row .bis-checkboxes .custom-control input[type="radio"]:not(:checked),
+.field-checkboxes.formfield .field.row .bis-checkboxes .form-check input[type="radio"]:checked,
+.field-checkboxes.formfield .field.row .bis-checkboxes .custom-control input[type="radio"]:checked,
+.field-checkboxes.formfield .field.row .bis-checkboxes .form-check input[type="checkbox"]:not(:checked),
+.field-checkboxes.formfield .field.row .bis-checkboxes .custom-control input[type="checkbox"]:not(:checked),
+.field-checkboxes.formfield .field.row .bis-checkboxes .form-check input[type="checkbox"]:checked,
+.field-checkboxes.formfield .field.row .bis-checkboxes .custom-control input[type="checkbox"]:checked {
+  position: absolute;
+  left: -9999px;
+}
+.field-checkboxes.formfield .field.row .bis-checkboxes .form-check input[type="radio"]:not(:checked) + label,
+.field-checkboxes.formfield .field.row .bis-checkboxes .custom-control input[type="radio"]:not(:checked) + label,
+.field-checkboxes.formfield .field.row .bis-checkboxes .form-check input[type="radio"]:checked + label,
+.field-checkboxes.formfield .field.row .bis-checkboxes .custom-control input[type="radio"]:checked + label {
+  position: relative;
+  padding-left: 2.45em;
+  cursor: pointer;
+}
+.field-checkboxes.formfield .field.row .bis-checkboxes .form-check input[type="radio"]:not(:checked) + label:before,
+.field-checkboxes.formfield .field.row .bis-checkboxes .custom-control input[type="radio"]:not(:checked) + label:before,
+.field-checkboxes.formfield .field.row .bis-checkboxes .form-check input[type="radio"]:checked + label:before,
+.field-checkboxes.formfield .field.row .bis-checkboxes .custom-control input[type="radio"]:checked + label:before {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: -2px;
+  width: 24px;
+  height: 24px;
+  border: 2px solid #ccc;
+  border-top-right-radius: 20px !important;
+  border-top-left-radius: 20px !important;
+  border-bottom-right-radius: 20px !important;
+  border-bottom-left-radius: 20px !important;
+  background: #fff;
+  -webkit-box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.1) !important;
+  box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.1) !important;
+}
+.field-checkboxes.formfield .field.row .bis-checkboxes .form-check input[type="radio"]:not(:checked) + label:after,
+.field-checkboxes.formfield .field.row .bis-checkboxes .custom-control input[type="radio"]:not(:checked) + label:after,
+.field-checkboxes.formfield .field.row .bis-checkboxes .form-check input[type="radio"]:checked + label:after,
+.field-checkboxes.formfield .field.row .bis-checkboxes .custom-control input[type="radio"]:checked + label:after {
+  content: ' ';
+  position: absolute;
+  top: 2px;
+  left: 4px;
+  font-size: 3.5em;
+  line-height: 0.8;
+  background-color: #09ad7e;
+  -webkit-transition: all 0.2s;
+  transition: all 0.2s;
+  font-weight: bold;
+  width: 16px;
+  height: 16px;
+  border-top-right-radius: 16px !important;
+  border-top-left-radius: 16px !important;
+  border-bottom-right-radius: 16px !important;
+  border-bottom-left-radius: 16px !important;
+}
+.field-checkboxes.formfield .field.row .bis-checkboxes .form-check input[type="radio"]:not(:checked) + label:after,
+.field-checkboxes.formfield .field.row .bis-checkboxes .custom-control input[type="radio"]:not(:checked) + label:after {
+  opacity: 0;
+  filter: alpha(opacity=0);
+  -webkit-transform: scale(0, 0);
+  -ms-transform: scale(0, 0);
+  transform: scale(0, 0);
+}
+.field-checkboxes.formfield .field.row .bis-checkboxes .form-check input[type="radio"]:checked + label:after,
+.field-checkboxes.formfield .field.row .bis-checkboxes .custom-control input[type="radio"]:checked + label:after {
+  opacity: 1;
+  filter: alpha(opacity=100);
+  -webkit-transform: scale(1, 1);
+  -ms-transform: scale(1, 1);
+  transform: scale(1, 1);
+}
+.field-checkboxes.formfield .field.row .bis-checkboxes .form-check input[type="radio"]:disabled:not(:checked) + label:before,
+.field-checkboxes.formfield .field.row .bis-checkboxes .custom-control input[type="radio"]:disabled:not(:checked) + label:before,
+.field-checkboxes.formfield .field.row .bis-checkboxes .form-check input[type="radio"]:disabled:checked + label:before,
+.field-checkboxes.formfield .field.row .bis-checkboxes .custom-control input[type="radio"]:disabled:checked + label:before {
+  -webkit-box-shadow: none !important;
+  box-shadow: none !important;
+  border-color: #bbb;
+  background-color: #ddd;
+}
+.field-checkboxes.formfield .field.row .bis-checkboxes .form-check input[type="radio"]:disabled:checked + label:after,
+.field-checkboxes.formfield .field.row .bis-checkboxes .custom-control input[type="radio"]:disabled:checked + label:after {
+  color: #999;
+}
+.field-checkboxes.formfield .field.row .bis-checkboxes .form-check input[type="radio"]:disabled + label,
+.field-checkboxes.formfield .field.row .bis-checkboxes .custom-control input[type="radio"]:disabled + label {
+  color: #aaa;
+}
+.field-checkboxes.formfield .field.row .bis-checkboxes .form-check input[type="radio"]:checked:focus + label:before,
+.field-checkboxes.formfield .field.row .bis-checkboxes .custom-control input[type="radio"]:checked:focus + label:before,
+.field-checkboxes.formfield .field.row .bis-checkboxes .form-check input[type="radio"]:not(:checked):focus + label:before,
+.field-checkboxes.formfield .field.row .bis-checkboxes .custom-control input[type="radio"]:not(:checked):focus + label:before {
+  border: 2px dotted blue;
+}
+.field-checkboxes.formfield .field.row .bis-checkboxes .form-check label,
+.field-checkboxes.formfield .field.row .bis-checkboxes .custom-control label {
+  font-family: "Raleway", sans-serif;
+  font-weight: 500;
+  line-height: 20px;
+  /* hover style just for information */
+}
+.field-checkboxes.formfield .field.row .bis-checkboxes .form-check label:hover:before,
+.field-checkboxes.formfield .field.row .bis-checkboxes .custom-control label:hover:before {
+  border: 2px solid #4778d9 !important;
+}
+/*----------- Dropdown Formfield -----------*/
+.field-dropdown.formfield .field div .form-group select {
+  font-family: "Raleway", sans-serif;
+  font-weight: 500;
+  font-size: 15px;
+}
+/*------------- Text Formfield -------------*/
+.field-textfield.formfield .field div textarea {
+  padding: 6px !important;
+  font-family: "Open Sans", sans-serif;
+}
+.field-textfield.formfield .field > div.col-sm-12.col-12 > div.padding-t6 {
+  margin-top: 10px;
+  background-color: #b3e0ff;
+  display: flex;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  border-radius: 5px;
+  padding: 5px;
+  flex-direction: column;
+}
+.field-textfield.formfield .field > div.col-sm-12.col-12 > div.padding-t6 .text-warning {
+  color: #000 !important;
+  padding: 0px 5px 0px 5px;
+}
+.field-textfield.formfield .field > div.col-sm-12.col-12 > div.padding-t6 span.userConfirmationBox {
+  flex-basis: 50%;
+}
+.field-textfield.formfield .field > div.col-sm-12.col-12 > div.padding-t6 span.userConfirmationBox > div.form-check.mb-3,
+.field-textfield.formfield .field > div.col-sm-12.col-12 > div.padding-t6 span.userConfirmationBox div.form-check {
+  margin-top: 5px;
+  margin-left: 10px;
+  margin-bottom: 10px;
+}
+.field-textfield.formfield .field > div.col-sm-12.col-12 > div.padding-t6 span.userConfirmationBox > div.form-check.mb-3 label.form-check-label,
+.field-textfield.formfield .field > div.col-sm-12.col-12 > div.padding-t6 span.userConfirmationBox div.form-check label.form-check-label {
+  margin-bottom: 0;
+  font-family: "Raleway", sans-serif;
+  font-size: 14px;
+  font-weight: 300;
+  color: #000;
+}
+.field-textfield.formfield .field > div.col-sm-12.col-12 > div.padding-t6 div.row {
+  flex-basis: 100%;
+  display: flex !important;
+  flex-direction: row;
+}
+.field-textfield.formfield .field > div.col-sm-12.col-12 > div.padding-t6 div.row div.p-0.col-md-2.col-12 {
+  flex-basis: 260px;
+  max-width: unset;
+  margin-top: 7px;
+  font-family: "Raleway", sans-serif;
+  font-size: 14px;
+  font-weight: 300;
+  padding-left: 10px !important;
+  margin-right: 20px;
+  color: #000;
+  border-radius: 5px;
+  letter-spacing: 0.2px;
+}
+.field-textfield.formfield .field > div.col-sm-12.col-12 > div.padding-t6 div.row div.col-md-4.col-12 {
+  margin: 0px !important;
+  padding: 0px !important;
+  width: 100%;
+  flex-grow: 2;
+  max-width: unset;
+}
+/*------------ Likert Formfield ------------*/
+.field-likertscale.formfield .field div .table-responsive {
+  overflow-x: unset;
+  border-bottom: 3px solid #ddd;
+  border-radius: 5px;
+}
+.field-likertscale.formfield .field div .table-responsive table.table {
+  margin-bottom: 0px;
+}
+.field-likertscale.formfield .field div .table-responsive table.table thead {
+  color: #fff;
+  font-family: "Raleway", sans-serif;
+  font-weight: 500;
+}
+.field-likertscale.formfield .field div .table-responsive table.table thead tr th {
+  border: none;
+  font-weight: 300;
+}
+.field-likertscale.formfield .field div .table-responsive table.table thead tr th:nth-of-type(2) {
+  border-radius: 5px 0px 0px 0px;
+  border-left: none !important;
+}
+.field-likertscale.formfield .field div .table-responsive table.table thead tr th.text-center {
+  background: #00a2ff;
+  padding-left: 10px;
+  padding-right: 10px;
+  font-size: 13px;
+  border-left: 1px solid #b3e0ff;
+}
+.field-likertscale.formfield .field div .table-responsive table.table thead tr th.text-center:last-of-type {
+  border-radius: 0px 5px 0px 0px;
+}
+.field-likertscale.formfield .field div .table-responsive table.table tbody tr {
+  background: #f4fdff;
+  border-top: 1px solid #b3e0ff;
+}
+.field-likertscale.formfield .field div .table-responsive table.table tbody tr:hover {
+  background: #d7f6fd;
+}
+.field-likertscale.formfield .field div .table-responsive table.table tbody tr td {
+  font-family: "Raleway", sans-serif;
+  font-weight: 500;
+  padding-left: 15px;
+  border: none !important;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  font-size: 14px;
+  line-height: 24px;
+}
+.field-likertscale.formfield .field div .table-responsive table.table tbody tr td.text-center {
+  padding-left: 0.3rem !important;
+}
+.field-likertscale.formfield .field div .table-responsive table.table tbody tr td .form-check {
+  padding-left: 0px !important;
+}
+.field-likertscale.formfield .field div .table-responsive table.table tbody tr td .form-check input {
+  visibility: hidden;
+  /* Custom Radio */
+  /* checked mark aspect */
+  /* checked mark aspect changes */
+  /* disabled checkbox */
+  /* accessibility */
+}
+.field-likertscale.formfield .field div .table-responsive table.table tbody tr td .form-check input[type="radio"]:not(:checked),
+.field-likertscale.formfield .field div .table-responsive table.table tbody tr td .form-check input[type="radio"]:checked {
+  position: absolute;
+  left: -9999px;
+}
+.field-likertscale.formfield .field div .table-responsive table.table tbody tr td .form-check input[type="radio"]:not(:checked) + label,
+.field-likertscale.formfield .field div .table-responsive table.table tbody tr td .form-check input[type="radio"]:checked + label {
+  padding-left: 2.45em;
+  cursor: pointer;
+}
+.field-likertscale.formfield .field div .table-responsive table.table tbody tr td .form-check input[type="radio"]:not(:checked) + label:before,
+.field-likertscale.formfield .field div .table-responsive table.table tbody tr td .form-check input[type="radio"]:checked + label:before {
+  content: '';
+  position: absolute;
+  left: calc(50% - 13px);
+  top: 0;
+  width: 24px;
+  height: 24px;
+  border: 2px solid #ccc;
+  border-top-right-radius: 20px !important;
+  border-top-left-radius: 20px !important;
+  border-bottom-right-radius: 20px !important;
+  border-bottom-left-radius: 20px !important;
+  background: #fff;
+  -webkit-box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.1) !important;
+  box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.1) !important;
+}
+.field-likertscale.formfield .field div .table-responsive table.table tbody tr td .form-check input[type="radio"]:not(:checked) + label:after,
+.field-likertscale.formfield .field div .table-responsive table.table tbody tr td .form-check input[type="radio"]:checked + label:after {
+  content: ' ';
+  position: absolute;
+  top: 4px;
+  left: calc(50% - 9px);
+  font-size: 3.5em;
+  line-height: 0.8;
+  background-color: #09ad7e;
+  -webkit-transition: all 0.2s;
+  transition: all 0.2s;
+  font-weight: bold;
+  width: 16px;
+  height: 16px;
+  border-top-right-radius: 16px !important;
+  border-top-left-radius: 16px !important;
+  border-bottom-right-radius: 16px !important;
+  border-bottom-left-radius: 16px !important;
+}
+.field-likertscale.formfield .field div .table-responsive table.table tbody tr td .form-check input[type="radio"]:not(:checked) + label:after {
+  opacity: 0;
+  filter: alpha(opacity=0);
+  -webkit-transform: scale(0, 0);
+  -ms-transform: scale(0, 0);
+  transform: scale(0, 0);
+}
+.field-likertscale.formfield .field div .table-responsive table.table tbody tr td .form-check input[type="radio"]:checked + label:after {
+  opacity: 1;
+  filter: alpha(opacity=100);
+  -webkit-transform: scale(1, 1);
+  -ms-transform: scale(1, 1);
+  transform: scale(1, 1);
+}
+.field-likertscale.formfield .field div .table-responsive table.table tbody tr td .form-check input[type="radio"]:disabled:not(:checked) + label:before,
+.field-likertscale.formfield .field div .table-responsive table.table tbody tr td .form-check input[type="radio"]:disabled:checked + label:before {
+  -webkit-box-shadow: none !important;
+  box-shadow: none !important;
+  border-color: #bbb;
+  background-color: #ddd;
+}
+.field-likertscale.formfield .field div .table-responsive table.table tbody tr td .form-check input[type="radio"]:disabled:checked + label:after {
+  color: #999;
+}
+.field-likertscale.formfield .field div .table-responsive table.table tbody tr td .form-check input[type="radio"]:disabled + label {
+  color: #aaa;
+}
+.field-likertscale.formfield .field div .table-responsive table.table tbody tr td .form-check input[type="radio"]:checked:focus + label:before,
+.field-likertscale.formfield .field div .table-responsive table.table tbody tr td .form-check input[type="radio"]:not(:checked):focus + label:before {
+  border: 2px dotted blue;
+}
+.field-likertscale.formfield .field div .table-responsive table.table tbody tr td .form-check label {
+  font-family: "Raleway", sans-serif;
+  font-weight: 500;
+  line-height: 20px;
+  /* hover style just for information */
+}
+.field-likertscale.formfield .field div .table-responsive table.table tbody tr td .form-check label:hover:before {
+  border: 2px solid #4778d9 !important;
+}
+/*------------- Chart Formfield ------------*/
+.field-chart.formfield {
+  padding-right: 0px;
+}
+.field-chart.formfield .field.row {
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: -ms-flex;
+  display: flex;
+}
+.field-chart.formfield .field.row div {
+  padding-right: 15px;
+}
+.field-chart.formfield .field.row div strong {
+  font-family: "Raleway", sans-serif;
+  font-weight: 500;
+  font-size: 15px;
+}
+/*------------- Date Formfield -------------*/
+.field-mark.formfield input.form-control {
+  border-top-right-radius: 0px !important;
+  border-bottom-right-radius: 0px !important;
+}
+.field-mark.formfield i.fad {
+  font-size: 16px;
+  color: #888;
+}
+/*------------- Time Formfield -------------*/
+.field-mark.formfield input.form-control {
+  border-top-right-radius: 0px !important;
+  border-bottom-right-radius: 0px !important;
+}
+.field-mark.formfield i.fad {
+  font-size: 16px;
+  color: #888;
+}
+/*---------- Upload File Formfield ---------*/
+.field-uploadfile.formfield .field div .filepicker {
+  background-color: #f4fdff;
+  border-radius: 0 0 5px 5px;
+  display: table;
+  width: 100%;
+  min-height: 60px;
+  border-right: none !important;
+  border-left: none !important;
+  border-top: 1px solid #b3e0ff;
+  border-bottom: 3px solid #ccc;
+}
+.field-uploadfile.formfield .field div .filepicker > .dz-preview {
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: -ms-flex;
+  display: flex;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  background: transparent;
+  box-sizing: content-box;
+  width: auto;
+}
+.field-uploadfile.formfield .field div .filepicker > .dz-preview > div {
+  z-index: 300;
+}
+.field-uploadfile.formfield .field div .filepicker > .dz-preview .dz-details .dz-size {
+  margin-top: 17px;
+}
+.field-uploadfile.formfield .field div .filepicker > .dz-preview .dz-remove {
+  z-index: 1000;
+  position: relative;
+  margin-bottom: 20px;
+}
+.field-uploadfile.formfield .field div .filepicker > .dz-preview > .dz-image {
+  width: auto;
+  height: auto;
+  margin-bottom: 5px;
+}
+.field-uploadfile.formfield .field div .filepicker > .dz-preview > .dz-image img {
+  display: block;
+  margin: 0px auto;
+}
+.field-uploadfile.formfield .field div .filepicker > div i.fa {
+  color: #00a2ff !important;
+}
+.field-uploadfile.formfield .field div .filepicker > div p {
+  color: #000000;
+  font-weight: 100;
+  font-size: 12px;
+  font-family: "Raleway";
+}
+.field-uploadfile.formfield .py-2 {
+  padding-bottom: 0.5rem !important;
+  padding-top: 1rem !important;
+}
+.field-uploadfile.formfield .py-2 div {
+  padding-left: 0px;
+}
+.field-uploadfile.formfield .caption div {
+  padding-left: 0px;
+}
+.field-uploadfile.formfield .caption div small {
+  font-weight: 400;
+  font-family: "Raleway";
+  color: #a02c1d;
+  margin-left: 3px;
+}
+/*---------- Signature Formfield -----------*/
+.formfield.field-signature .description + .caption {
+  border-top: 1px solid #b3e0ff;
+  background: #f4fdff;
+}
+.formfield.field-signature .description + .caption small {
+  color: #000000 !important;
+  font-weight: 100;
+  font-size: 12px;
+  font-family: "Raleway";
+  padding: 10px 15px !important;
+  display: inline-block;
+}
+.formfield.field-signature .signatureHolder.row {
+  height: auto;
+  background: #f4fdff;
+  border-radius: 0 0 5px 5px;
+  border-bottom: 3px solid #ccc;
+  display: table !important;
+  width: 100% !important;
+}
+.formfield.field-signature .signatureHolder.row .formfield.signatureWrapper {
+  display: table !important;
+  margin-bottom: 0px !important;
+}
+.formfield.field-signature .signatureHolder.row .formfield.signatureWrapper .filepicker.dropzone {
+  width: 100% !important;
+}
+.formfield.field-signature .signatureHolder.row .formfield.signatureWrapper .filepicker.dropzone img.signImage {
+  height: 220px !important;
+  width: auto !important;
+  max-height: 220px !important;
+}
+.formfield.field-signature .signatureHolder.row .signnatureInput {
+  width: calc(100% - 13px) !important;
+}
+.formfield.field-signature .signatureHolder.row .col .filepicker.dropzone {
+  border: none;
+  background: none;
+  padding: 0px 15px 15px 15px !important;
+  height: 154px;
+}
+.formfield.field-signature .signatureHolder.row .col .filepicker.dropzone img {
+  max-height: 250px;
+  max-width: 100%;
+}
+.formfield.field-signature .signatureHolder.row .col .filepicker.dropzone img + div.dz-default {
+  display: none;
+}
+.formfield.field-signature .signatureHolder.row .col .filepicker.dropzone div:first-of-type {
+  border: 2px dashed #aaa;
+}
+.formfield.field-signature .py-2.row {
+  padding-bottom: 0.5rem !important;
+  padding-top: 1rem !important;
+  display: flex;
+}
+.formfield.field-signature .py-2.row div {
+  float: left;
+  padding-left: 3px;
+}
+.formfield.field-signature .py-2.row div button {
+  margin-left: 0px;
+  margin-right: 3px;
+}
+.formfield.field-signature .py-2.row div button.btn-success {
+  margin-right: 0px;
+}
+.formfield.field-signature .py-2.row div.text-right {
+  padding-right: 0px;
+}
+.formfield.field-signature .caption.row .col small {
+  font-weight: 400;
+  font-family: "Raleway";
+  color: #a02c1d;
+  padding-left: 3px;
+}
+/*------------- Mark Formfield -------------*/
+/*------------ Hours Formfield -------------*/
+/*------------- Task Formfield -------------*/
+.field-task.formfield .title.row {
+  background-color: #00a2ff;
+  border-radius: 3px 3px 0px 0px;
+}
+.field-task.formfield .title.row h3 {
+  margin-bottom: 0px;
+  padding-left: 15px;
+  padding-top: 10px;
+}
+.field-task.formfield .description.row {
+  background-color: #00a2ff;
+  padding-left: 15px !important;
+  padding-bottom: 10px !important;
+}
+.field-task.formfield .description.row .col {
+  margin-bottom: 0px;
+}
+.field-task.formfield .description.row .col span {
+  color: #fff;
+}
+.field-task.formfield .field.row {
+  padding: 10px 0px 5px 15px !important;
+  border-top: 1px solid #b3e0ff;
+  border-bottom: 3px solid #ccc;
+  border-radius: 0px 0px 5px 5px;
+  margin: 0px;
+  background-color: #f4fdff;
+}
+.field-task.formfield .field.row div.col-sm-3 {
+  display: inline-flex;
+  max-width: 50%;
+}
+.field-task.formfield .field.row div.col-sm-3 .form-group {
+  width: 100%;
+  padding-right: 15px;
+}
+.field-task.formfield .field.row div.col-sm-3 .form-group label {
+  font-family: "Raleway", sans-serif;
+  font-weight: 500;
+}
+.field-task.formfield .field.row div.col-12 .form-group label {
+  font-family: "Raleway", sans-serif;
+  font-weight: 500;
+}
+.field-task.formfield .field.row > div:last-of-type {
+  padding-right: 15px;
+}
+.field-task.formfield .addnew-task {
+  height: 35px;
+  padding: 0px;
+  margin-top: -5px !important;
+}
+.field-task.formfield .addnew-task button.addnewTask {
+  margin: auto 15px;
+  margin-top: 5px;
+  position: relative;
+}
+/*-------- Equipment Info Formfield --------*/
+/*------------ Diagram Formfield -----------*/
+.field-diagram.formfield .field.row {
+  padding: 15px;
+  border-top: 1px solid #b3e0ff;
+  border-bottom: 3px solid #ccc;
+  border-radius: 0px 0px 5px 5px;
+  margin: 10px 0px 0px 0px;
+  background-color: #f4fdff;
+}
+.field-diagram.formfield .field.row div.col > div {
+  border: 2px dashed #aaa;
+  box-sizing: content-box;
+}
+.field-diagram.formfield .py-2.row {
+  width: auto;
+  display: table;
+  float: right;
+  padding-top: 10px !important;
+}
+.field-diagram.formfield .caption.row {
+  display: table;
+  width: auto;
+  margin-top: 12px;
+}
+.field-diagram.formfield .caption.row small {
+  font-weight: 400;
+  font-family: "Raleway";
+  color: #a02c1d;
+  margin-left: 3px;
+}
+/*---------- Attendance Formfield ----------*/
+.field-attendance.formfield .field.row {
+  padding: 10px 15px 5px 15px;
+  border-top: 1px solid #b3e0ff;
+  border-bottom: 3px solid #ccc;
+  border-radius: 0px 0px 5px 5px;
+  margin: 10px 0px 0px 0px;
+  background-color: #f4fdff;
+}
+.field-attendance.formfield .field.row .col .row {
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: -ms-flex;
+  display: flex;
+}
+.field-attendance.formfield .field.row .col .row > div {
+  float: left;
+  padding-left: 0px;
+  padding-right: 0px;
+}
+.field-attendance.formfield .field.row .col .row > div.text-center button {
+  margin-top: 27px;
+}
+.field-attendance.formfield .field.row .col .row > div.text-center small {
+  color: #000000 !important;
+  font-weight: 100;
+  font-size: 11px;
+  font-family: "Raleway";
+  padding: 10px 0px 10px 15px !important;
+  display: inline-block;
+  margin-top: 0px;
+  text-align: center !important;
+}
+.field-attendance.formfield .field.row .col .row > div div.table-responsive table thead tr th {
+  background: #00a2ff;
+  color: #fff;
+  font-weight: 500;
+  font-family: "Raleway";
+  letter-spacing: 0.3px;
+  border: none;
+  padding-left: 10px;
+  padding-right: 10px;
+}
+.field-attendance.formfield .field.row .col .row > div div.table-responsive table tbody tr {
+  border-bottom: 1px solid #b3e0ff;
+  background: #fff;
+}
+.field-attendance.formfield .field.row .col .row > div div.table-responsive table tbody tr:hover {
+  background: #d7f6fd !important;
+}
+.field-attendance.formfield .field.row .col .row > div div.table-responsive table tbody tr td {
+  border-top: none !important;
+  padding-left: 10px;
+  padding-right: 10px;
+  font-family: "Raleway";
+}
+.field-attendance.formfield .field.row .col .row > div div.table-responsive table tbody tr td button {
+  margin-left: 10px;
+  margin-right: 0px !important;
+}
+/*---------- Assets Formfield ----------*/
+.field-assets.formfield .field.row {
+  padding: 10px 15px 5px 15px;
+  border-top: 1px solid #b3e0ff;
+  border-bottom: 3px solid #ccc;
+  border-radius: 0px 0px 5px 5px;
+  margin: 10px 0px 0px 0px;
+  background-color: #f4fdff;
+}
+.field-assets.formfield .field.row .col .row {
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: -ms-flex;
+  display: flex;
+}
+.field-assets.formfield .field.row .col .row > div {
+  float: left;
+  padding-left: 0px;
+  padding-right: 0px;
+}
+.field-assets.formfield .field.row .col .row > div.text-center button {
+  margin-top: 27px;
+}
+.field-assets.formfield .field.row .col .row > div.text-center small {
+  color: #000000 !important;
+  font-weight: 100;
+  font-size: 11px;
+  font-family: "Raleway";
+  padding: 10px 0px 10px 15px !important;
+  display: inline-block;
+  margin-top: 0px;
+  text-align: center !important;
+}
+.field-assets.formfield .field.row .col .row > div div.table-responsive table thead tr th {
+  background: #00a2ff;
+  color: #fff;
+  font-weight: 500;
+  font-family: "Raleway";
+  letter-spacing: 0.3px;
+  border: none;
+  padding-left: 10px;
+  padding-right: 10px;
+}
+.field-assets.formfield .field.row .col .row > div div.table-responsive table tbody tr {
+  border-bottom: 1px solid #b3e0ff;
+  background: #fff;
+}
+.field-assets.formfield .field.row .col .row > div div.table-responsive table tbody tr:hover {
+  background: #d7f6fd !important;
+}
+.field-assets.formfield .field.row .col .row > div div.table-responsive table tbody tr td {
+  border-top: none !important;
+  padding-left: 10px;
+  padding-right: 10px;
+  font-family: "Raleway";
+}
+.field-assets.formfield .field.row .col .row > div div.table-responsive table tbody tr td button {
+  margin-left: 10px;
+  margin-right: 0px !important;
+}
+
+/*--------- Personal Info Formfield --------*/
+.field-personalinformation.formfield .field.row {
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: -ms-flex;
+  display: flex;
+}
+.field-personalinformation.formfield .field.row > div {
+  border: 2px dashed #ddd;
+  padding: 10px 0px !important;
+  border-radius: 5px;
+  margin: 5px;
+  max-width: calc(50% - 14px);
+}
+.field-personalinformation.formfield .field.row > div:empty {
+  display: none;
+}
+.field-personalinformation.formfield .field.row > div .row div {
+  font-family: "Raleway";
+  font-weight: 500;
+  font-size: 15px;
+}
+.field-personalinformation.formfield .field.row > div .row div i.mr-3 {
+  width: 20px;
+  text-align: center;
+  margin-right: 15px !important;
+  font-size: 16px;
+}
+.field-personalinformation.formfield .field.row > div .row div i.mr-3.fa-map,
+.field-personalinformation.formfield .field.row > div .row div i.mr-3.fa-globe-americas {
+  color: #fff !important;
+}
+.field-personalinformation.formfield .field.row > div .row div i.mr-3.fa-map:before,
+.field-personalinformation.formfield .field.row > div .row div i.mr-3.fa-globe-americas:before,
+.field-personalinformation.formfield .field.row > div .row div i.mr-3.fa-map:after,
+.field-personalinformation.formfield .field.row > div .row div i.mr-3.fa-globe-americas:after {
+  color: #fff !important;
+}
+.field-personalinformation.formfield .field.row > div .row div i.fad:before {
+  color: #2ab1ff;
+}
+.field-personalinformation.formfield .field.row > div .row div i.fad:after {
+  color: #93ebff;
+  opacity: 1 !important;
+}
+/*---------- Plain Text Formfield ----------*/
+/*--------- Dynamic Text Formfield ---------*/
+/*------------- Video Formfield ------------*/
+.field-video.formfield .field > div {
+  padding-top: 0px !important;
+}
+/*------------- Image Formfield ------------*/
+.field-image.formfield .field div {
+  padding-top: 0px !important;
+}
+/*---------- Page Break Formfield ----------*/
+.field-pagebreak.formfield {
+  height: 30px;
+  background-color: #ccc;
+  padding: 0px !important;
+  margin-left: -25px;
+  margin-right: -15px;
+  box-sizing: content-box;
+  max-width: unset;
+  flex: unset;
+  width: 110%;
+}
+.field-pagebreak.formfield hr {
+  display: none;
+}
+/*---------- Row Formfield ----------*/
+.field-row {
+  margin-bottom: 0px !important;
+}
+.field-row .row {
+  margin-top: 0px !important;
+  padding: 0px !important;
+}
+/*------------ Section Formfield -----------*/
+.field-section.formfield {
+  display: grid;
+}
+.field-section.formfield .field-section.formfield {
+  box-shadow: 0px 0px 0px 1px #ddd;
+  border-radius: 5px;
+}
+.field-section.formfield hr {
+  display: none;
+}
+.field-section.formfield > div.row.title {
+  margin-left: 0px;
+  margin-right: 0px;
+  background-color: #7ed0ff;
+  padding: 15px;
+  border-bottom: 3px solid #31b4ff;
+  border-top-right-radius: 5px !important;
+  border-top-left-radius: 5px !important;
+}
+.field-section.formfield > div.row.title div.col h3 {
+  font-size: 20px;
+  font-weight: 600;
+  margin-bottom: 0px;
+}
+.field-section.formfield > div.row.description {
+  background: #f3f3f3;
+  background-color: #f3f3f3;
+  padding: 10px 7.5px 0px !important;
+  margin-top: 0px !important;
+  margin-left: 0px;
+  margin-right: 0px;
+}
+.field-section.formfield > div.row.description div.col {
+  font-size: 20px !important;
+  font-family: 'Raleway', sans-serif;
+  font-weight: 300;
+  margin-bottom: 0px !important;
+  border-bottom: 1px solid #ccc;
+  padding-bottom: 10px;
+  padding-left: 7.5px;
+  padding-right: 7.5px;
+}
+.field-section.formfield > div.field.row {
+  padding-top: 45px;
+  padding-left: 15px !important;
+  padding-right: 15px !important;
+  padding-bottom: 5px;
+  margin-top: 0px !important;
+  margin-left: 0px;
+  margin-right: 0px;
+  background-color: #f3f3f3;
+  border-bottom-right-radius: 5px !important;
+  border-bottom-left-radius: 5px !important;
+  border-bottom: 3px solid #ddd;
+}
+.field-section.formfield > div.field.row > div.formfield {
+  padding-right: 15px !important;
+}
+/*-------------- Row Formfield -------------*/
+/*--------------- Menu Holder --------------*/
+div#menuHolder {
+  position: fixed;
+  top: 0;
+  right: 0;
+  height: 100%;
+  overflow: visible;
+  margin-left: 25px;
+  width: 280px;
+  z-index: 1000;
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+}
+div#menuHolder > div {
+  height: 100%;
+  position: fixed;
+  width: 100%;
+}
+div#menuHolder > div .accordion {
+  height: 100%;
+  background: #5C5C5C;
+  border-top-right-radius: 0px !important;
+  border-top-left-radius: 0px !important;
+  border-bottom-right-radius: 0px !important;
+  border-bottom-left-radius: 0px !important;
+}
+div#menuHolder > div .accordion .list-group {
+  max-width: 280px;
+  width: 100%;
+}
+div#menuHolder > div .accordion .list-group .menu-logo {
+  border-top-right-radius: 0px !important;
+  border-top-left-radius: 0px !important;
+  border-bottom-right-radius: 0px !important;
+  border-bottom-left-radius: 0px !important;
+  text-align: center;
+}
+div#menuHolder > div .accordion .list-group .menu-logo.list-group-item {
+  padding-top: 10px;
+  padding-bottom: 10px;
+  background: #fff;
+}
+div#menuHolder > div .accordion .list-group .menu-logo img {
+  max-width: 250px;
+  max-height: 90px;
+}
+div#menuHolder > div .accordion .list-group .title {
+  padding: 0px;
+  text-align: left;
+}
+div#menuHolder > div .accordion .list-group .title h3 {
+  background-color: #000;
+  color: #fff;
+  padding: 5px 10px;
+  font-weight: bold;
+  font-stretch: extra-expanded;
+  margin-bottom: 0px !important;
+  font-size: 15px;
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+}
+div#menuHolder > div .accordion .list-group .list-group-item {
+  border: none !important;
+  border-bottom: 1px solid #fff !important;
+  padding: 0px;
+  background: #0081b8;
+  margin-bottom: 0px;
+}
+div#menuHolder > div .accordion .list-group .list-group-item a {
+  display: block;
+  padding: 4px 8px;
+  font-size: 15px;
+  font-weight: 400;
+  color: #fff;
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+}
+/*--------------- Form Footer --------------*/
+.bis-form-footer {
+  width: 100%;
+  bottom: 0px;
+  height: 50px;
+  left: 15px;
+  z-index: 1000;
+  color: #fff;
+  background-color: #000;
+  position: fixed;
+  -webkit-box-shadow: none !important;
+  box-shadow: none !important;
+}
+.bis-form-footer .bis-form-footer-left {
+  float: left;
+  width: 50%;
+  padding: 7px 10px;
+}
+.bis-form-footer .bis-form-footer-left .userinfo {
+  width: 45%;
+  float: left;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  overflow: hidden;
+}
+.bis-form-footer .bis-form-footer-left .locationinfo {
+  width: 55%;
+  float: left;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  overflow: hidden;
+}
+.bis-form-footer .bis-form-footer-left .startinfo {
+  font-size: 11px;
+  float: left;
+  width: 100%;
+}
+.bis-form-footer .bis-form-footer-right {
+  float: left;
+  width: 50%;
+  padding: 7px 10px;
+  text-align: right;
+}
+.bis-form-footer .bis-form-footer-right button {
+  padding: 6px 10px;
+  margin-left: 5px;
+}
+.bis-form-footer .bis-form-footer-right button.btn-info i.fad.fa-cloud-upload-alt:before {
+  content: "\f0c7";
+}
+.bis-form-footer .bis-form-footer-right button.btn-info i.fad.fa-cloud-upload-alt:after {
+  content: "\10f0c7";
+}
+.bis-form-footer .bis-form-footer-right button.btn-success i.fad.fa-save:before {
+  content: "\f382";
+}
+.bis-form-footer .bis-form-footer-right button.btn-success i.fad.fa-save:after {
+  content: "\10f382";
+}
+.bis-form-footer > div.col {
+  padding: 7px 10px;
+  float: left;
+  width: 30%;
+}
+.bis-form-footer > div.col h3 {
+  font-size: 14px;
+  line-height: 21px;
+  margin-bottom: 0px;
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+}
+.bis-form-footer > div.col small {
+  line-height: 15px;
+  font-size: 11px !important;
+  height: 15px;
+  display: block;
+}
+.bis-form-footer > div.col .btn {
+  padding: 7px 12px;
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-size: 14px;
+}
+.bis-form-footer > div.col.text-right {
+  width: 40% !important;
+}
+.bis-form-footer.row {
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: -ms-flex;
+  display: flex;
+}
+/*-------- Modals -----------*/
+.toast {
+  border-radius: 6px;
+  max-width: 600px;
+}
+.toast .toast-header {
+  background-color: transparent;
+  padding: 15px 20px;
+  border-bottom: 1px solid #ddd;
+}
+.toast .toast-header h3 {
+  margin-bottom: 0px;
+  color: #333;
+  font-family: "Raleway";
+  font-weight: 500;
+  font-size: 18px;
+}
+.toast .toast-header button {
+  font-size: 24px;
+  margin: 0px !important;
+  color: #333;
+  line-height: 21px;
+}
+.toast .toast-body {
+  padding: 15px 20px 0px;
+  font-size: 14px;
+  font-family: "Raleway";
+  font-weight: 300;
+  letter-spacing: 0.1px;
+}
+.toast .toast-body.text-right {
+  padding: 15px;
+}
+.toast .toast-body.text-right button {
+  height: 19px;
+  padding: 6px 12px;
+  box-sizing: content-box;
+  border: 1px solid #ccc;
+  font-size: 14px;
+  font-weight: 500 !important;
+  background-color: #fff;
+  color: black;
+}
+.toast .toast-body.text-right button i {
+  display: none;
+}
+.toast .toast-body.text-right button:hover {
+  background-color: #EAE6E6 !important;
+  border-color: #adadad !important;
+}
+@media (max-width: 1024px), only screen and (max-device-width: 1024px) and (orientation: landscape), (max-device-width: 1023px) and (orientation: landscape) {
+  .formfield button.btn {
+    font-size: 14px !important;
+  }
+  .bis-form-footer .bis-form-footer-left .userinfo {
+    width: 100%;
+  }
+  .bis-form-footer .bis-form-footer-left .startinfo {
+    width: 100%;
+  }
+  .bis-form-footer .bis-form-footer-left .locationinfo {
+    width: 100%;
+  }
+  .bis-form-footer .btn {
+    padding: 7px 12px;
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+    font-size: 14px;
+  }
+}
+@media only screen and (max-width: 991px) {
+  .container-fluid > div > div.row > div.col {
+    padding-left: 0px;
+    padding-right: 0px;
+  }
+  .container-fluid > div > div.row > div.col .padding-t20 {
+    padding-top: 0px;
+  }
+  div#elements-holder {
+    width: 100% !important;
+    max-width: unset;
+    padding-left: 10px !important;
+    margin-top: 0px !important;
+  }
+  #menuHolder {
+    display: none !important;
+  }
+  .bis-form-footer .bis-form-footer-left {
+    width: 40%;
+  }
+  .bis-form-footer .bis-form-footer-right {
+    width: 60%;
+  }
+}
+@media only screen and (min-width: 992px) {
+  .d-md-block {
+    display: block!important;
+  }
+  #elements-holder {
+    padding-left: 10px;
+  }
+}
+@media only screen and (max-width: 768px) {
+  .logo-body {
+    max-width: 200px !important;
+  }
+  /* Attendance */
+  .field-attendance.formfield .field.row .col .row > div {
+    width: 100% !important;
+    max-width: 100% !important;
+  }
+  .field-attendance.formfield .field.row .col .row > div:first-of-type div.table-responsive table {
+    margin-bottom: 0px;
+  }
+  .field-attendance.formfield .field.row .col .row > div:nth-of-type(2) div.table-responsive thead {
+    display: none;
+  }
+  .field-attendance.formfield .field.row .col .row > div div.table-responsive {
+    margin-bottom: 0px;
+  }
+  /* Footer */
+  .bis-form-footer .bis-form-footer-left {
+    width: 30%;
+  }
+  .bis-form-footer .bis-form-footer-right {
+    width: 70%;
+  }
+  .bis-form-footer .btn.btn-success i,
+  .bis-form-footer .btn.btn-info i {
+    display: none;
+  }
+}
+@media only screen and (max-width: 551px) {
+  .field-formtitle.formfield div.flex-grow-l {
+    width: calc(100% - 50px);
+  }
+  .bis-form-footer {
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: -ms-flex;
+    display: flex;
+    -webkit-flex-direction: column-reverse;
+    -ms-flex-direction: column-reverse;
+    flex-direction: column-reverse;
+    height: 80px;
+  }
+  .bis-form-footer .bis-form-footer-left {
+    width: 100%;
+  }
+  .bis-form-footer .bis-form-footer-left .userinfo {
+    width: 50%;
+  }
+  .bis-form-footer .bis-form-footer-left .startinfo {
+    display: none;
+  }
+  .bis-form-footer .bis-form-footer-left .locationinfo {
+    width: 50%;
+  }
+  .bis-form-footer .bis-form-footer-right {
+    width: 100%;
+    padding-bottom: 0px;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: -ms-flex;
+    display: flex;
+    -webkit-justify-content: space-between;
+    -ms-justify-content: space-between;
+    justify-content: space-between;
+  }
+  .bis-form-footer .btn.btn-success i,
+  .bis-form-footer .btn.btn-info i {
+    display: inline-block;
+  }
+}
+/*------------ CUSTOM STYLES ------------*/
+/*---- global ----*/
+.redFont {
+  color: red !important;
+}
+.bottomMargin60 {
+  margin-bottom: 60px !important;
+}
+.noBottomMargin.formfield,
+.NoBottomMargin.formfield,
+.noMarginBottom.formfield,
+.NoMarginBottom.formfield {
+  margin-bottom: 0px !important;
+}
+.noBottomMargin.formfield ul,
+.NoBottomMargin.formfield ul,
+.noMarginBottom.formfield ul,
+.NoMarginBottom.formfield ul,
+.noBottomMargin.formfield .col,
+.NoBottomMargin.formfield .col,
+.noMarginBottom.formfield .col,
+.NoMarginBottom.formfield .col {
+  margin-bottom: 0px !important;
+}
+.noTitle h3 > span,
+.NoTitle h3 > span {
+  display: none;
+}
+.requiredTitle h3::after {
+  content: "*";
+  color: #ff0000;
+}
+.requiredTitleDescription .description span:after {
+  content: "*";
+  color: #ff0000;
+}
+.headerText {
+  padding-left: 0px;
+  padding-right: 15px;
+  margin-bottom: 0px !important;
+  overflow: hidden;
+}
+.headerText .row {
+  margin-left: 0px;
+  margin-right: 0px;
+}
+.headerText .row.title h3 {
+  font-size: 24px;
+  padding-left: 15px;
+  padding-right: 15px;
+  width: 100%;
+  padding-bottom: 5px !important;
+  margin-bottom: 0px;
+}
+.headerText .row.description .col {
+  font-size: 16px;
+  padding-left: 15px;
+  padding-right: 15px;
+  padding-top: 20px;
+  padding-bottom: 20px;
+  background: #efefef;
+  border-bottom: 1px solid #aaa;
+  border-top: 1px solid #aaa;
+  margin-bottom: 0px;
+}
+.lowerAlphaList {
+  list-style: lower-alpha !important;
+}
+.lowerRomanList {
+  list-style: lower-roman !important;
+}
+.tallTextBox textarea {
+  height: 100px;
+}
+.marginTop {
+  margin-top: 20px;
+}
+.marginTop50 {
+  margin-top: 50px;
+}
+.noTitle.reqField .description.row .col::after {
+  content: "*";
+  color: #ff0000;
+  margin-left: 3px !important;
+  font-size: 20px;
+  line-height: 21px !important;
+  font-weight: 600;
+}
+.notBold.formfield .title h3 {
+  font-weight: 300 !important;
+}
+.bigTitle.formfield .title h3 {
+  font-size: 1.2em;
+  margin-bottom: 20px;
+}
+.descriptionBeside .description.row {
+  display: inline-block;
+  float: right;
+  margin-top: -24px !important;
+}
+.descriptionBeside .title.row {
+  margin-bottom: 3px;
+}
+.descriptionBeside .field.row {
+  display: block !important;
+}
+.courseTableHeader {
+  background: #d2e8fd;
+  text-align: center;
+  padding: 5px !important;
+  margin-bottom: 0px !important;
+  border-right: 5px solid #fff;
+}
+.tableField i.text-danger {
+  display: none !important;
+}
+/* Hide Chars remaining */
+.noCharsRemaining small.text-muted.form-text {
+  display: none !important;
+}
+/*---- sectionTitle ----*/
+.sectionTitle {
+  margin-top: 25px;
+  margin-bottom: 15px !important;
+}
+.sectionTitle h3 {
+  background-color: #f8f8f8;
+  border-radius: 15px;
+  font-size: 1.4em;
+  line-height: 30px;
+}
+.sectionTitle h3::before {
+  counter-increment: section;
+  content: counter(section);
+  width: 30px;
+  display: inline-block;
+  text-align: center;
+  height: 30px;
+  background: #A02C22;
+  border-radius: 30px;
+  line-height: 30px;
+  color: #fff;
+  font-size: 18px;
+  margin-right: 10px;
+}
+/*---- sectionRow ----*/
+.sectionRow {
+  padding-left: 40px !important;
+  padding-right: 20px !important;
+}
+/*---- warningText ----*/
+.warningText {
+  margin-top: 25px;
+}
+.warningText .title h3 {
+  background-color: #ffefef;
+  border-radius: 15px;
+  font-size: 1.4em;
+  color: #000000;
+  line-height: 30px;
+  width: 100%;
+}
+.warningText .title h3::before {
+  content: "!";
+  width: 30px;
+  display: inline-block;
+  text-align: center;
+  height: 30px;
+  background: #A02C22;
+  border-radius: 30px;
+  line-height: 30px;
+  color: #fff;
+  font-size: 18px;
+  margin-right: 5px;
+}
+.warningText .row.description {
+  margin-top: 15px;
+  margin-left: 40px;
+  color: #000;
+  font-weight: 500;
+}
+/* acknowledgement question header label */
+.formfield.field-checkboxes.acknowledgementQuestion {
+  padding-left: 0px;
+  padding-right: 0px;
+}
+.formfield.field-checkboxes.acknowledgementQuestion .title h3 {
+  font-size: 24px;
+  border-bottom: 1px solid #aaa;
+  width: 100%;
+  margin-bottom: 20px;
+  padding-bottom: 5px;
+  padding-left: 15px;
+  padding-right: 15px;
+  margin-bottom: 0px;
+}
+.formfield.field-checkboxes.acknowledgementQuestion .row.description .col {
+  font-size: 16px;
+  padding-left: 15px !important;
+  padding-right: 15px;
+  padding-top: 20px;
+  padding-bottom: 20px;
+  background: #efefef;
+  border-bottom: 1px solid #aaa;
+  margin-bottom: 0px !important;
+}
+.formfield.field-checkboxes.acknowledgementQuestion .row.field {
+  padding-left: 0px;
+  padding-right: 0px;
+}
+.formfield.field-checkboxes.acknowledgementQuestion .row.field .bis-checkboxes {
+  font-size: 18px;
+  margin-top: 0px !important;
+  margin-bottom: 0px !important;
+  padding-top: 15px;
+  padding-bottom: 15px;
+  background: #f9f9f9;
+  border-bottom: 1px solid #ddd;
+  padding-left: 15px !important;
+  padding-right: 15px !important;
+}
+.formfield.field-checkboxes.acknowledgementQuestion .row.field .bis-checkboxes label {
+  padding-left: 2.5em !important;
+}
+/* -----------------------= 5.1 single line =------------------------------*/
+.singleLineCheckbox {
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: -ms-flex;
+  display: flex;
+  -webkit-align-items: center;
+  -ms-align-items: center;
+  align-items: center;
+}
+.singleLineCheckbox.noTitle {
+  margin-top: 22px !important;
+}
+.singleLineCheckbox .title h3 {
+  line-height: 33px;
+}
+.singleLineCheckbox .row.field {
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: -ms-flex;
+  display: flex;
+  -webkit-justify-content: flex-end;
+  -ms-justify-content: flex-end;
+  justify-content: flex-end;
+  -webkit-flex-grow: 2;
+  -ms-flex-grow: 2;
+  flex-grow: 2;
+  -webkit-flex-wrap: nowrap;
+  -ms-flex-wrap: nowrap;
+  flex-wrap: nowrap;
+  margin-top: 0px !important;
+  padding-right: 10px !important;
+}
+.singleLineCheckbox .row.field .bis-checkboxes {
+  margin-left: 20px !important;
+  padding-left: 10px !important;
+  width: auto !important;
+  flex: unset;
+}
+.singleLineCheckbox .row.field .bis-checkboxes label {
+  width: 100% !important;
+  white-space: nowrap;
+}
+/*----- surveySection -----*/
+.field-section.formfield.surveySection .field.row {
+  padding-left: 0px !important;
+  padding-right: 0px !important;
+}
+.field-section.formfield.surveySection .surveyRow {
+  border-bottom: 1px solid #ddd;
+  padding: 10px 15px !important;
+}
+.field-section.formfield.surveySection .surveyRow.firstRow {
+  border-top: 1px solid #ddd;
+}
+.field-section.formfield.surveySection .surveyRow.firstRow .surveyQuestion .description {
+  text-align: right;
+  display: table;
+  float: right;
+}
+.field-section.formfield.surveySection .surveyRow.firstRow .surveyQuestion.showLabels .bis-checkboxes:first-of-type::after {
+  content: '\f00c';
+  font-family: 'Font Awesome\ 5 Free';
+  position: absolute;
+  margin-left: -2px !important;
+  top: -63px;
+  font-size: 20px !important;
+  color: #09ad7e;
+}
+.field-section.formfield.surveySection .surveyRow.firstRow .surveyQuestion.showLabels .bis-checkboxes:nth-of-type(2)::after {
+  content: '\f00d';
+  font-family: 'Font Awesome\ 5 Free';
+  position: absolute;
+  top: -63px;
+  left: 3px;
+  font-size: 20px !important;
+  color: #ff0000;
+}
+.field-section.formfield.surveySection .surveyRow.firstRow .surveyQuestion.showLabels .bis-checkboxes:last-of-type::after {
+  content: 'N/A';
+  position: absolute;
+  top: -60px;
+  font-size: 15px !important;
+  color: #333;
+  font-family: Tahoma;
+  letter-spacing: -1px !important;
+  font-weight: 500;
+}
+.field-section.formfield.surveySection .surveyRow:nth-of-type(odd) {
+  background: #fff;
+}
+.field-section.formfield.surveySection .surveyRow:nth-of-type(even) {
+  background: #f8f8f8;
+}
+.surveyQuestion.formfield.field-checkboxes .bis-checkboxes:nth-of-type(2) [type="radio"]:not(:checked) + label::after,
+.surveyQuestion.formfield.field-checkboxes .bis-checkboxes:nth-of-type(2) [type="radio"]:checked + label::after {
+  background-color: #09ad7e !important;
+}
+.surveyQuestion.formfield.field-checkboxes .bis-checkboxes:nth-of-type(2) [type="radio"]:not(:checked) + label::after,
+.surveyQuestion.formfield.field-checkboxes .bis-checkboxes:nth-of-type(2) [type="radio"]:checked + label::after {
+  background-color: #ff0000 !important;
+}
+.surveyQuestion.formfield.field-checkboxes .bis-checkboxes:last-of-type [type="radio"]:not(:checked) + label::after,
+.surveyQuestion.formfield.field-checkboxes .bis-checkboxes:last-of-type [type="radio"]:checked + label::after {
+  background-color: #888888 !important;
+}
+.surveyQuestion.formfield.field-checkboxes .bis-checkboxes:first-of-type [type="radio"]:not(:checked) + label::before,
+.surveyQuestion.formfield.field-checkboxes .bis-checkboxes:first-of-type [type="radio"]:checked + label::before {
+  background: #e6fee6 !important;
+}
+.surveyQuestion.formfield.field-checkboxes .bis-checkboxes:nth-of-type(2) [type="radio"]:not(:checked) + label::before,
+.surveyQuestion.formfield.field-checkboxes .bis-checkboxes:first-of-type [type="radio"]:checked + label::before {
+  background: #ffeaea !important;
+}
+.surveyQuestion.formfield.field-checkboxes .bis-checkboxes:first-of-type .form-check label:hover::before {
+  border: 2px solid #09ad7e !important;
+  border-color: #09ad7e !important;
+}
+.surveyQuestion.formfield.field-checkboxes .bis-checkboxes:nth-of-type(2) .form-check label:hover::before {
+  border: 2px solid #ff0000 !important;
+  border-color: #ff0000 !important;
+}
+.auditorTitle,
+.subTitle {
+  margin-top: 30px;
+}
+.auditorTitle .title span,
+.subTitle .title span {
+  color: #00558a !important;
+  font-size: 18px;
+  text-transform: uppercase;
+}
+/* Custom styles AP (please keep these at the bottom) */
+.bis-form-footer .bis-form-footer-right {
+  justify-content: center;
+}
+.bis-form-footer .btn.btn-success i,
+.bis-form-footer .btn.btn-info i {
+  display: inherit;
+}
+#elements-holder.flex-grow-1 {
+  -webkit-flex-grow: unset !important;
+  -ms-flex-grow: unset !important;
+  flex-grow: unset !important;
+}
+.hide {
+  display: none !important;
+}
+.fal,
+.far {
+  font-family: "Font Awesome 5 Pro" !important;
+}
+.popover-body span {
+  font-size: 14px;
+  font-family: Helvetica, Arial, sans-serif;
+}
+/*--------------- trafficLight for Barry --------------*/
+.trafficLight.formfield {
+  margin-bottom: 0px !important;
+  padding-top: 10px !important;
+  padding-bottom: 10px !important;
+}
+.trafficLight .field.row .bis-checkboxes:first-of-type .form-check input[type="radio"]:not(:checked) + label::after,
+.trafficLight .field.row .bis-checkboxes:first-of-type .form-check input[type="radio"]:checked + label::after {
+  background-color: #09ad7e !important;
+}
+.trafficLight .field.row .bis-checkboxes:nth-of-type(2) .form-check input[type="radio"]:not(:checked) + label::after,
+.trafficLight .field.row .bis-checkboxes:nth-of-type(2) .form-check input[type="radio"]:checked + label::after {
+  background-color: #F9CF05 !important;
+}
+.trafficLight .field.row .bis-checkboxes:nth-of-type(3) .form-check input[type="radio"]:not(:checked) + label::after,
+.trafficLight .field.row .bis-checkboxes:nth-of-type(3) .form-check input[type="radio"]:checked + label::after {
+  background-color: #ff0000 !important;
+}
+.trafficLight .field.row .bis-checkboxes:last-of-type .form-check input[type="radio"]:not(:checked) + label::after,
+.trafficLight .field.row .bis-checkboxes:last-of-type .form-check input[type="radio"]:checked + label::after {
+  background-color: #888888 !important;
+}
+.trafficLight .field.row .bis-checkboxes:first-of-type [type="radio"]:not(:checked) + label::before,
+.trafficLight .field.row .bis-checkboxes:first-of-type [type="radio"]:checked + label::before {
+  background: #e6fee6 !important;
+}
+.trafficLight .field.row .bis-checkboxes:nth-of-type(2) [type="radio"]:not(:checked) + label::before,
+.trafficLight .field.row .bis-checkboxes:nth-of-type(2) [type="radio"]:checked + label::before {
+  background: #fffdb9 !important;
+}
+.trafficLight .field.row .bis-checkboxes:nth-of-type(3) [type="radio"]:not(:checked) + label::before,
+.trafficLight .field.row .bis-checkboxes:nth-of-type(3) [type="radio"]:checked + label::before {
+  background: #ffeaea !important;
+}
+.trafficLight .field.row .bis-checkboxes:last-of-type [type="radio"]:not(:checked) + label::before,
+.trafficLight .field.row .bis-checkboxes:last-of-type [type="radio"]:checked + label::before {
+  background: #fefefe !important;
+}
+.trafficLight.field-checkboxes.formfield .field.row .bis-checkboxes:first-of-type .form-check label:hover::before {
+  border: 2px solid #09ad7e !important;
+}
+.trafficLight.field-checkboxes.formfield .field.row .bis-checkboxes:nth-of-type(2) .form-check label:hover::before {
+  border: 2px solid #F9CF05 !important;
+}
+.trafficLight.field-checkboxes.formfield .field.row .bis-checkboxes:nth-of-type(3) .form-check label:hover::before {
+  border: 2px solid #ff0000 !important;
+}
+/* Reverse */
+.trafficLight.reverse .field.row .bis-checkboxes:first-of-type .form-check input[type="radio"]:not(:checked) + label::after,
+.trafficLight.reverse .field.row .bis-checkboxes:first-of-type .form-check input[type="radio"]:checked + label::after {
+  background-color: #ff0000 !important;
+}
+.trafficLight.reverse .field.row .bis-checkboxes:nth-of-type(2) .form-check input[type="radio"]:not(:checked) + label::after,
+.trafficLight.reverse .field.row .bis-checkboxes:nth-of-type(2) .form-check input[type="radio"]:checked + label::after {
+  background-color: #F9CF05 !important;
+}
+.trafficLight.reverse .field.row .bis-checkboxes:nth-of-type(3) .form-check input[type="radio"]:not(:checked) + label::after,
+.trafficLight.reverse .field.row .bis-checkboxes:nth-of-type(3) .form-check input[type="radio"]:checked + label::after {
+  background-color: #09ad7e !important;
+}
+.trafficLight.reverse .field.row .bis-checkboxes:last-of-type .form-check input[type="radio"]:not(:checked) + label::after,
+.trafficLight.reverse .field.row .bis-checkboxes:last-of-type .form-check input[type="radio"]:checked + label::after {
+  background-color: #888888 !important;
+}
+.trafficLight.reverse .field.row .bis-checkboxes:first-of-type [type="radio"]:not(:checked) + label::before,
+.trafficLight.reverse .field.row .bis-checkboxes:first-of-type [type="radio"]:checked + label::before {
+  background: #ffeaea !important;
+}
+.trafficLight.reverse .field.row .bis-checkboxes:nth-of-type(2) [type="radio"]:not(:checked) + label::before,
+.trafficLight.reverse .field.row .bis-checkboxes:nth-of-type(2) [type="radio"]:checked + label::before {
+  background: #fffdb9 !important;
+}
+.trafficLight.reverse .field.row .bis-checkboxes:nth-of-type(3) [type="radio"]:not(:checked) + label::before,
+.trafficLight.reverse .field.row .bis-checkboxes:nth-of-type(3) [type="radio"]:checked + label::before {
+  background: #e6fee6 !important;
+}
+.trafficLight.reverse .field.row .bis-checkboxes:last-of-type [type="radio"]:not(:checked) + label::before,
+.trafficLight.reverse .field.row .bis-checkboxes:last-of-type [type="radio"]:checked + label::before {
+  background: #fefefe !important;
+}
+.trafficLight.field-checkboxes.reverse.formfield .field.row .bis-checkboxes:first-of-type .form-check label:hover::before {
+  border: 2px solid #ff0000 !important;
+}
+.trafficLight.field-checkboxes.reverse.formfield .field.row .bis-checkboxes:nth-of-type(2) .form-check label:hover::before {
+  border: 2px solid #F9CF05 !important;
+}
+.trafficLight.field-checkboxes.reverse.formfield .field.row .bis-checkboxes:nth-of-type(3) .form-check label:hover::before {
+  border: 2px solid #09ad7e !important;
+}
+.trafficLight.field-likertscale.formfield .field.row div .table-responsive table.table tbody tr td:nth-of-type(2) .form-check input[type="radio"]:not(:checked) + label::after,
+.trafficLight.field-likertscale.formfield .field.row div .table-responsive table.table tbody tr td:nth-of-type(2) .form-check input[type="radio"]:checked + label::after {
+  background-color: #09ad7e !important;
+}
+.trafficLight.field-likertscale.formfield .field.row div .table-responsive table.table tbody tr td:nth-of-type(2) .form-check label:hover::before {
+  border: 2px solid #09ad7e !important;
+}
+.trafficLight.field-likertscale.formfield .field.row div .table-responsive table.table tbody tr td:nth-of-type(2) .form-check [type="radio"]:not(:checked) + label::before,
+.trafficLight.field-likertscale.formfield .field.row div .table-responsive table.table tbody tr td:nth-of-type(2) .form-check [type="radio"]:checked + label::before {
+  background: #e6fee6 !important;
+}
+.trafficLight.field-likertscale.formfield .field.row div .table-responsive table.table tbody tr td:nth-of-type(3) .form-check input[type="radio"]:not(:checked) + label::after,
+.trafficLight.field-likertscale.formfield .field.row div .table-responsive table.table tbody tr td:nth-of-type(3) .form-check input[type="radio"]:checked + label::after {
+  background-color: #ff0000 !important;
+}
+.trafficLight.field-likertscale.formfield .field.row div .table-responsive table.table tbody tr td:nth-of-type(3) .form-check label:hover::before {
+  border: 2px solid #ff0000 !important;
+}
+.trafficLight.field-likertscale.formfield .field.row div .table-responsive table.table tbody tr td:nth-of-type(3) .form-check [type="radio"]:not(:checked) + label::before,
+.trafficLight.field-likertscale.formfield .field.row div .table-responsive table.table tbody tr td:nth-of-type(3) .form-check [type="radio"]:checked + label::before {
+  background: #ffeaea !important;
+}
+.trafficLight.field-likertscale.formfield .field.row div .table-responsive table.table tbody tr td:nth-of-type(4) .form-check input[type="radio"]:not(:checked) + label::after,
+.trafficLight.field-likertscale.formfield .field.row div .table-responsive table.table tbody tr td:nth-of-type(4) .form-check input[type="radio"]:checked + label::after {
+  background-color: #888888 !important;
+}
+.trafficLight.field-likertscale.formfield .field.row div .table-responsive table.table tbody tr td:nth-of-type(4) .form-check label:hover::before {
+  border: 2px solid #888888 !important;
+}
+.trafficLight.field-likertscale.formfield .field.row div .table-responsive table.table tbody tr td:nth-of-type(4) .form-check [type="radio"]:not(:checked) + label::before,
+.trafficLight.field-likertscale.formfield .field.row div .table-responsive table.table tbody tr td:nth-of-type(4) .form-check [type="radio"]:checked + label::before {
+  background: #fefefe !important;
+}
+/* REVERSE */
+.trafficLight.field-likertscale.reverse.formfield .field.row div .table-responsive table.table tbody tr td:nth-of-type(2) .form-check input[type="radio"]:not(:checked) + label::after,
+.trafficLight.field-likertscale.reverse.formfield .field.row div .table-responsive table.table tbody tr td:nth-of-type(2) .form-check input[type="radio"]:checked + label::after {
+  background-color: #ff0000 !important;
+}
+.trafficLight.field-likertscale.reverse.formfield .field.row div .table-responsive table.table tbody tr td:nth-of-type(2) .form-check label:hover::before {
+  border: 2px solid #ff0000 !important;
+}
+.trafficLight.field-likertscale.reverse.formfield .field.row div .table-responsive table.table tbody tr td:nth-of-type(2) .form-check [type="radio"]:not(:checked) + label::before,
+.trafficLight.field-likertscale.reverse.formfield .field.row div .table-responsive table.table tbody tr td:nth-of-type(2) .form-check [type="radio"]:checked + label::before {
+  background: #ffeaea !important;
+}
+.trafficLight.field-likertscale.reverse.formfield .field.row div .table-responsive table.table tbody tr td:nth-of-type(3) .form-check input[type="radio"]:not(:checked) + label::after,
+.trafficLight.field-likertscale.reverse.formfield .field.row div .table-responsive table.table tbody tr td:nth-of-type(3) .form-check input[type="radio"]:checked + label::after {
+  background-color: #F9CF05 !important;
+}
+.trafficLight.field-likertscale.reverse.formfield .field.row div .table-responsive table.table tbody tr td:nth-of-type(3) .form-check label:hover::before {
+  border: 2px solid #F9CF05 !important;
+}
+.trafficLight.field-likertscale.reverse.formfield .field.row div .table-responsive table.table tbody tr td:nth-of-type(3) .form-check [type="radio"]:not(:checked) + label::before,
+.trafficLight.field-likertscale.reverse.formfield .field.row div .table-responsive table.table tbody tr td:nth-of-type(3) .form-check [type="radio"]:checked + label::before {
+  background: #fffdb9 !important;
+}
+.trafficLight.field-likertscale.reverse.formfield .field.row div .table-responsive table.table tbody tr td:nth-of-type(4) .form-check input[type="radio"]:not(:checked) + label::after,
+.trafficLight.field-likertscale.reverse.formfield .field.row div .table-responsive table.table tbody tr td:nth-of-type(4) .form-check input[type="radio"]:checked + label::after {
+  background-color: #09ad7e !important;
+}
+.trafficLight.field-likertscale.reverse.formfield .field.row div .table-responsive table.table tbody tr td:nth-of-type(4) .form-check label:hover::before {
+  border: 2px solid #09ad7e !important;
+}
+.trafficLight.field-likertscale.reverse.formfield .field.row div .table-responsive table.table tbody tr td:nth-of-type(4) .form-check [type="radio"]:not(:checked) + label::before,
+.trafficLight.field-likertscale.reverse.formfield .field.row div .table-responsive table.table tbody tr td:nth-of-type(4) .form-check [type="radio"]:checked + label::before {
+  background: #e6fee6 !important;
+}
+.trafficLight.field-likertscale.reverse.formfield .field.row div .table-responsive table.table tbody tr td:nth-of-type(5) .form-check input[type="radio"]:not(:checked) + label::after,
+.trafficLight.field-likertscale.reverse.formfield .field.row div .table-responsive table.table tbody tr td:nth-of-type(5) .form-check input[type="radio"]:checked + label::after {
+  background-color: #888888 !important;
+}
+.trafficLight.field-likertscale.reverse.formfield .field.row div .table-responsive table.table tbody tr td:nth-of-type(5) .form-check label:hover::before {
+  border: 2px solid #888888 !important;
+}
+.trafficLight.field-likertscale.reverse.formfield .field.row div .table-responsive table.table tbody tr td:nth-of-type(5) .form-check [type="radio"]:not(:checked) + label::before,
+.trafficLight.field-likertscale.reverse.formfield .field.row div .table-responsive table.table tbody tr td:nth-of-type(5) .form-check [type="radio"]:checked + label::before {
+  background: #fefefe !important;
+}
+.border1 {
+  background: rgba(0, 0, 0, 0) linear-gradient(to right, #f2994a, #f2c94c);
+  border-radius: 25px;
+}
+.border2 {
+  background: linear-gradient(to right, #ffafbd, #ffc3a0);
+  border-radius: 25px;
+}
+/* CAPITALIZE INPUT - for LORNEVILLE */
+.uppercase.formfield input {
+  text-transform: uppercase;
+}
+/* INSTRUCTOR DASHBOARD */
+.instructorDashboard.formfield {
+  margin-bottom: 0px !important;
+  padding-top: 10px !important;
+  padding-bottom: 10px !important;
+}
+.instructorDashboard .field.row .bis-checkboxes:first-of-type [type="radio"]:not(:checked) + label::before,
+.instructorDashboard .field.row .bis-checkboxes:first-of-type [type="radio"]:checked + label::before {
+  background: #ff000085 !important;
+}
+.instructorDashboard .field.row .bis-checkboxes:nth-of-type(2) [type="radio"]:not(:checked) + label::before,
+.instructorDashboard .field.row .bis-checkboxes:nth-of-type(2) [type="radio"]:checked + label::before {
+  background: #fffdb9 !important;
+}
+.instructorDashboard .field.row .bis-checkboxes:nth-of-type(3) [type="radio"]:not(:checked) + label::before,
+.instructorDashboard .field.row .bis-checkboxes:nth-of-type(3) [type="radio"]:checked + label::before {
+  background: #27ff006e !important;
+}
+.instructorDashboard .field.row .bis-checkboxes:nth-of-type(4) [type="radio"]:not(:checked) + label::before,
+.instructorDashboard .field.row .bis-checkboxes:nth-of-type(4) [type="radio"]:checked + label::before {
+  background: #008c24bf !important;
+}
+.instructorDashboard .field.row .bis-checkboxes:nth-of-type(5) [type="radio"]:not(:checked) + label::before,
+.instructorDashboard .field.row .bis-checkboxes:nth-of-type(5) [type="radio"]:checked + label::before {
+  background: #ffffff !important;
+}
+.instructorDashboard .field-checkboxes.formfield .field.row .bis-checkboxes .form-check input[type="radio"]:not(:checked) + label:after,
+.field-checkboxes.formfield .field.row .bis-checkboxes .custom-control input[type="radio"]:not(:checked) + label:after,
+.field-checkboxes.formfield .field.row .bis-checkboxes .form-check input[type="radio"]:checked + label:after,
+.field-checkboxes.formfield .field.row .bis-checkboxes .custom-control input[type="radio"]:checked + label:after {
+  background-color: #000000;
+}
+@media only screen and (max-width: 768px) {
+  .descriptionBeside .description.row {
+    display: inline-block;
+    float: right;
+    margin-top: -24px !important;
+  }
+}
+.react-datepicker-popper {
+  z-index: 1001 !important;
+}
+@media only screen and (max-width: 575px) {
+  .sign-btn > div:nth-child(1) {
+    margin-bottom: 10px;
+    width: 100%;
+  }
+  .sign-btn > div:nth-child(2) {
+    display: flex;
+    justify-content: space-between;
+  }
+}
+@media only screen and (max-width: 551px) {
+  #elements-holder {
+    padding-bottom: 60px !important;
+  }
+}
+@media (min-width: 992px) and (max-width: 1433px) {
+  .footerButtonText {
+    display: none !important;
+  }
+}
+@media (max-width: 769px) {
+  #menuHolder {
+    width: 200px !important;
+  }
+}
+html,
+body {
+  overscroll-behavior-y: contain;
+}
+/*----- Linked Section -----*/
+.linkedSection > .field.row > .field-section > .description.row > .col {
+  border-bottom: none !important;
+}
+.linkedSection > .field.row > .field-section > .title.row {
+  display: none !important;
+}
+.linkedSection > .field.row > .field-section > .field.row {
+  border-bottom: none !important;
+}
+.linkedSection > .field.row > .field-section hr {
+  display: none !important;
+}
+.field-section.linkedSection .field-section.formfield {
+  box-shadow: none !important;
+}
+.field-section.linkedSection > .field.row {
+  margin-top: 0px !important;
+}
+/*---- chart w/ table header only ----*/
+.tableOnlyHeader .field.row > div > strong {
+  display: none;
+}
+.tableOnlyHeader.two .field.row > div:first-of-type > strong,
+.tableOnlyHeader.two .field.row > div:nth-of-type(2) > strong {
+  display: table !important;
+}
+.tableOnlyHeader.three .field.row > div:first-of-type > strong,
+.tableOnlyHeader.three .field.row > div:nth-of-type(2) > strong,
+.tableOnlyHeader.three .field.row > div:nth-of-type(3) > strong {
+  display: table !important;
+}
+.tableOnlyHeader.four .field.row > div.pb-3:first-of-type > strong,
+.tableOnlyHeader.four .field.row > div.pb-3:nth-of-type(2) > strong,
+.tableOnlyHeader.four .field.row > div.pb-3:nth-of-type(3) > strong,
+.tableOnlyHeader.four .field.row > div.pb-3:nth-of-type(4) > strong {
+  display: table !important;
+}
+/*---- print styles only ----*/
+@media print {
+  body {
+    background-color: #fff !important;
+    margin: 15px;
+    min-height: unset !important;
+    padding-bottom: 0px !important;
+  }
+  body #reactRoot .container-fluid > div > .row {
+    display: block !important;
+  }
+  body #reactRoot .container-fluid > div > .row #elements-holder {
+    display: block !important;
+    box-shadow: none !important;
+    padding-bottom: 0px !important;
+  }
+  body #reactRoot .container-fluid > div > .row #elements-holder .formfield {
+    float: left;
+  }
+  body #reactRoot .container-fluid > div > .row #elements-holder .formfield.noPrint {
+    display: none !important;
+  }
+  body #reactRoot .container-fluid > div > .row #elements-holder .formfield input {
+    background: #fff !important;
+  }
+  body #reactRoot .container-fluid > div > .row #elements-holder .formfield > .title.row {
+    flex-grow: 100% !important;
+    flex-basis: 100% !important;
+    flex-wrap: nowrap !important;
+  }
+  body #reactRoot .container-fluid > div > .row #elements-holder .formfield > .field.row .form-group {
+    padding-left: 0px;
+    padding-right: 0px;
+  }
+  body #reactRoot .container-fluid > div > .row #elements-holder .formfield > .field.row .form-group .rbt input.rbt-input-main.form-control.rbt-input {
+    color: #000 !important;
+  }
+  body #reactRoot .container-fluid > div > .row #elements-holder .formfield > .field.row .form-group .rbt input.rbt-input-hint {
+    display: none !important;
+  }
+  body #reactRoot .container-fluid > div > .row #elements-holder .formfield.col-sm-1,
+  body #reactRoot .container-fluid > div > .row #elements-holder .formfield.col-sm-2,
+  body #reactRoot .container-fluid > div > .row #elements-holder .formfield.col-sm-3,
+  body #reactRoot .container-fluid > div > .row #elements-holder .formfield.col-sm-4,
+  body #reactRoot .container-fluid > div > .row #elements-holder .formfield.col-sm-5,
+  body #reactRoot .container-fluid > div > .row #elements-holder .formfield.col-sm-6,
+  body #reactRoot .container-fluid > div > .row #elements-holder .formfield.col-sm-7,
+  body #reactRoot .container-fluid > div > .row #elements-holder .formfield.col-sm-8,
+  body #reactRoot .container-fluid > div > .row #elements-holder .formfield.col-sm-9,
+  body #reactRoot .container-fluid > div > .row #elements-holder .formfield.col-sm-10,
+  body #reactRoot .container-fluid > div > .row #elements-holder .formfield.col-sm-11,
+  body #reactRoot .container-fluid > div > .row #elements-holder .formfield.col-sm-12 {
+    flex: none !important;
+    display: inline-block !important;
+  }
+  body #reactRoot .container-fluid > div > .row #elements-holder .formfield.col-sm-1.noPrint,
+  body #reactRoot .container-fluid > div > .row #elements-holder .formfield.col-sm-2.noPrint,
+  body #reactRoot .container-fluid > div > .row #elements-holder .formfield.col-sm-3.noPrint,
+  body #reactRoot .container-fluid > div > .row #elements-holder .formfield.col-sm-4.noPrint,
+  body #reactRoot .container-fluid > div > .row #elements-holder .formfield.col-sm-5.noPrint,
+  body #reactRoot .container-fluid > div > .row #elements-holder .formfield.col-sm-6.noPrint,
+  body #reactRoot .container-fluid > div > .row #elements-holder .formfield.col-sm-7.noPrint,
+  body #reactRoot .container-fluid > div > .row #elements-holder .formfield.col-sm-8.noPrint,
+  body #reactRoot .container-fluid > div > .row #elements-holder .formfield.col-sm-9.noPrint,
+  body #reactRoot .container-fluid > div > .row #elements-holder .formfield.col-sm-10.noPrint,
+  body #reactRoot .container-fluid > div > .row #elements-holder .formfield.col-sm-11.noPrint,
+  body #reactRoot .container-fluid > div > .row #elements-holder .formfield.col-sm-12.noPrint {
+    display: none !important;
+  }
+  body #reactRoot .container-fluid > div > .row #elements-holder .formfield.col-sm-1.d-none.formfield,
+  body #reactRoot .container-fluid > div > .row #elements-holder .formfield.col-sm-2.d-none.formfield,
+  body #reactRoot .container-fluid > div > .row #elements-holder .formfield.col-sm-3.d-none.formfield,
+  body #reactRoot .container-fluid > div > .row #elements-holder .formfield.col-sm-4.d-none.formfield,
+  body #reactRoot .container-fluid > div > .row #elements-holder .formfield.col-sm-5.d-none.formfield,
+  body #reactRoot .container-fluid > div > .row #elements-holder .formfield.col-sm-6.d-none.formfield,
+  body #reactRoot .container-fluid > div > .row #elements-holder .formfield.col-sm-7.d-none.formfield,
+  body #reactRoot .container-fluid > div > .row #elements-holder .formfield.col-sm-8.d-none.formfield,
+  body #reactRoot .container-fluid > div > .row #elements-holder .formfield.col-sm-9.d-none.formfield,
+  body #reactRoot .container-fluid > div > .row #elements-holder .formfield.col-sm-10.d-none.formfield,
+  body #reactRoot .container-fluid > div > .row #elements-holder .formfield.col-sm-11.d-none.formfield,
+  body #reactRoot .container-fluid > div > .row #elements-holder .formfield.col-sm-12.d-none.formfield {
+    display: none !important;
+  }
+  body #reactRoot .container-fluid > div > .row #elements-holder .formfield.field-section > div.row.description {
+    background-color: #fff !important;
+    background: #fff !important;
+    border-left: 1px solid #ddd;
+    border-right: 1px solid #ddd;
+  }
+  body #reactRoot .container-fluid > div > .row #elements-holder .formfield.field-section > div.field.row {
+    background-color: #fff !important;
+    border-left: 1px solid #ddd;
+    border-right: 1px solid #ddd;
+  }
+  body #reactRoot .container-fluid > div > .row #elements-holder .formfield.field-attendance,
+  body #reactRoot .container-fluid > div > .row #elements-holder .formfield.field-chart,
+  body #reactRoot .container-fluid > div > .row #elements-holder .formfield.field-checkboxes,
+  body #reactRoot .container-fluid > div > .row #elements-holder .formfield.field-date,
+  body #reactRoot .container-fluid > div > .row #elements-holder .formfield.field-diagram,
+  body #reactRoot .container-fluid > div > .row #elements-holder .formfield.field-dropdown,
+  body #reactRoot .container-fluid > div > .row #elements-holder .formfield.field-dynamictext,
+  body #reactRoot .container-fluid > div > .row #elements-holder .formfield.field-equipment,
+  body #reactRoot .container-fluid > div > .row #elements-holder .formfield.field-equipmentinformation,
+  body #reactRoot .container-fluid > div > .row #elements-holder .formfield.field-formtitle,
+  body #reactRoot .container-fluid > div > .row #elements-holder .formfield.field-gpstracker,
+  body #reactRoot .container-fluid > div > .row #elements-holder .formfield.field-hours,
+  body #reactRoot .container-fluid > div > .row #elements-holder .formfield.field-image,
+  body #reactRoot .container-fluid > div > .row #elements-holder .formfield.field-likertscale,
+  body #reactRoot .container-fluid > div > .row #elements-holder .formfield.field-pdfdocument,
+  body #reactRoot .container-fluid > div > .row #elements-holder .formfield.field-personalinformation,
+  body #reactRoot .container-fluid > div > .row #elements-holder .formfield.field-plaintext,
+  body #reactRoot .container-fluid > div > .row #elements-holder .formfield.field-mark,
+  body #reactRoot .container-fluid > div > .row #elements-holder .formfield.field-signature,
+  body #reactRoot .container-fluid > div > .row #elements-holder .formfield.field-task,
+  body #reactRoot .container-fluid > div > .row #elements-holder .formfield.field-textfield,
+  body #reactRoot .container-fluid > div > .row #elements-holder .formfield.field-time,
+  body #reactRoot .container-fluid > div > .row #elements-holder .formfield.field-uploadfile,
+  body #reactRoot .container-fluid > div > .row #elements-holder .formfield.field-video {
+    page-break-inside: avoid !important;
+    break-inside: avoid !important;
+  }
+  body #reactRoot .container-fluid > div > .row #elements-holder .formfield.field-attendance.noPrint,
+  body #reactRoot .container-fluid > div > .row #elements-holder .formfield.field-chart.noPrint,
+  body #reactRoot .container-fluid > div > .row #elements-holder .formfield.field-checkboxes.noPrint,
+  body #reactRoot .container-fluid > div > .row #elements-holder .formfield.field-date.noPrint,
+  body #reactRoot .container-fluid > div > .row #elements-holder .formfield.field-diagram.noPrint,
+  body #reactRoot .container-fluid > div > .row #elements-holder .formfield.field-dropdown.noPrint,
+  body #reactRoot .container-fluid > div > .row #elements-holder .formfield.field-dynamictext.noPrint,
+  body #reactRoot .container-fluid > div > .row #elements-holder .formfield.field-equipment.noPrint,
+  body #reactRoot .container-fluid > div > .row #elements-holder .formfield.field-equipmentinformation.noPrint,
+  body #reactRoot .container-fluid > div > .row #elements-holder .formfield.field-formtitle.noPrint,
+  body #reactRoot .container-fluid > div > .row #elements-holder .formfield.field-gpstracker.noPrint,
+  body #reactRoot .container-fluid > div > .row #elements-holder .formfield.field-hours.noPrint,
+  body #reactRoot .container-fluid > div > .row #elements-holder .formfield.field-image.noPrint,
+  body #reactRoot .container-fluid > div > .row #elements-holder .formfield.field-likertscale.noPrint,
+  body #reactRoot .container-fluid > div > .row #elements-holder .formfield.field-pdfdocument.noPrint,
+  body #reactRoot .container-fluid > div > .row #elements-holder .formfield.field-personalinformation.noPrint,
+  body #reactRoot .container-fluid > div > .row #elements-holder .formfield.field-plaintext.noPrint,
+  body #reactRoot .container-fluid > div > .row #elements-holder .formfield.field-mark.noPrint,
+  body #reactRoot .container-fluid > div > .row #elements-holder .formfield.field-signature.noPrint,
+  body #reactRoot .container-fluid > div > .row #elements-holder .formfield.field-task.noPrint,
+  body #reactRoot .container-fluid > div > .row #elements-holder .formfield.field-textfield.noPrint,
+  body #reactRoot .container-fluid > div > .row #elements-holder .formfield.field-time.noPrint,
+  body #reactRoot .container-fluid > div > .row #elements-holder .formfield.field-uploadfile.noPrint,
+  body #reactRoot .container-fluid > div > .row #elements-holder .formfield.field-video.noPrint {
+    display: none !important;
+  }
+  body #reactRoot .container-fluid > div > .row #elements-holder .formfield.field-image .row,
+  body #reactRoot .container-fluid > div > .row #elements-holder .formfield.field-signature .row,
+  body #reactRoot .container-fluid > div > .row #elements-holder .formfield.field-gpstracker .row {
+    display: block !important;
+  }
+  body #reactRoot .container-fluid > div > .row #elements-holder .formfield.field-image.noPrint,
+  body #reactRoot .container-fluid > div > .row #elements-holder .formfield.field-signature.noPrint,
+  body #reactRoot .container-fluid > div > .row #elements-holder .formfield.field-gpstracker.noPrint {
+    display: none !important;
+  }
+  body #reactRoot .container-fluid > div > .row #elements-holder .formfield.field-likertscale .field div .table-responsive table.table thead tr th {
+    background-color: transparent !important;
+  }
+  body #reactRoot .container-fluid > div > .row #elements-holder .formfield.field-likertscale .field div .table-responsive table.table thead tr th.text-center {
+    background-color: #00a2ff !important;
+  }
+  body #reactRoot .container-fluid > div > .row #elements-holder .formfield.field-likertscale .field div .table-responsive table.table tbody tr td {
+    background-color: #f4fdff !important;
+  }
+  body #reactRoot .container-fluid > div > .row #elements-holder .formfield.field-likertscale.noPrint {
+    display: none !important;
+  }
+  body #reactRoot .container-fluid > div > .row #elements-holder .formfield.field-textfield {
+    display: inline-table;
+    height: auto;
+  }
+  body #reactRoot .container-fluid > div > .row #elements-holder .formfield.field-textfield.noPrint {
+    display: none !important;
+  }
+  body #reactRoot .container-fluid > div > .row #elements-holder .formfield.field-textfield .field.row {
+    display: inline-table !important;
+    width: 100%;
+  }
+  body #reactRoot .container-fluid > div > .row #elements-holder .formfield.field-textfield .field.row > div.col-sm-12.col-12 {
+    display: inline-table !important;
+  }
+  body #reactRoot .container-fluid > div > .row #elements-holder .formfield.field-textfield .field.row > div.col-sm-12.col-12 textarea.form-control {
+    display: inline-table !important;
+    border: none !important;
+    overflow-y: auto !important;
+    box-shadow: none !important;
+  }
+  body #reactRoot .container-fluid > div > .row #elements-holder .formfield.field-textfield .field.row > div.col-sm-12.col-12 small.text-muted.form-text {
+    display: none;
+  }
+  body #reactRoot .container-fluid > div > .row #elements-holder .formfield.field-textfield .field.row .rbt input.rbt-input-main.form-control.rbt-input {
+    color: #000 !important;
+  }
+  body #reactRoot .container-fluid > div > .row #elements-holder .formfield.field-textfield .field.row .rbt input.rbt-input-hint {
+    display: none !important;
+  }
+  body #reactRoot .container-fluid > div > .row #elements-holder .formfield.field-textfield .field.row small.text-muted.form-text {
+    display: none !important;
+  }
+  body #reactRoot .container-fluid > div > .row #elements-holder .formfield.field-pagebreak {
+    float: none;
+    page-break-after: always !important;
+    break-after: always !important;
+    background-color: transparent !important;
+  }
+  body #reactRoot .container-fluid > div > .row #elements-holder .formfield.field-pagebreak.col-sm-1,
+  body #reactRoot .container-fluid > div > .row #elements-holder .formfield.field-pagebreak.col-sm-2,
+  body #reactRoot .container-fluid > div > .row #elements-holder .formfield.field-pagebreak.col-sm-3,
+  body #reactRoot .container-fluid > div > .row #elements-holder .formfield.field-pagebreak.col-sm-4,
+  body #reactRoot .container-fluid > div > .row #elements-holder .formfield.field-pagebreak.col-sm-5,
+  body #reactRoot .container-fluid > div > .row #elements-holder .formfield.field-pagebreak.col-sm-6,
+  body #reactRoot .container-fluid > div > .row #elements-holder .formfield.field-pagebreak.col-sm-7,
+  body #reactRoot .container-fluid > div > .row #elements-holder .formfield.field-pagebreak.col-sm-8,
+  body #reactRoot .container-fluid > div > .row #elements-holder .formfield.field-pagebreak.col-sm-9,
+  body #reactRoot .container-fluid > div > .row #elements-holder .formfield.field-pagebreak.col-sm-10,
+  body #reactRoot .container-fluid > div > .row #elements-holder .formfield.field-pagebreak.col-sm-11,
+  body #reactRoot .container-fluid > div > .row #elements-holder .formfield.field-pagebreak.col-sm-12 {
+    display: block !important;
+  }
+  body #reactRoot .container-fluid > div > .row #elements-holder .formfield.field-pagebreak .row {
+    display: block !important;
+  }
+  body #reactRoot .container-fluid > div > .row #elements-holder .formfield.field-pagebreak hr {
+    display: none !important;
+  }
+  body #reactRoot .container-fluid > div > .row #elements-holder .formfield.field-signature img {
+    height: 220px !important;
+    width: auto !important;
+  }
+  body #reactRoot .container-fluid > div > .row #elements-holder .formfield.field-signature .field.signatureHolder.row {
+    min-height: unset !important;
+    height: auto !important;
+    display: table !important;
+    background: transparent;
+    border-left: 1px solid #ccc;
+    border-right: 1px solid #ccc;
+    border-top: 1px solid #ccc;
+    width: 100% !important;
+  }
+  body #reactRoot .container-fluid > div > .row #elements-holder .formfield.field-signature .field.signatureHolder.row .formfield.signatureWrapper {
+    margin-bottom: 0px !important;
+    display: table !important;
+  }
+  body #reactRoot .container-fluid > div > .row #elements-holder .formfield.field-signature .field.signatureHolder.row .formfield.signatureWrapper .filepicker.dropzone {
+    display: table !important;
+    width: 100%;
+  }
+  body #reactRoot .container-fluid > div > .row #elements-holder .formfield.field-signature .field.signatureHolder.row .formfield.signatureWrapper .filepicker.dropzone img {
+    max-height: 220px !important;
+    height: 220px !important;
+    margin: 0px auto;
+    position: relative;
+  }
+  body #reactRoot .container-fluid > div > .row #elements-holder .formfield.field-formtitle {
+    background-color: transparent !important;
+  }
+  body #reactRoot .container-fluid > div > .row #elements-holder .formfield.field-formtitle.col-sm-1,
+  body #reactRoot .container-fluid > div > .row #elements-holder .formfield.field-formtitle.col-sm-2,
+  body #reactRoot .container-fluid > div > .row #elements-holder .formfield.field-formtitle.col-sm-3,
+  body #reactRoot .container-fluid > div > .row #elements-holder .formfield.field-formtitle.col-sm-4,
+  body #reactRoot .container-fluid > div > .row #elements-holder .formfield.field-formtitle.col-sm-5,
+  body #reactRoot .container-fluid > div > .row #elements-holder .formfield.field-formtitle.col-sm-6,
+  body #reactRoot .container-fluid > div > .row #elements-holder .formfield.field-formtitle.col-sm-7,
+  body #reactRoot .container-fluid > div > .row #elements-holder .formfield.field-formtitle.col-sm-8,
+  body #reactRoot .container-fluid > div > .row #elements-holder .formfield.field-formtitle.col-sm-9,
+  body #reactRoot .container-fluid > div > .row #elements-holder .formfield.field-formtitle.col-sm-10,
+  body #reactRoot .container-fluid > div > .row #elements-holder .formfield.field-formtitle.col-sm-11,
+  body #reactRoot .container-fluid > div > .row #elements-holder .formfield.field-formtitle.col-sm-12 {
+    display: flex !important;
+  }
+  body #reactRoot .container-fluid > div > .row #elements-holder .formfield.field-task {
+    background-color: #fff !important;
+  }
+  body #reactRoot .container-fluid > div > .row #elements-holder .formfield.field-task .description.row .col {
+    border-left: 1px solid #ddd !important;
+    border-right: 1px solid #ddd !important;
+    padding: 15px 10px !important;
+  }
+  body #reactRoot .container-fluid > div > .row #elements-holder .formfield.field-task .field.row {
+    padding: 10px 0px 6px 15px !important;
+    border-radius: 0px !important;
+    border-bottom: none !important;
+    border-left: 1px solid #ddd !important;
+    border-right: 1px solid #ddd !important;
+    border-top: none !important;
+    background-color: #fff !important;
+  }
+  body #reactRoot .container-fluid > div > .row #elements-holder .formfield.field-task .field.row:last-of-type {
+    border-bottom: 1px solid #ddd !important;
+  }
+  body #reactRoot .container-fluid > div > .row #elements-holder .formfield.field-task button {
+    display: none !important;
+  }
+  body #reactRoot .container-fluid > div > .row #elements-holder .formfield.field-checkboxes .field.row .bis-checkboxes .form-check input[type="checkbox"]:not(:checked) + label:before {
+    background: #fff !important;
+  }
+  body #reactRoot .container-fluid > div > .row #elements-holder .formfield.field-likertscale .field div .table-responsive table.table tbody tr td .form-check input[type="radio"]:not(:checked) + label:before {
+    background: #fff !important;
+  }
+}
